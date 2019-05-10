@@ -45,7 +45,7 @@
 
 		/* Style each tab content individually */ 
 		#history {background-color:white;}
-		#follower {background-color:white;}
+		#fans {background-color:white;}
 		#following {background-color:white;}
 	</style>
     
@@ -98,6 +98,7 @@
 							<h5>Name</h5>
 						</div>
 						<a href="#" class="btn btn-sm btn-link" type="button" style="width: 50%;height: 30%">Edit</a>
+						<button>追蹤+</button>
 					</div>
 					<!-- <form action="/somewhere/to/upload" enctype="multipart/form-data">
    						<input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/ >
@@ -120,23 +121,23 @@
 					
 				</div>
 				<div class="col-md-8">
-					<button class="tablink" onclick="openPage('history', this, 'white')">history</button>
-					<button class="tablink" onclick="openPage('following', this, 'white')" id="defaultOpen">following</button>
-					<button class="tablink" onclick="openPage('follower', this, 'white')">follower</button>
+					<button class="tablink" onclick="openPage('history', this, 'white')" id="defaultOpen">History</button>
+					<button class="tablink" onclick="openPage('following', this, 'white')">Following</button>
+					<button class="tablink" onclick="openPage('fans', this, 'white')">Fans</button>
 
 					<div id="history" class="tabcontent">
-  						<h3>Home</h3>
-  						<p>Home is where the heart is..</p>
+  						<h3>history</h3>
+  						<p>歷史紀錄_紀錄回答過的討論文章及發問過的問題</p>
 					</div>
 
 					<div id="following" class="tabcontent">
-						<h3>News</h3>
-					  	<p>Some news this fine day!</p> 
+						<h3>正在追蹤</h3>
+					  	<p>追蹤的人</p> 
 					</div>
 
-					<div id="follower" class="tabcontent">
-  						<h3>Contact</h3>
-  					<p>Get in touch, or swing by for a cup of coffee.</p>
+					<div id="fans" class="tabcontent">
+  						<h3>Fans</h3>
+  						<p>顯示粉絲</p>
 					</div>
 					<script type="text/javascript">
 						function openPage(pageName, elmnt, color) {
