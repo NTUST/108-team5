@@ -3,3 +3,10 @@
 	top: 25px;
 	margin-right:25px;
 }
+
+.board>.row>div:hover{
+	cursor: pointer;
+}
+.board>.row>div:hover .link-board{
+	display: inline-block !important;
+}
