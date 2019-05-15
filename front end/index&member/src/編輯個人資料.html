@@ -1,38 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>碼農天堂</title>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>碼農天堂</title>
-
-    <meta name="description" content="Source code generated using layoutit.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<form action="/somewhere/to/upload" enctype="multipart/form-data">
-   		<div style="border: 1px;border-style: solid;width: 25%;height: 50%">
-   			<img id="preview_progressbarTW_img" src="#" />
-   		</div>
-   		<input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/ >		
-	</form>
+	<div class="row" style="background: white;" >
+				<div class="col-md-7" id="div1">
+					<h1 style="font-size: 66px;color: blue;margin-top: 1%">
+								碼農天堂
+					</h1>
+				</div>
+				<div class="col-md-5" >
+					<ul class="nav" id="div2">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">首頁</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">討論區</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link " href="#">問答區</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link " href="#">個人小屋</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link " href="#">登出</a>
+							</li>
+						</li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	<div style="margin-left:9%;margin-right:9%;">
+		<header>
+		  <h2><b>修改</b></h2>
+		</header>
 
-	<script>
-		function readURL(input){
- 			if(input.files && input.files[0]){
-	    		var imageTagID = input.getAttribute("targetID");
-				var reader = new FileReader();
-				reader.onload = function (e) {
-					var img = document.getElementById(imageTagID);
-					img.setAttribute("src", e.target.result)
-	    		}
-	    		reader.readAsDataURL(input.files[0]);
-			}
-		}
-	</script>
+		<section>
+		  		<form action="form_action.asp" method="get" style="width:18%;height: auto; margin-right:auto; margin-left:auto; ">
+  					First name: <br>
+  					<input type="text" name="fname" /><br>
+  					Last name: <br>
+  					<input type="text" name="lname" /><br>
+  					about me<br>
+  					<input type="text" name="aboutme" />
+				</form><br>
+			    <form action="/somewhere/to/upload" enctype="multipart/form-data" style="width:20%;height: auto; margin-right:auto; margin-left:auto; ">
+			   		<div>
+			   			<img id="preview_progressbarTW_img" src="" style="width: 100%;height: auto;" />
+			   		</div>
+			   		請選擇想要的頭像<br>
+			   		<input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/ >
+			   		
+				</form>
+				<a href="個人小屋-關於我.html" ><button class="button button1">儲存</button></a>
+				<!--按儲存之後個人小屋的部分都要可以SHOW出剛更改完的資料-->
+				<script>
+					function readURL(input){
+			 			if(input.files && input.files[0]){
+				    		var imageTagID = input.getAttribute("targetID");
+							var reader = new FileReader();
+							reader.onload = function (e) {
+								var img = document.getElementById(imageTagID);
+								img.setAttribute("src", e.target.result)
+				    		}
+				    		reader.readAsDataURL(input.files[0]);
+						}
+					}
+				</script>
+		</section>
+
+		<footer>
+
+		</footer>
+	</div>
 </body>
 </html>
