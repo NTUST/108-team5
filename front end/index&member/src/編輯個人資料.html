@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>碼農天堂</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<form action="/somewhere/to/upload" enctype="multipart/form-data">
+   		<div style="border: 1px;border-style: solid;width: 25%;height: 50%">
+   			<img id="preview_progressbarTW_img" src="#" />
+   		</div>
+   		<input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/ >		
+	</form>
+
+	<script>
+		function readURL(input){
+ 			if(input.files && input.files[0]){
+	    		var imageTagID = input.getAttribute("targetID");
+				var reader = new FileReader();
+				reader.onload = function (e) {
+					var img = document.getElementById(imageTagID);
+					img.setAttribute("src", e.target.result)
+	    		}
+	    		reader.readAsDataURL(input.files[0]);
+			}
+		}
+	</script>
+</body>
+</html>

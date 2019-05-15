@@ -1,1 +1,94 @@
-# Empty CSS file for your own CSS
+#div1{
+	left: 15%;
+}
+#div2{
+	margin-top: 30px;
+}
+@media screen and (max-width:800px) {
+  #div1 {
+  	left: 18%;
+  }
+  #div2{
+	margin-left:16%;
+
+  }
+  #div3{
+	text-align: center;
+  }
+}
+
+
+/*個人小屋CSS*/
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: lightblue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white; 
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+ height: 600px;   /* only for demonstration, should be removed */
+  background: white;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: white;
+  height: 600px; /*only for demonstration, should be removed */
+}
+
+
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the footer */
+footer {
+  background-color:lightblue;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+#posting{
+	display: table;
+	padding:10px;
+	width: 49.9%;
+	height: 49.9%;
+	background: lightblue;
+	color:white; 
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
