@@ -10,3 +10,13 @@
 .board>.row>div:hover .link-board{
 	display: inline-block !important;
 }
+
+.search-input{
+	background: transparent;
+	border: 0;
+	outline: 0;
+	width: 70%;
+}
+.search-input::placeholder{
+	font-size: 12px;
+}
