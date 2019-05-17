@@ -7,6 +7,9 @@
 .board>.row>div:hover{
 	cursor: pointer;
 }
+.style-jvp6q3ta{
+	cursor: pointer;
+}
 .board>.row>div:hover .link-board{
 	display: inline-block !important;
 }
