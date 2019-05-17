@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Bootstrap 4, from LayoutIt!</title>
+	<meta content="Source code generated using layoutit.com" name="description">
+	<meta content="LayoutIt!" name="author">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<!--以下div是為了控制文章預覽區域,如果文章數目增加需要讓高度做變動,看要不要一頁最多放8個文章(其他數目也可)-->
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6" style="top: 40px;left: 270px">
+						<div>
+							<h1 style="font-size:66px;color: lightblue"><a href="" style="text-decoration:none;">碼農天堂</a></h1>
+						</div>
+					</div>
+					<div class="col-md-6" style="top: 55px;">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link active" href="#" style="position: relative;display: block;left: 180%;">首頁</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./forum.html" style="position: relative;display: block;left: 150%;">討論區</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../../QA/src/QA.html" style="position: relative;display: block;left: 150%;">問答區</a>
+							</li>
+							<li class="nav-item dropdown ml-md-auto">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://example.com" id="navbarDropdownMenuLink" style="position: relative;display: block;left: -420%">會員</a>
+								<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">登入</a> <a class="dropdown-item" href="#">註冊</a> <a class="dropdown-item" href="#">個人小屋</a>
+									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">其他</a>
+								</div>
+							</li>
+						</ul><!--<a href="url">7527</a> <a href="url">27272</a> <a href="url">2752752</a> <a href="url">7275275</a>-->
+						<!--<ul id="List">
+                        <ol>
+                            <li>
+                                <a href="#">首頁</a>
+                            </li>
+                            <li>
+                                <a href="#">討論區</a>
+                            </li>
+                            <li>
+                                <a href="#">問答區</a>
+                            </li>
+                            <li>
+                                <a href="#">問答區</a>
+                            </li>
+                        </ul>
+                    </nav>-->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6" style="background-color: lightblue;top: 58px;">
+						<span style="position: relative;display: block;left: 280px;top: 10px">討論區</span>
+					</div>
+					<div class="col-md-1" style="background-color: lightblue;top: 58px;text-align: right;">
+						<span style="position: relative;display: block;top: 10px"><svg class="qqNm_ desktop-header-search-icon-fill button-hover-fill" data-hook="search-icon" height="16" style="fill-rule:evenodd" viewbox="0 0 15 16" width="15" xmlns="http://www.w3.org/2000/svg">
+						<path d="M878.766,254.573l-3.7-3.96a6.555,6.555,0,0,0,1.471-4.153,6.274,6.274,0,1,0-6.27,6.46,6.074,6.074,0,0,0,3.592-1.169l3.725,3.99a0.8,0.8,0,0,0,1.156.024A0.862,0.862,0,0,0,878.766,254.573Zm-8.5-12.888a4.777,4.777,0,1,1-4.636,4.775A4.712,4.712,0,0,1,870.27,241.685Z" transform="translate(-864 -240)"></path></svg></span>
+					</div>
+					<div class="col-md-1" style="background-color: lightblue;top: 58px;text-align: right;">
+						<span class="_385Jf" style="position: relative;display: block;top: 10px"><svg class="breadcrumbs-icon-fill members-icon-button button-hover-fill" height="19px" version="1.1" viewbox="0 0 19 19" width="19px" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11,15 L11,16 C11,16.5522847 10.5522847,17 10,17 L2,17 C1.44771525,17 1,16.5522847 1,16 L1,13 C1,11.3431458 2.34314575,10 4,10 L8,10 C8.05673321,10 8.11309861,10.0015748 8.16905486,10.0046831 C8.57956608,8.8370451 9.69203186,8 11,8 L15,8 C16.6568542,8 18,9.34314575 18,11 L18,14 C18,14.5522847 17.5522847,15 17,15 L11,15 Z M11,14 L17,14 L17,11 C17,9.8954305 16.1045695,9 15,9 L11,9 C10.1683695,9 9.45529124,9.50758246 9.15366611,10.2298465 C10.2378934,10.6819075 11,11.751954 11,13 L11,14 Z M13,7 C11.3431458,7 10,5.65685425 10,4 C10,2.34314575 11.3431458,1 13,1 C14.6568542,1 16,2.34314575 16,4 C16,5.65685425 14.6568542,7 13,7 Z M13,6 C14.1045695,6 15,5.1045695 15,4 C15,2.8954305 14.1045695,2 13,2 C11.8954305,2 11,2.8954305 11,4 C11,5.1045695 11.8954305,6 13,6 Z M4,11 C2.8954305,11 2,11.8954305 2,13 L2,16 L10,16 L10,13 C10,11.8954305 9.1045695,11 8,11 L4,11 Z M6,9 C4.34314575,9 3,7.65685425 3,6 C3,4.34314575 4.34314575,3 6,3 C7.65685425,3 9,4.34314575 9,6 C9,7.65685425 7.65685425,9 6,9 Z M6,8 C7.1045695,8 8,7.1045695 8,6 C8,4.8954305 7.1045695,4 6,4 C4.8954305,4 4,4.8954305 4,6 C4,7.1045695 4.8954305,8 6,8 Z" id="Members"></path></svg><span class="_1vKJV"></span></span>
+					</div>
+					<div class="col-md-4" style="background-color: lightblue;top: 58px;">
+						<button class="btn btn-success" style="width:130px;position: relative;left: 50px" type="button">登入/註冊</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" style="top: 58px;background-color: lightblue;height: 1000px">
+				<div class="row">
+					<div class="col-md-12" style="top: 0px;">
+						<div class="style-jvqa3opr" id="comp-jvqa3oou" style="background-color: white;left: 330px; width: 944px; position: relative;left: 50%;margin-left: -472px;height: 585px"><div id="comp-jvqa3ooubg" class="style-jvqa3oprbg"></div><div class="style-jvqa3oprinlineContent" id="comp-jvqa3oouinlineContent"><div class="ImageButton_1" data-state="supports_opacity transition_none   " id="comp-jvqa3orc" style="left: 825px; width: 32px; position: absolute; top: 98px; height: 32px;"><a title="" id="comp-jvqa3orclink" class="ImageButton_1link" style="width: 32px; height: 32px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvqa3orcdefaultImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvqa3orcdefaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_515471d549f34f878c302629cae9b5a3~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_515471d549f34f878c302629cae9b5a3~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvqa3orchoverImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvqa3orchoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_8951285488524f63a89bb18034d094ab~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_8951285488524f63a89bb18034d094ab~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvqa3orcactiveImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvqa3orcactiveImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_515471d549f34f878c302629cae9b5a3~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_515471d549f34f878c302629cae9b5a3~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
+.ImageButton_1defaultImage {position:absolute;opacity:1;}
+.ImageButton_1hoverImage {position:absolute;opacity:0;}
+.ImageButton_1activeImage {position:absolute;opacity:0;}
+.ImageButton_1_correct-positioning {position:absolute;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
+.ImageButton_1defaultImage {overflow:hidden;}
+.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1hoverImage {overflow:hidden;}
+.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1activeImage {overflow:hidden;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div class="style-jvqac7el" id="comp-jvqa53at" style="left: 1px; width: 943px; position: absolute; top: 0px; height: 57px;"><div id="comp-jvqa53atbg" class="style-jvqac7elbg"></div><div class="style-jvqac7elinlineContent" id="comp-jvqa53atinlineContent"><div data-packed="false" class="txtNew" id="comp-jvqa6pgq" style="left: 780px; width: 96px; position: absolute; pointer-events: none; top: 18.5px;"><h1 class="font_0" style="font-size:14px;"><span style="font-size:14px;">&#8203;取消追蹤貼文</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvqa74q0" style="left: 889px; width: 32px; position: absolute; pointer-events: none; top: 18.5px;"><h1 class="font_0" style="font-size:14px;"><span style="font-size:14px;"><a href="#" class="reply">回覆</a></span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style></div></div><style type="text/css" data-styleid="style-jvqac7el">.style-jvqac7elbg {border:1px solid rgba(166, 164, 164, 1);background-color:rgba(235, 240, 255, 1);border-radius:0;  }
+.style-jvqac7elinlineContent,.style-jvqac7elbg {position:absolute;top:0;right:0;bottom:0;left:0;}</style><div class="ImageButton_1" data-state="supports_opacity transition_none   " id="comp-jvqa3opz" style="left: 105px; width: 32px; position: absolute; top: 98px; height: 32px;"><a title="" id="comp-jvqa3opzlink" class="ImageButton_1link" style="width: 32px; height: 32px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvqa3opzdefaultImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvqa3opzdefaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvqa3opzhoverImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvqa3opzhoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvqa3opzactiveImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvqa3opzactiveImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
+.ImageButton_1defaultImage {position:absolute;opacity:1;}
+.ImageButton_1hoverImage {position:absolute;opacity:0;}
+.ImageButton_1activeImage {position:absolute;opacity:0;}
+.ImageButton_1_correct-positioning {position:absolute;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
+.ImageButton_1defaultImage {overflow:hidden;}
+.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1hoverImage {overflow:hidden;}
+.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1activeImage {overflow:hidden;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-packed="false" class="txtNew" id="comp-jvqa3oqi" style="pointer-events: none; left: 139px; width: 52px; position: absolute; top: 98px;"><h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">用戶名稱</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvqa3oqs" style="pointer-events: none; left: 139px; width: 64px; position: absolute; top: 115px;"><h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">用戶階級</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvqa3orn" style="pointer-events: none; left: 105px; width: 736px; position: absolute; min-height: 57px; top: 166px;" data-min-height="57"><h1 class="font_0" style="font-size:30px;"><span style="font-size:30px;">標題</span></h1></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvqa3osk" style="pointer-events: none; left: 105px; width: 66px; position: absolute; top: 235px;"><h1 class="font_0" style="font-size:12px;"><span style="font-size:12px;">x 個留言</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvqa3osv" style="pointer-events: none; left: 178px; width: 63px; position: absolute; top: 235px;"><h1 class="font_0" style="font-size:12px;"><span style="font-size:12px;">x 個查看</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" data-min-height="37" class="txtNew" id="comp-jvqa3os0" style="pointer-events: none; left: 108px; width: 736px; position: absolute; min-height: 37px; top: 282px;"><p class="font_7" style="font-size:15px;">&#8203;內文</p></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvqa3ot9" style="pointer-events: none; left: 815px; width: 16px; position: absolute; top: 345.519px;"><h1 class="font_0" style="font-size:14px;"><span style="font-size:14px;">2</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-svg-id="0345921c668b47ed87c489509b3c146e.svg" data-svg-type="color" data-display-mode="stretch" data-viewbox="0 0 200 200" data-preserve-viewbox="ignore" class="style-jvqa3otu1" id="comp-jvqa3otn" style="left: 838px; width: 19px; position: absolute; top: 341.519px; height: 19px;"><div id="comp-jvqa3otnlink" class="style-jvqa3otu1link"><div class="style-jvqa3otu1_comp-jvqa3otn style-jvqa3otu1_non-scaling-stroke style-jvqa3otu1svg" id="comp-jvqa3otnsvg" style="opacity: 1;"><svg preserveAspectRatio="none" data-bbox="27.5 24.5 145 151" viewBox="27.5 24.4999942779541 145.00010681152344 151" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img" style="">
+    <g>
+        <path d="M166.82 92.908c-4.907-6.392-12.402-9.912-21.097-9.912h-15.146c6.23-13.612 6.442-33.453 1.485-45.221-3.609-8.563-9.786-13.275-17.398-13.275-2.065 0-4.226.362-6.425 1.067C97.378 29.064 96.97 37.703 96.61 45.321c-.525 11.074-1.32 27.359-29.535 48.386V83.144H27.5v90.882h39.575v-11.241c6.772 6.125 16.413 12.715 26.557 12.715h45.764c9.546 0 18.961-7.209 21.44-16.41l10.278-38.174c2.838-10.55 1.275-20.76-4.294-28.008zM56.546 163.515H38.029V93.66h18.518l-.001 69.855zm104.396-45.33l-10.278 38.176c-1.237 4.598-6.501 8.625-11.269 8.625H93.632c-9.948 0-21.633-11.478-26.557-17.341v-41.027c38.409-26.049 39.433-47.737 40.053-60.801.38-8.062.829-9.112 4.341-10.246 1.153-.371 2.23-.557 3.196-.557 3.193 0 5.778 2.302 7.69 6.838 5.25 12.462 2.515 34.824-5.228 42.724l-8.754 8.931h37.35c5.424 0 9.831 2.003 12.74 5.796 3.559 4.637 4.463 11.515 2.479 18.882z" fill="#4854C7" data-color="1"></path>
+    </g>
+</svg>
+</div></div></div><style type="text/css" data-styleid="style-jvqa3otu1">.style-jvqa3otu1 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.style-jvqa3otu1link,.style-jvqa3otu1svg {position:absolute;top:0;right:0;bottom:0;left:0;}
+.style-jvqa3otu1 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
+.style-jvqa3otu1_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div class="ImageButton_1" data-state="supports_opacity transition_none   " id="comp-jvri1jtq" style="left: 105px; width: 48px; position: absolute; top: 326.519px; height: 48px;"><a title="" id="comp-jvri1jtqlink" class="ImageButton_1link" style="width: 48px; height: 48px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvri1jtqdefaultImage" style="position: relative; width: 48px; height: 48px;"><img id="comp-jvri1jtqdefaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_b7e97a2966464f9db45c120a0286b43a~mv2.png/v1/fill/w_45,h_45,al_c,q_90/035244_b7e97a2966464f9db45c120a0286b43a~mv2.webp" style="width: 48px; height: 48px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvri1jtqhoverImage" style="position: relative; width: 48px; height: 48px;"><img id="comp-jvri1jtqhoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_63d0234c3b7f446bbae5fe9418d99161~mv2.png/v1/fill/w_45,h_45,al_c,q_90/035244_63d0234c3b7f446bbae5fe9418d99161~mv2.webp" style="width: 48px; height: 48px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvri1jtqactiveImage" style="position: relative; width: 48px; height: 48px;"><img id="comp-jvri1jtqactiveImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_b7e97a2966464f9db45c120a0286b43a~mv2.png/v1/fill/w_45,h_45,al_c,q_90/035244_b7e97a2966464f9db45c120a0286b43a~mv2.webp" style="width: 48px; height: 48px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
+.ImageButton_1defaultImage {position:absolute;opacity:1;}
+.ImageButton_1hoverImage {position:absolute;opacity:0;}
+.ImageButton_1activeImage {position:absolute;opacity:0;}
+.ImageButton_1_correct-positioning {position:absolute;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
+.ImageButton_1defaultImage {overflow:hidden;}
+.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1hoverImage {overflow:hidden;}
+.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1activeImage {overflow:hidden;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-packed="false" class="txtNew" id="comp-jvri4rtv" style="pointer-events: none; left: 171px; width: 310px; position: absolute; top: 341.519px;"><h1 class="font_0" style="font-size:14px;"><span style="font-size:14px;">留言</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-border-width="1" class="style-jvri5p7l" id="comp-jvri5p5z" style="transform-origin: center 0.5px; left: 105px; width: 752px; position: absolute; top: 393.067px; height: 5px;"></div><style type="text/css" data-styleid="style-jvri5p7l">.style-jvri5p7l {box-sizing:border-box;border-top:1px solid rgba(66, 66, 66, 1);height:0;}</style><div class="ImageButton_1" data-state="supports_opacity transition_none   " id="comp-jvri6img" style="left: 105px; width: 32px; position: absolute; top: 418px; height: 32px;"><a title="" id="comp-jvri6imglink" class="ImageButton_1link" style="width: 32px; height: 32px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvri6imgdefaultImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvri6imgdefaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvri6imghoverImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvri6imghoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvri6imgactiveImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvri6imgactiveImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
+.ImageButton_1defaultImage {position:absolute;opacity:1;}
+.ImageButton_1hoverImage {position:absolute;opacity:0;}
+.ImageButton_1activeImage {position:absolute;opacity:0;}
+.ImageButton_1_correct-positioning {position:absolute;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
+.ImageButton_1defaultImage {overflow:hidden;}
+.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1hoverImage {overflow:hidden;}
+.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1activeImage {overflow:hidden;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-packed="false" class="txtNew" id="comp-jvri76jd" style="pointer-events: none; left: 139px; width: 64px; position: absolute; top: 433px;"><h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">用戶階級</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvri76jp" style="pointer-events: none; left: 139px; width: 52px; position: absolute; top: 416px;"><h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">用戶名稱</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvri7pq3" style="pointer-events: none; left: 108px; width: 736px; position: absolute; top: 469px;"><h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">留言</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div class="ImageButton_1" data-state="supports_opacity transition_none prepare_hda  " id="comp-jvri8v58" style="left: 104px; width: 48px; position: absolute; top: 505.519px; height: 48px;"><a title="" id="comp-jvri8v58link" class="ImageButton_1link" style="width: 48px; height: 48px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvri8v58defaultImage" style="position: relative; width: 48px; height: 48px;"><img id="comp-jvri8v58defaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_b7e97a2966464f9db45c120a0286b43a~mv2.png/v1/fill/w_45,h_45,al_c,q_90/035244_b7e97a2966464f9db45c120a0286b43a~mv2.webp" style="width: 48px; height: 48px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvri8v58hoverImage" style="position: relative; width: 48px; height: 48px;"><img id="comp-jvri8v58hoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_63d0234c3b7f446bbae5fe9418d99161~mv2.png/v1/fill/w_45,h_45,al_c,q_90/035244_63d0234c3b7f446bbae5fe9418d99161~mv2.webp" style="width: 48px; height: 48px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvri8v58activeImage" style="position: relative; width: 48px; height: 48px;"><img id="comp-jvri8v58activeImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_b7e97a2966464f9db45c120a0286b43a~mv2.png/v1/fill/w_45,h_45,al_c,q_90/035244_b7e97a2966464f9db45c120a0286b43a~mv2.webp" style="width: 48px; height: 48px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
+.ImageButton_1defaultImage {position:absolute;opacity:1;}
+.ImageButton_1hoverImage {position:absolute;opacity:0;}
+.ImageButton_1activeImage {position:absolute;opacity:0;}
+.ImageButton_1_correct-positioning {position:absolute;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
+.ImageButton_1defaultImage {overflow:hidden;}
+.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1hoverImage {overflow:hidden;}
+.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1activeImage {overflow:hidden;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-packed="false" class="txtNew" id="comp-jvri8v5j" style="pointer-events: none; left: 169px; width: 310px; position: absolute; top: 520.519px;"><h1 class="font_0" style="font-size:14px;"><span style="font-size:14px;"><span>&#8203;回覆</span></span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvricu3e" style="pointer-events: none; left: 777px; width: 48px; position: absolute; top: 104px;"><h1 class="font_0" style="font-size:15px;"><span style="font-size:15px;">&#8203;4天前</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvriibmw" style="pointer-events: none; left: 777px; width: 48px; position: absolute; top: 424px;"><h1 class="font_0" style="font-size:15px;"><span style="font-size:15px;">&#8203;4天前</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div class="ImageButton_1" data-state="supports_opacity transition_none   " id="comp-jvriibn9" style="left: 825px; width: 32px; position: absolute; top: 418px; height: 32px;"><a title="" id="comp-jvriibn9link" class="ImageButton_1link" style="width: 32px; height: 32px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvriibn9defaultImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvriibn9defaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_515471d549f34f878c302629cae9b5a3~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_515471d549f34f878c302629cae9b5a3~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvriibn9hoverImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvriibn9hoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_8951285488524f63a89bb18034d094ab~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_8951285488524f63a89bb18034d094ab~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvriibn9activeImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvriibn9activeImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_515471d549f34f878c302629cae9b5a3~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_515471d549f34f878c302629cae9b5a3~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
+.ImageButton_1defaultImage {position:absolute;opacity:1;}
+.ImageButton_1hoverImage {position:absolute;opacity:0;}
+.ImageButton_1activeImage {position:absolute;opacity:0;}
+.ImageButton_1_correct-positioning {position:absolute;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
+.ImageButton_1defaultImage {overflow:hidden;}
+.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1hoverImage {overflow:hidden;}
+.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1activeImage {overflow:hidden;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-svg-id="0345921c668b47ed87c489509b3c146e.svg" data-svg-type="color" data-display-mode="stretch" data-viewbox="0 0 200 200" data-preserve-viewbox="ignore" class="style-jvrijmhk1" id="comp-jvrijmd0" style="left: 838px; width: 19px; position: absolute; top: 518.519px; height: 19px;"><div id="comp-jvrijmd0link" class="style-jvrijmhk1link"><div class="style-jvrijmhk1_comp-jvrijmd0 style-jvrijmhk1_non-scaling-stroke style-jvrijmhk1svg" id="comp-jvrijmd0svg" style="opacity: 1;"><svg preserveAspectRatio="none" data-bbox="27.5 24.5 145 151" viewBox="27.5 24.4999942779541 145.00010681152344 151" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img" style="">
+    <g>
+        <path d="M166.82 92.908c-4.907-6.392-12.402-9.912-21.097-9.912h-15.146c6.23-13.612 6.442-33.453 1.485-45.221-3.609-8.563-9.786-13.275-17.398-13.275-2.065 0-4.226.362-6.425 1.067C97.378 29.064 96.97 37.703 96.61 45.321c-.525 11.074-1.32 27.359-29.535 48.386V83.144H27.5v90.882h39.575v-11.241c6.772 6.125 16.413 12.715 26.557 12.715h45.764c9.546 0 18.961-7.209 21.44-16.41l10.278-38.174c2.838-10.55 1.275-20.76-4.294-28.008zM56.546 163.515H38.029V93.66h18.518l-.001 69.855zm104.396-45.33l-10.278 38.176c-1.237 4.598-6.501 8.625-11.269 8.625H93.632c-9.948 0-21.633-11.478-26.557-17.341v-41.027c38.409-26.049 39.433-47.737 40.053-60.801.38-8.062.829-9.112 4.341-10.246 1.153-.371 2.23-.557 3.196-.557 3.193 0 5.778 2.302 7.69 6.838 5.25 12.462 2.515 34.824-5.228 42.724l-8.754 8.931h37.35c5.424 0 9.831 2.003 12.74 5.796 3.559 4.637 4.463 11.515 2.479 18.882z" fill="#4854C7" data-color="1"></path>
+    </g>
+</svg>
+</div></div></div><style type="text/css" data-styleid="style-jvrijmhk1">.style-jvrijmhk1 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.style-jvrijmhk1link,.style-jvrijmhk1svg {position:absolute;top:0;right:0;bottom:0;left:0;}
+.style-jvrijmhk1 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
+.style-jvrijmhk1_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div data-packed="false" class="txtNew" id="comp-jvrijmde" style="pointer-events: none; left: 815px; width: 16px; position: absolute; top: 522.519px;"><h1 class="font_0" style="font-size:14px;"><span style="font-size:14px;">2</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style></div></div>
+					</div>
+				</div>
+				<div class="row">
+					<dir class="col-md-12">
+						<div class="style-jvrjsr6e" id="comp-jvrjo13a" style="background-color: white;left: 50%;margin-left: -472px; width: 944px; position: relative;height: 223px;"><div id="comp-jvrjo13abg" class="style-jvrjsr6ebg"></div><div class="style-jvrjsr6einlineContent" id="comp-jvrjo13ainlineContent"><div class="ImageButton_1" data-state="supports_opacity transition_none   " id="comp-jvrjpu4b" style="left: 93px; width: 32px; position: absolute; top: 41px; height: 32px;"><a title="" id="comp-jvrjpu4blink" class="ImageButton_1link" style="width: 32px; height: 32px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvrjpu4bdefaultImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvrjpu4bdefaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvrjpu4bhoverImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvrjpu4bhoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvrjpu4bactiveImage" style="position: relative; width: 32px; height: 32px;"><img id="comp-jvrjpu4bactiveImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_30,h_30,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 32px; height: 32px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
+.ImageButton_1defaultImage {position:absolute;opacity:1;}
+.ImageButton_1hoverImage {position:absolute;opacity:0;}
+.ImageButton_1activeImage {position:absolute;opacity:0;}
+.ImageButton_1_correct-positioning {position:absolute;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
+.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
+.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
+.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
+.ImageButton_1defaultImage {overflow:hidden;}
+.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1hoverImage {overflow:hidden;}
+.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
+.ImageButton_1activeImage {overflow:hidden;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-packed="false" class="txtNew" id="comp-jvrjr7ad" style="left: 139px; width: 52px; position: absolute; pointer-events: none; top: 40px;"><h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">用戶名稱</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" class="txtNew" id="comp-jvrjr79x" style="left: 139px; width: 64px; position: absolute; pointer-events: none; top: 57px;"><h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">用戶階級</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-packed="false" data-min-height="37" class="txtNew" id="comp-jvrjrvf7" style="pointer-events: none; left: 93px; width: 736px; position: absolute; min-height: 37px; top: 93.5px;"><p class="font_7" style="font-size:15px;">撰寫留言...</p></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.txtNew_override-left * {text-align:left !important;}
+.txtNew_override-right * {text-align:right !important;}
+.txtNew_override-center * {text-align:center !important;}
+.txtNew_override-justify * {text-align:justify !important;}
+.txtNew > * {pointer-events:auto;}
+.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
+.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
+.txtNew ul {list-style-type:disc;}
+.txtNew ol {list-style-type:decimal;}
+.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
+.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
+.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
+.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
+.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
+.txtNew a {color:inherit;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrju164" id="comp-jvrju13u" style="left: 93px; width: 24px; position: absolute; top: 152.433px; height: 24px;"><div id="comp-jvrju13ulink" class="style-jvrju164link"><div class="style-jvrju164_comp-jvrju13u style-jvrju164_non-scaling-stroke style-jvrju164svg" id="comp-jvrju13usvg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg preserveAspectRatio="none" data-bbox="1.5 1.5 57 57" xmlns="http://www.w3.org/2000/svg" viewBox="1.5 1.5 57 57" role="img" style="stroke-width: 0px;">
+    <g>
+        <path d="M46.5 58.5h-33c-6.6 0-12-5.4-12-12v-33c0-6.6 5.4-12 12-12h33c6.6 0 12 5.4 12 12v33c0 6.6-5.4 12-12 12z"></path>
+    </g>
+</svg>
+</div></div></div><style type="text/css" data-styleid="style-jvrju164">.style-jvrju164 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.style-jvrju164link,.style-jvrju164svg {position:absolute;top:0;right:0;bottom:0;left:0;}
+.style-jvrju164 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
+.style-jvrju164_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrjuzv42" id="comp-jvrjuzs0" style="left: 137px; width: 24px; position: absolute; top: 152.433px; height: 24px;"><div id="comp-jvrjuzs0link" class="style-jvrjuzv42link"><div class="style-jvrjuzv42_comp-jvrjuzs0 style-jvrjuzv42_non-scaling-stroke style-jvrjuzv42svg" id="comp-jvrjuzs0svg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg preserveAspectRatio="none" data-bbox="1.5 1.5 57 57" xmlns="http://www.w3.org/2000/svg" viewBox="1.5 1.5 57 57" role="img" style="stroke-width: 0px;">
+    <g>
+        <path d="M46.5 58.5h-33c-6.6 0-12-5.4-12-12v-33c0-6.6 5.4-12 12-12h33c6.6 0 12 5.4 12 12v33c0 6.6-5.4 12-12 12z"></path>
+    </g>
+</svg>
+</div></div></div><style type="text/css" data-styleid="style-jvrjuzv42">.style-jvrjuzv42 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.style-jvrjuzv42link,.style-jvrjuzv42svg {position:absolute;top:0;right:0;bottom:0;left:0;}
+.style-jvrjuzv42 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
+.style-jvrjuzv42_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrjv0gk2" id="comp-jvrjv0c7" style="left: 179px; width: 24px; position: absolute; top: 152.433px; height: 24px;"><div id="comp-jvrjv0c7link" class="style-jvrjv0gk2link"><div class="style-jvrjv0gk2_comp-jvrjv0c7 style-jvrjv0gk2_non-scaling-stroke style-jvrjv0gk2svg" id="comp-jvrjv0c7svg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg preserveAspectRatio="none" data-bbox="1.5 1.5 57 57" xmlns="http://www.w3.org/2000/svg" viewBox="1.5 1.5 57 57" role="img" style="stroke-width: 0px;">
+    <g>
+        <path d="M46.5 58.5h-33c-6.6 0-12-5.4-12-12v-33c0-6.6 5.4-12 12-12h33c6.6 0 12 5.4 12 12v33c0 6.6-5.4 12-12 12z"></path>
+    </g>
+</svg>
+</div></div></div><style type="text/css" data-styleid="style-jvrjv0gk2">.style-jvrjv0gk2 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+.style-jvrjv0gk2link,.style-jvrjv0gk2svg {position:absolute;top:0;right:0;bottom:0;left:0;}
+.style-jvrjv0gk2 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
+.style-jvrjv0gk2_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div id="comp-jvrjvqoz" data-align="center" data-disabled="false" data-margin="0" data-should-use-flex="true" data-width="129" data-height="37" class="b1" data-state="desktop shouldUseFlex center" style="left: 713px; position: absolute; top: 145.933px; height: 37px; min-height: 22px; width: 129px;"><div id="comp-jvrjvqozlink" class="g-transparent-a b1link"><span id="comp-jvrjvqozlabel" class="b1label">發佈</span></div></div><style type="text/css" data-styleid="b1">.b1 button.b1link {width:100%;}
+.b1[data-state~="shouldUseFlex"] .b1link,.b1[data-state~="shouldUseFlex"] .b1labelwrapper {text-align:initial;display:flex;align-items:center;}
+.b1[data-state~="shouldUseFlex"][data-state~="center"] .b1link,.b1[data-state~="shouldUseFlex"][data-state~="center"] .b1labelwrapper {justify-content:center;}
+.b1[data-state~="shouldUseFlex"][data-state~="left"] .b1link,.b1[data-state~="shouldUseFlex"][data-state~="left"] .b1labelwrapper {justify-content:flex-start;}
+.b1[data-state~="shouldUseFlex"][data-state~="right"] .b1link,.b1[data-state~="shouldUseFlex"][data-state~="right"] .b1labelwrapper {justify-content:flex-end;}
+.b1link {border-radius:0;  position:absolute;top:0;right:0;bottom:0;left:0;transition:border-color 0.4s ease 0s, background-color 0.4s ease 0s;  }
+.b1label {font:normal normal normal 16px/1.4em avenir-lt-w01_35-light1475496,sans-serif ;  transition:color 0.4s ease 0s;  color:#FFFFFF;display:inline-block;margin:calc(-1 * 0px) 0px 0;position:relative;white-space:nowrap;}
+.b1[data-state~="shouldUseFlex"] .b1label {margin:0;}
+.b1[data-disabled="false"] .b1link {background-color:rgba(49, 92, 213, 1);border:solid rgba(49, 92, 213, 1) 0px;cursor:pointer !important;}
+.b1[data-disabled="false"]:active[data-state~="mobile"] .b1link,.b1[data-disabled="false"]:hover[data-state~="desktop"] .b1link,.b1[data-disabled="false"][data-preview~="hover"] .b1link {background-color:rgba(38, 71, 163, 1);border-color:transparent;}
+.b1[data-disabled="false"]:active[data-state~="mobile"] .b1label,.b1[data-disabled="false"]:hover[data-state~="desktop"] .b1label,.b1[data-disabled="false"][data-preview~="hover"] .b1label {color:#FFFFFF;}
+.b1[data-disabled="true"] .b1link,.b1[data-preview~="disabled"] .b1link {background-color:rgba(204, 204, 204, 1);border-color:rgba(204, 204, 204, 1);}
+.b1[data-disabled="true"] .b1label,.b1[data-preview~="disabled"] .b1label {color:#FFFFFF;}</style></div></div>
+					</dir>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js">
+	</script> 
+	<script src="js/bootstrap.min.js">
+	</script> 
+	<script src="js/scripts.js">
+	</script>
+</body>
+</html>
