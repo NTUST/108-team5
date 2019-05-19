@@ -1,7 +1,10 @@
 #div1{
-	left: 15%;
+	/*top: 40px
+  left: 270px*/
+  left:15%;
 }
 #div2{
+ /* top: 55px;*/
 	margin-top: 30px;
 }
 @media screen and (max-width:800px) {
@@ -19,6 +22,7 @@
 
 
 /*個人小屋CSS*/
+
 * {
   box-sizing: border-box;
 }
@@ -92,7 +96,7 @@ footer {
 }
 
 .button {
-  background-color: lightblue; /* Green */
+  background-color: blue; /* Green */
   border: none;
   color: white;
   padding: 8px 32px;
@@ -101,11 +105,19 @@ footer {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+ -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
 }
 .button1:hover {
-  background-color: blue;
+  background-color: lightblue;
   color: white;
 }
+#relative{
+  position: relative;
+  top: 120px;
+}
+
+
+
+

@@ -1,0 +1,69 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>碼農天堂登入</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+</head>
+	
+<body style="background: lightblue;">
+	<div class="box">
+		<div class="login-box" >
+			<div class="login-title text-center" style="background:blue;width: 400px;height: 50px;position:relative;top: 150px;left: 480px;">
+				<h1 style="color: white;position:relative;top: 8px;">
+					<small>碼農天堂登入</small>
+				</h1>
+			</div>
+			<br>
+			<div class="login-content " style="width: 400px;height: auto;position: relative;top: 150px;left: 480px;">
+				<div class="form">
+					<form id="modifyPassword" class="form-horizontal" action="" method="post">							
+						<!-- 用户名输入 -->
+						<div class="form-group">
+							<div class="col-xs-10 col-xs-offset-1">
+								<div class="input-group">
+									<span class="input-group-addon"><span></span><i class="fas fa-user"></i></span> 
+								<input type="text" id="username" name="username" class="form-control" placeholder="請輸入您的名字">
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="form-group">
+							<div class="col-xs-10 col-xs-offset-1">
+								<div class="input-group">
+									<span class="input-group-addon"><span></span><i class="fas fa-user"></i></span> 
+								<input type="email" id="email" name="email" class="form-control" placeholder="請輸入您的email">
+								</div>
+							</div>
+						</div>
+						<br>
+						<!-- 密码输入 -->
+						<div class="form-group">
+							<div class="col-xs-10 col-xs-offset-1">
+								<div class="input-group">
+									<span class="input-group-addon"><span></span><i class="fas fa-lock"></i></span> 
+										<input type="password" id="password" name="password" class="form-control" placeholder="請設定密碼">
+								</div>
+							</div>
+						</div>
+						<div class="form-group form-actions">
+							<div class="col-xs-12 text-center">
+								<input type="button" value="儲存" class="btn btn-sm btn-success" onclick="location.href='登入介面.html'">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+
+</body>
+</html>
