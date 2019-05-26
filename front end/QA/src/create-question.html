@@ -14,35 +14,42 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-6" style="top: 40px;left: 270px">
-						<div>
-							<h1 style="font-size:66px;color: lightblue"><a href="" style="text-decoration:none;"><b>碼農天堂</b></a></h1>
-						</div>
-					</div>
-					<div class="col-md-6" style="top: 55px;">
-						<ul class="nav">
+				<div class="row" style="background: white;" >
+				<div class="col-md-8" id="div1">
+					<h1 style="font-size: 66px;color: blue;margin-top: 1%">
+								<a href="index.html" style="text-decoration:none;1"><b>碼農天堂</b></a></h1>
+					</h1>
+				</div>
+				<div class="col-md-4">
+					<ul class="nav" id="div2">
 							<li class="nav-item">
-								<a class="nav-link active" href="#" style="position: relative;display: block;left: 120px;">首頁</a>
+								<a class="nav-link active" href="../../index&member/src/index.html">首頁</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="../../forum/src/forum_index.html" style="position: relative;display: block;left: 120px;">討論區</a>
+								<a class="nav-link" href="../../forum/src/forum_index.html">討論區</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="./QA.html" style="position: relative;display: block;left: 120px;">問答區</a>
+								<a class="nav-link " href="">問答區</a>
 							</li>
-							<li class="nav-item dropdown ml-md-auto">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://example.com" id="navbarDropdownMenuLink" style="position: relative;display: block;left: -310px">會員</a>
-								<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" style="left: -391.6px;right: 310px">
-									<!--此為未登入前-->
-									<a class="dropdown-item" href="#">登入</a>
-									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">註冊</a>
-									<!--登入後-->
-									<!--<a class="dropdown-item" href="#">個人小屋</a>
-										<div class="dropdown-divider"></div><a class="dropdown-item" href="#">註冊</a>-->
+
+							 <!-- {% if(is_login())  %} -->
+							<li class="nav-item">
+								<a class="nav-link d-none" href="../../index&member/src/個人小屋-關於我.html">個人小屋</a>
+							</li>
+
+							 <!-- else  -->
+							<li class="nav-item dropdown ml-mda-uto">
+							 	<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">會員</a>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+								 <a class="dropdown-item" href="../../index&member/src/註冊.html">註冊</a> <a class="dropdown-item" href="../../index&member/src/登入介面.html">登入</a>
 								</div>
 							</li>
-						</ul><!--<a href="url">7527</a> <a href="url">27272</a> <a href="url">2752752</a> <a href="url">7275275</a>-->
+							<!--  endif  -->
+					</ul>
+					<br>
+				</div>
+			</div>
+				<!--<a href="url">7527</a> <a href="url">27272</a> <a href="url">2752752</a> <a href="url">7275275</a>-->
 						<!--<ul id="List">
                         <ol>
                             <li>
@@ -59,10 +66,9 @@
                             </li>
                         </ul>
                     </nav>-->
-					</div>
-				</div>
+
 				<div class="row" style="position: relative; top: 58px">
-					<div class="col-md-8" style="left: 275px">
+					<div class="col-md-7" style="left: 275px">
 					<!--以下的DIV是可以切換問答類別,當使用者按下某個類別後須顯示該類別的所有文章-->
 					<div class="tabbable" id="tabs-890488" style="width: 954px;">
 						<ul class="nav nav-tabs" style="">
@@ -111,8 +117,16 @@
 					</div>
 					</div>
 					
-					<div class="col-md-1" style="top: 0px;left: -50px"><svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 19 19" role="img" class="_1lTvN blog-desktop-header-search-icon-fill"><path d="M12.8617648,11.8617648 L15.8633394,14.8633394 C15.9414442,14.9414442 15.9414442,15.0680772 15.8633394,15.1461821 L15.1461821,15.8633394 C15.0680772,15.9414442 14.9414442,15.9414442 14.8633394,15.8633394 L11.8617648,12.8617648 C10.9329713,13.578444 9.76865182,14.0047607 8.50476074,14.0047607 C5.46719462,14.0047607 3.00476074,11.5423269 3.00476074,8.50476074 C3.00476074,5.46719462 5.46719462,3.00476074 8.50476074,3.00476074 C11.5423269,3.00476074 14.0047607,5.46719462 14.0047607,8.50476074 C14.0047607,9.76865182 13.578444,10.9329713 12.8617648,11.8617648 Z M8.5,13 C10.9852814,13 13,10.9852814 13,8.5 C13,6.01471863 10.9852814,4 8.5,4 C6.01471863,4 4,6.01471863 4,8.5 C4,10.9852814 6.01471863,13 8.5,13 Z"></path></svg></div>
-					<div class="col-md-1" style="top: 0px;left: -130px"><svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 19 19" role="img" class="blog-header-widget-icon-fill members-icon-button"><path d="M9.5,8.59865341 C9.05873995,8.85390857 8.54643072,9 8,9 C6.34314575,9 5,7.65685425 5,6 C5,4.34314575 6.34314575,3 8,3 C8.54643072,3 9.05873995,3.14609143 9.5,3.40134659 C9.94126005,3.14609143 10.4535693,3 11,3 C12.6568542,3 14,4.34314575 14,6 C14,7.65685425 12.6568542,9 11,9 C10.4535693,9 9.94126005,8.85390857 9.5,8.59865341 Z M10.3330702,7.88610319 C10.5416639,7.95986345 10.7661447,8 11,8 C12.1045695,8 13,7.1045695 13,6 C13,4.8954305 12.1045695,4 11,4 C10.7661447,4 10.5416639,4.04013655 10.3330702,4.11389681 C10.7501616,4.62918795 11,5.28541753 11,6 C11,6.71458247 10.7501616,7.37081205 10.3330702,7.88610319 Z M9.5,10 L13,10 C14.6568542,10 16,11.3431458 16,13 L16,16 C16,16.5522847 15.5522847,17 15,17 L9.5,17 L4,17 C3.44771525,17 3,16.5522847 3,16 L3,13 C3,11.3431458 4.34314575,10 6,10 L6,10 L9.5,10 Z M12.2361065,11 C12.7111464,11.5307565 13,12.2316456 13,13 L13,16 L15,16 L15,13 C15,11.8954305 14.1045695,11 13,11 L12.2361065,11 Z M6,11 L6,11 C4.8954305,11 4,11.8954305 4,13 L4,16 L12,16 L12,13 C12,11.8954305 11.1045695,11 10,11 L6,11 Z M8,8 C9.1045695,8 10,7.1045695 10,6 C10,4.8954305 9.1045695,4 8,4 C6.8954305,4 6,4.8954305 6,6 C6,7.1045695 6.8954305,8 8,8 Z"></path></svg></div>
+					<div class="col-md-2" style="text-align: left;left: -6%">
+								<span style="position: relative;top: 0%; border-bottom: #04f 1px solid;">
+									<input type="text" class="search-input" placeholder="在此輸入搜尋內容">
+											<svg class="qqNm_ desktop-header-search-icon-fill button-hover-fill style-jvp6q3ta" data-hook="search-icon" height="16" style="fill-rule:evenodd" viewBox="0 0 15 16" width="15" xmlns="http://www.w3.org/2000/svg" onclick="">
+												<path d="M878.766,254.573l-3.7-3.96a6.555,6.555,0,0,0,1.471-4.153,6.274,6.274,0,1,0-6.27,6.46,6.074,6.074,0,0,0,3.592-1.169l3.725,3.99a0.8,0.8,0,0,0,1.156.024A0.862,0.862,0,0,0,878.766,254.573Zm-8.5-12.888a4.777,4.777,0,1,1-4.636,4.775A4.712,4.712,0,0,1,870.27,241.685Z" transform="translate(-864 -240)"></path>
+											</svg>
+								</span>
+									
+							</div>
+					<div class="col-md-1" style="top: 0px;left: -130px"><svg xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 19 19" role="img" class="blog-header-widget-icon-fill members-icon-button style-jvp6q3ta" onclick=""><path d="M9.5,8.59865341 C9.05873995,8.85390857 8.54643072,9 8,9 C6.34314575,9 5,7.65685425 5,6 C5,4.34314575 6.34314575,3 8,3 C8.54643072,3 9.05873995,3.14609143 9.5,3.40134659 C9.94126005,3.14609143 10.4535693,3 11,3 C12.6568542,3 14,4.34314575 14,6 C14,7.65685425 12.6568542,9 11,9 C10.4535693,9 9.94126005,8.85390857 9.5,8.59865341 Z M10.3330702,7.88610319 C10.5416639,7.95986345 10.7661447,8 11,8 C12.1045695,8 13,7.1045695 13,6 C13,4.8954305 12.1045695,4 11,4 C10.7661447,4 10.5416639,4.04013655 10.3330702,4.11389681 C10.7501616,4.62918795 11,5.28541753 11,6 C11,6.71458247 10.7501616,7.37081205 10.3330702,7.88610319 Z M9.5,10 L13,10 C14.6568542,10 16,11.3431458 16,13 L16,16 C16,16.5522847 15.5522847,17 15,17 L9.5,17 L4,17 C3.44771525,17 3,16.5522847 3,16 L3,13 C3,11.3431458 4.34314575,10 6,10 L6,10 L9.5,10 Z M12.2361065,11 C12.7111464,11.5307565 13,12.2316456 13,13 L13,16 L15,16 L15,13 C15,11.8954305 14.1045695,11 13,11 L12.2361065,11 Z M6,11 L6,11 C4.8954305,11 4,11.8954305 4,13 L4,16 L12,16 L12,13 C12,11.8954305 11.1045695,11 10,11 L6,11 Z M8,8 C9.1045695,8 10,7.1045695 10,6 C10,4.8954305 9.1045695,4 8,4 C6.8954305,4 6,4.8954305 6,6 C6,7.1045695 6.8954305,8 8,8 Z"></path></svg></div>
 					
 					<div class="col-md-2" style="top: -10px;left: -190px"><button type="button" class="btn btn-success">
 						登入/註冊
@@ -132,7 +146,7 @@
 		</div>
 		<div class="row" style="position: relative; top:80px; height: 600px">
 			<div class="col-md-12">
-				<div class="style-jvrxxn4u" id="comp-jvrxi3cl" style="border: gray 1px solid; left: 50%; margin-left: -469px; width: 953px; position: relative; top: 0px; height: 549px;"><div id="comp-jvrxi3clbg" class="style-jvrxxn4ubg"></div><div class="style-jvrxxn4uinlineContent" id="comp-jvrxi3clinlineContent"><div class="ImageButton_1" data-state="supports_opacity transition_none   " id="comp-jvrxi3do" style="left: 100px; width: 64px; position: absolute; top: 33.5px; height: 61px;"><a title="" id="comp-jvrxi3dolink" class="ImageButton_1link" style="width: 64px; height: 61px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvrxi3dodefaultImage" style="position: relative; width: 64px; height: 61px;"><img id="comp-jvrxi3dodefaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_122,h_122,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 64px; height: 61px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvrxi3dohoverImage" style="position: relative; width: 64px; height: 61px;"><img id="comp-jvrxi3dohoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.png/v1/fill/w_122,h_122,al_c,q_90/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.webp" style="width: 64px; height: 61px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvrxi3doactiveImage" style="position: relative; width: 64px; height: 61px;"><img id="comp-jvrxi3doactiveImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_122,h_122,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 64px; height: 61px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+				<div class="style-jvrxxn4u" id="comp-jvrxi3cl" style="border: gray 1px solid; left: 50%; margin-left: -469px; width: 953px; position: relative; top: 0px; height: 549px;"><div id="comp-jvrxi3clbg" class="style-jvrxxn4ubg"></div><div class="style-jvrxxn4uinlineContent" id="comp-jvrxi3clinlineContent"><div class="ImageButton_1 style-jvp6q3ta" data-state="supports_opacity transition_none   " id="comp-jvrxi3do" style="left: 100px; width: 64px; position: absolute; top: 33.5px; height: 61px;" onclick="location.href='#'"><a title="" id="comp-jvrxi3dolink" class="ImageButton_1link" style="width: 64px; height: 61px;"><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1defaultImage" id="comp-jvrxi3dodefaultImage" style="position: relative; width: 64px; height: 61px;"><img id="comp-jvrxi3dodefaultImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_122,h_122,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 64px; height: 61px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1hoverImage" id="comp-jvrxi3dohoverImage" style="position: relative; width: 64px; height: 61px;"><img id="comp-jvrxi3dohoverImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.png/v1/fill/w_122,h_122,al_c,q_90/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.webp" style="width: 64px; height: 61px; object-fit: contain;"></div></div><div class="ImageButton_1_correct-positioning"><div data-has-bg-scroll-effect="" data-style="" class="ImageButton_1activeImage" id="comp-jvrxi3doactiveImage" style="position: relative; width: 64px; height: 61px;"><img id="comp-jvrxi3doactiveImageimage" alt="" data-type="image" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_122,h_122,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 64px; height: 61px; object-fit: contain;"></div></div></a></div><style type="text/css" data-styleid="ImageButton_1">.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
 .ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
 .ImageButton_1defaultImage {position:absolute;opacity:1;}
 .ImageButton_1hoverImage {position:absolute;opacity:0;}
@@ -152,7 +166,7 @@
 .ImageButton_1hoverImage {overflow:hidden;}
 .ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
 .ImageButton_1activeImage {overflow:hidden;}
-.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-packed="false" class="txtNew" id="comp-jvrxi3e8" style="left: 167.5px; width: 64px; position: absolute; pointer-events: none; top: 44px;"><h1 class="font_0" style="font-size:15px;"><span style="font-size:15px;">用戶名稱</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
+.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}</style><div data-packed="false" class="txtNew" id="comp-jvrxi3e8" style="left: 167.5px; width: 64px; position: absolute; pointer-events: none; top: 44px;"><h1 class="font_0" style="font-size:15px;"><span class="style-jvp6q3ta" style="font-size:15px;" onclick="location.href='#'">用戶名稱</span></h1><div class="measurer" style="position: absolute"></div></div><style type="text/css" data-styleid="txtNew">.txtNew {word-wrap:break-word;text-align:start;}
 .txtNew_override-left * {text-align:left !important;}
 .txtNew_override-right * {text-align:right !important;}
 .txtNew_override-center * {text-align:center !important;}
@@ -196,7 +210,7 @@
 .txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
 .txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
 .txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-.txtNew a {color:inherit;}</style><div class="style-jvrxi3j8" id="comp-jvrxi3j4" style="left: 741px; width: 142px; position: absolute; top: 44px; height: 44px;"><div id="comp-jvrxi3j4bg" class="style-jvrxi3j8bg"></div><div class="style-jvrxi3j8inlineContent" id="comp-jvrxi3j4inlineContent"><div data-svg-id="28ba11b32f354afab995adf598678192.svg" data-svg-type="color" data-display-mode="fit" data-viewbox="0 0 200 200" data-preserve-viewbox="ignore" class="style-jvrxi3ji1" id="comp-jvrxi3jd" style="left: 20px; width: 16.9794px; position: absolute; top: 14px; height: 16px;"><style> .style-jvrxi3ji1_comp-jvrxi3jd svg [data-color="1"] {fill: rgba(54, 56, 54, 1);}
+.txtNew a {color:inherit;}</style><div class="style-jvrxi3j8 style-jvp6q3ta" id="comp-jvrxi3j4" style="left: 741px; width: 142px; position: absolute; top: 44px; height: 44px;" onclick=""><div id="comp-jvrxi3j4bg" class="style-jvrxi3j8bg"></div><div class="style-jvrxi3j8inlineContent" id="comp-jvrxi3j4inlineContent"><div data-svg-id="28ba11b32f354afab995adf598678192.svg" data-svg-type="color" data-display-mode="fit" data-viewbox="0 0 200 200" data-preserve-viewbox="ignore" class="style-jvrxi3ji1" id="comp-jvrxi3jd" style="left: 20px; width: 16.9794px; position: absolute; top: 14px; height: 16px;"><style> .style-jvrxi3ji1_comp-jvrxi3jd svg [data-color="1"] {fill: rgba(54, 56, 54, 1);}
 </style><div id="comp-jvrxi3jdlink" class="style-jvrxi3ji1link"><div class="style-jvrxi3ji1_comp-jvrxi3jd style-jvrxi3ji1_non-scaling-stroke style-jvrxi3ji1svg" id="comp-jvrxi3jdsvg" style="opacity: 1;"><svg preserveAspectRatio="xMidYMid meet" data-bbox="22 26.499 156 147.002" viewBox="22.000001907348633 26.498992919921875 156 147.00204467773438" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img" style="">
     <g>
         <path d="M73.958 173.5a9.357 9.357 0 0 1-4.653-1.243l-16.613-9.581a9.25 9.25 0 0 1-4.341-5.649 9.221 9.221 0 0 1 .521-6.264l4.423-17.894-5.158-8.914-17.724-5.118c-4.712-.451-8.413-4.432-8.413-9.257V90.42c0-4.826 3.701-8.807 8.415-9.257l17.722-5.12 5.16-8.913-4.423-17.891a9.231 9.231 0 0 1-.523-6.263 9.231 9.231 0 0 1 4.341-5.652l16.613-9.579a9.342 9.342 0 0 1 4.654-1.245 9.357 9.357 0 0 1 7.58 3.891l13.296 12.767h10.331l13.294-12.766a9.35 9.35 0 0 1 7.581-3.893c1.629 0 3.238.43 4.653 1.246l16.614 9.578a9.241 9.241 0 0 1 4.341 5.649 9.23 9.23 0 0 1-.525 6.269L146.7 67.129l5.159 8.915 17.724 5.12c4.715.449 8.417 4.43 8.417 9.257v19.16c0 4.827-3.702 8.806-8.417 9.257l-17.724 5.118-5.159 8.914 4.422 17.891a9.216 9.216 0 0 1 .524 6.264 9.252 9.252 0 0 1-4.344 5.653l-16.611 9.578a9.339 9.339 0 0 1-4.653 1.245 9.348 9.348 0 0 1-7.582-3.897l-13.291-12.76h-10.33L81.54 169.609a9.355 9.355 0 0 1-7.582 3.891zM58.91 154.099l14.723 8.492 16.954-16.28h18.826l16.953 16.279 14.72-8.491-5.642-22.827 9.411-16.257 22.6-6.525V91.512l-22.6-6.527-9.411-16.261 5.642-22.825-14.72-8.488-16.953 16.278H90.587L73.633 37.411 58.91 45.899l5.643 22.83-9.411 16.257-22.597 6.524v16.98l22.601 6.525 9.407 16.257-5.643 22.827z" fill="#4854C7" data-color="1"></path>
@@ -273,27 +287,15 @@
 .txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
 .txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
 .txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-.txtNew a {color:inherit;}</style><div data-border-width="1" class="style-jvrxi3fo" id="comp-jvrxi3fl" style="transform-origin: center 0.5px; left: 107px; width: 736px; position: absolute; top: 399.933px; height: 5px;"></div><style type="text/css" data-styleid="style-jvrxi3fo">.style-jvrxi3fo {box-sizing:border-box;border-top:1px solid rgba(232, 230, 230, 1);height:0;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrxi3g31" id="comp-jvrxi3fy" style="left: 121.5px; width: 24px; position: absolute; top: 412.433px; height: 24px;"><div id="comp-jvrxi3fylink" class="style-jvrxi3g31link"><div class="style-jvrxi3g31_comp-jvrxi3fy style-jvrxi3g31_non-scaling-stroke style-jvrxi3g31svg" id="comp-jvrxi3fysvg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg preserveAspectRatio="none" data-bbox="1.5 1.5 57 57" xmlns="http://www.w3.org/2000/svg" viewBox="1.5 1.5 57 57" role="img" style="stroke-width: 0px;">
-    <g>
-        <path d="M46.5 58.5h-33c-6.6 0-12-5.4-12-12v-33c0-6.6 5.4-12 12-12h33c6.6 0 12 5.4 12 12v33c0 6.6-5.4 12-12 12z"></path>
-    </g>
-</svg>
+.txtNew a {color:inherit;}</style><div data-border-width="1" class="style-jvrxi3fo" id="comp-jvrxi3fl" style="transform-origin: center 0.5px; left: 107px; width: 736px; position: absolute; top: 399.933px; height: 5px;"></div><style type="text/css" data-styleid="style-jvrxi3fo">.style-jvrxi3fo {box-sizing:border-box;border-top:1px solid rgba(232, 230, 230, 1);height:0;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrxi3g31 style-jvp6q3ta" id="comp-jvrxi3fy" style="left: 121.5px; width: 24px; position: absolute; top: 412.433px; height: 24px;" onclick=""><div id="comp-jvrxi3fylink" class="style-jvrxi3g31link"><div class="style-jvrxi3g31_comp-jvrxi3fy style-jvrxi3g31_non-scaling-stroke style-jvrxi3g31svg" id="comp-jvrxi3fysvg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg width="19" height="19" viewBox="0 0 19 19"><g fill-rule="evenodd"><path d="M2 6a1 1 0 0 1 1-1h2.75l.668-1.424A1 1 0 0 1 7.323 3h4.354a1 1 0 0 1 .905.576L13.25 5H16a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6zm1 0v8h13V6h-3.5l-1.018-2H7.518L6.5 6H3zm6.5 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0-1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" id="path-1"></path></g></svg>
 </div></div></div><style type="text/css" data-styleid="style-jvrxi3g31">.style-jvrxi3g31 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
 .style-jvrxi3g31link,.style-jvrxi3g31svg {position:absolute;top:0;right:0;bottom:0;left:0;}
 .style-jvrxi3g31 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
-.style-jvrxi3g31_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrxi3gj1" id="comp-jvrxi3ge" style="left: 165.5px; width: 24px; position: absolute; top: 412.433px; height: 24px;"><div id="comp-jvrxi3gelink" class="style-jvrxi3gj1link"><div class="style-jvrxi3gj1_comp-jvrxi3ge style-jvrxi3gj1_non-scaling-stroke style-jvrxi3gj1svg" id="comp-jvrxi3gesvg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg preserveAspectRatio="none" data-bbox="1.5 1.5 57 57" xmlns="http://www.w3.org/2000/svg" viewBox="1.5 1.5 57 57" role="img" style="stroke-width: 0px;">
-    <g>
-        <path d="M46.5 58.5h-33c-6.6 0-12-5.4-12-12v-33c0-6.6 5.4-12 12-12h33c6.6 0 12 5.4 12 12v33c0 6.6-5.4 12-12 12z"></path>
-    </g>
-</svg>
+.style-jvrxi3g31_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrxi3gj1 style-jvp6q3ta" id="comp-jvrxi3ge" style="left: 165.5px; width: 24px; position: absolute; top: 412.433px; height: 24px;" onclick=""><div id="comp-jvrxi3gelink" class="style-jvrxi3gj1link"><div class="style-jvrxi3gj1_comp-jvrxi3ge style-jvrxi3gj1_non-scaling-stroke style-jvrxi3gj1svg" id="comp-jvrxi3gesvg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19 19"><defs><path id="video-icon-path" d="M14 7l2.842-1.421A.8.8 0 0 1 18 6.294v6.412a.8.8 0 0 1-1.158.715L14 12v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v2zm0 3.9l2.708 1.354a.2.2 0 0 0 .29-.179V6.922a.2.2 0 0 0-.29-.178L14 8.098V10.9zM2 5v9h11V5H2z"></path></defs><g fill-rule="evenodd"><mask id="video-icon-mask"><use xlink:href="#video-icon-path"></use></mask><use fill-rule="nonzero" xlink:href="#video-icon-path"></use></g></svg>
 </div></div></div><style type="text/css" data-styleid="style-jvrxi3gj1">.style-jvrxi3gj1 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
 .style-jvrxi3gj1link,.style-jvrxi3gj1svg {position:absolute;top:0;right:0;bottom:0;left:0;}
 .style-jvrxi3gj1 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
-.style-jvrxi3gj1_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrxi3h9" id="comp-jvrxi3h1" style="left: 209.5px; width: 24px; position: absolute; top: 412.433px; height: 24px;"><div id="comp-jvrxi3h1link" class="style-jvrxi3h9link"><div class="style-jvrxi3h9_comp-jvrxi3h1 style-jvrxi3h9_non-scaling-stroke style-jvrxi3h9svg" id="comp-jvrxi3h1svg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg preserveAspectRatio="none" data-bbox="1.5 1.5 57 57" xmlns="http://www.w3.org/2000/svg" viewBox="1.5 1.5 57 57" role="img" style="stroke-width: 0px;">
-    <g>
-        <path d="M46.5 58.5h-33c-6.6 0-12-5.4-12-12v-33c0-6.6 5.4-12 12-12h33c6.6 0 12 5.4 12 12v33c0 6.6-5.4 12-12 12z"></path>
-    </g>
-</svg>
+.style-jvrxi3gj1_non-scaling-stroke * {vector-effect:non-scaling-stroke;}</style><div data-svg-id="be029226280349de8ba140f1a7dffd40.svg" data-svg-type="shape" data-display-mode="stretch" data-strokewidth="0" data-viewbox="0 0 60 60" data-preserve-viewbox="ignore" class="style-jvrxi3h9 style-jvp6q3ta" id="comp-jvrxi3h1" style="left: 209.5px; width: 24px; position: absolute; top: 412.433px; height: 24px;" onclick=""><div id="comp-jvrxi3h1link" class="style-jvrxi3h9link"><div class="style-jvrxi3h9_comp-jvrxi3h1 style-jvrxi3h9_non-scaling-stroke style-jvrxi3h9svg" id="comp-jvrxi3h1svg" style="fill-opacity: 1; stroke-width: 0; stroke: rgb(54, 56, 54); stroke-opacity: 1; fill: rgb(57, 57, 57);"><svg width="19" height="19" viewBox="0 0 19 19"><path fill-rule="evenodd" d="M16.8 4c.11 0 .2.09.2.2v2.6a.2.2 0 0 1-.2.2h-.6a.2.2 0 0 1-.2-.2V5H3v1.8a.2.2 0 0 1-.2.2h-.6a.2.2 0 0 1-.2-.2V4.2c0-.11.09-.2.2-.2h14.6zM2.2 15a.2.2 0 0 1-.2-.2v-2.6c0-.11.09-.2.2-.2h.6c.11 0 .2.09.2.2V14h13v-1.8c0-.11.09-.2.2-.2h.6c.11 0 .2.09.2.2v2.6a.2.2 0 0 1-.2.2H2.2zm2-6h10.6c.11 0 .2.09.2.2v.6a.2.2 0 0 1-.2.2H4.2a.2.2 0 0 1-.2-.2v-.6c0-.11.09-.2.2-.2z"></path></svg>
 </div></div></div><style type="text/css" data-styleid="style-jvrxi3h9">.style-jvrxi3h9 {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
 .style-jvrxi3h9link,.style-jvrxi3h9svg {position:absolute;top:0;right:0;bottom:0;left:0;}
 .style-jvrxi3h9 svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}

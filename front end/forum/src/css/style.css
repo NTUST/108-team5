@@ -4,9 +4,9 @@
 	margin-right:25px;
 }
 
-.board>.row>div:hover{
+/*.board>.row>div:hover{
 	cursor: pointer;
-}
+}*/
 .style-jvp6q3ta{
 	cursor: pointer;
 }
@@ -22,4 +22,26 @@
 }
 .search-input::placeholder{
 	font-size: 12px;
+}
+
+#div1{
+	/*top: 40px
+  left: 270px*/
+  left:15%;
+}
+#div2{
+ /* top: 55px;*/
+	margin-top: 30px;
+}
+@media screen and (max-width:800px) {
+  #div1 {
+  	left: 18%;
+  }
+  #div2{
+	margin-left:16%;
+
+  }
+  #div3{
+	text-align: center;
+  }
 }
