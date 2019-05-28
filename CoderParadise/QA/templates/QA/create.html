@@ -1,0 +1,15 @@
+{% extends 'QA/layout.html' %}
+{% block content %}
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+
+    <div class="col-md-9" id="div1">
+        <div name="editor1"></div>
+        <script>
+            CKEDITOR.replace( 'editor1' , {uiColor: '#0000000f'});
+        </script>
+        <button class="btn btn-primary create-post style-jvp6q3ta" type="button" style="position: relative;"  onclick="location.href='/QA/'">
+            <div style="position: relative;display: inline-block;">SAVE</div>
+        </button>
+    <div>
+
+{% endblock content %}

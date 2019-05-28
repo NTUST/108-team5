@@ -1,0 +1,31 @@
+{% extends 'QA/layout.html' %}
+{% block content %}
+
+<div class="col-md-9" id="div1">
+    <button class="btn btn-primary create-post style-jvp6q3ta" type="button" style="position: relative;"  onclick="location.href='/QA/'">
+        <div style="position: relative;display: inline-block;">BACK</div>
+    </button>
+    <div class="card" style="margin-top: 10px; padding: 10px">
+        <h2>{{data.title}}</h2>
+            <div>{{ data.body|safe }}</div>
+        <hr>
+        <h3>Answer</h3>
+        {% for data in anss%}   
+            <div class="card-body">
+                <div class="list">
+                    <p class="card-text">
+                        <div class="">
+                            <a href="">{{data.postedUser}}</a>
+                        </div>
+                        <div>
+                            <a><span style="white-space: pre-line">{{data.body}}</span></a>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock content %}
