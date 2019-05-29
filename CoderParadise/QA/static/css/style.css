@@ -1,0 +1,54 @@
+#div1{
+	/*top: 40px
+  left: 270px*/
+  left:15%;
+}
+#div2{
+ /* top: 55px;*/
+	margin-top: 30px;
+}
+@media screen and (max-width:800px) {
+  #div1 {
+  	left: 18%;
+  }
+  #div2{
+	margin-left:16%;
+
+  }
+  #div3{
+	text-align: center;
+  }
+}
+.style-jvp6q3ta{
+  cursor: pointer;
+}
+.search-input{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 70%;
+}
+.search-input::placeholder{
+  font-size: 12px;
+}
+.create-post{
+  border-radius: 0px
+}
+.create-post-svg{
+  fill: white
+}
+
+.title{
+  font-weight:bold;
+  font-size: 24px;
+}
+
+.list{
+  border-bottom: 1px solid #f4f4f4;
+  margin-left: 2%;
+}
+
+body{
+  font-family: Helvetica, Arial,LiHei Pro,黑體-繁,微軟正黑體, sans-serif;
+}
+

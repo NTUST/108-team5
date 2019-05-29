@@ -1,0 +1,139 @@
+{% extends 'QA/layout.html' %}
+
+{% block content %}
+<div class="col-md-9" id="div1">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active show" href="#tab1" data-toggle="tab">所有文章</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab2" data-toggle="tab">C</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab3" data-toggle="tab">Java</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab4" data-toggle="tab">Python</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tab5" data-toggle="tab">其他</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="panel-538244">
+            <div class="card">
+                {% for data in datasAll%}   
+                    <div class="card-body">
+                        <div class="list">
+                            <p class="card-text">
+                                <div class="title">
+                                    <a  href="/QA/detail/{{data.id}}">{{data.title}}</a>
+                                </div>
+                                <div>
+                                    <a>{{data.postedUser}}</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="tab-pane" id="tab1">
+            <div class="card">
+                {% for data in datasAll%}   
+                    <div class="card-body">
+                        <div class="list">
+                            <p class="card-text">
+                                <div class="title">
+                                    <a href="/QA/detail/{{data.id}}">{{data.title}}</a>
+                                </div>
+                                <div>
+                                    <a>{{data.postedUser}}</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="tab-pane" id="tab2">
+            <div class="card">
+                {% for data in datasCPP%}   
+                    <div class="card-body">
+                        <div class="list">
+                            <p class="card-text">
+                                <div class="title">
+                                    <a href="/QA/detail/{{data.id}}">{{data.title}}</a>
+                                </div>
+                                <div>
+                                    <a>{{data.postedUser}}</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="tab-pane" id="tab3">
+            <div class="card">
+                {% for data in datasJava%}   
+                    <div class="card-body">
+                        <div class="list">
+                            <p class="card-text">
+                                <div class="title">
+                                    <a href="/QA/detail/{{data.id}}">{{data.title}}</a>
+                                </div>
+                                <div>
+                                    <a>{{data.postedUser}}</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="tab-pane" id="tab4">
+            <div class="card">
+                {% for data in datasPython%}   
+                    <div class="card-body">
+                        <div class="list">
+                            <p class="card-text">
+                                <div class="title">
+                                    <a href="/QA/detail/{{data.id}}">{{data.title}}</a>
+                                </div>
+                                <div>
+                                    <a>{{data.postedUser}}</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="tab-pane" id="tab5">
+            <div class="card">
+                {% for data in datasOther%}   
+                    <div class="card-body">
+                        <div class="list">
+                            <p class="card-text">
+                                <div class="title">
+                                    <a href="/QA/detail/{{data.id}}">{{data.title}}</a>
+                                </div>
+                                <div>
+                                    <a>{{data.postedUser}}</a>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary create-post style-jvp6q3ta" type="button" style="width: 290px;height: 50px; position: relative; left: 0%"  onclick="location.href='/QA/create'">
+        <div style="position: relative; left: -30%; text-align: right;display: inline-block;">建立文章</div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" viewBox="0 0 445 445" class="create-post-svg" style="position: relative; left: 30%; fill-rule: evenodd; clip-rule: evenodd;display: inline-block;">
+            <polygon points="427.4,199.7 245.3,199.7 245.3,17.6 199.7,17.6 199.7,199.7 17.6,199.7 17.6,245.3 199.7,245.3 199.7,427.4 245.3,427.4 245.3,245.3 427.4,245.3"></polygon>
+        </svg>
+    </button>
+</div>
+{% endblock content %}
