@@ -2,7 +2,12 @@
 {% block content %}
     <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 
+
     <div class="col-md-9" id="div1">
+    
+        <input class="col-md-12" type="text" name="title_textbox" id="title_textbox" placeholder="Title">
+        <br>
+        <br>
         <div name="editor1"></div>
         <script>
             CKEDITOR.replace( 'editor1' , {uiColor: '#0000000f'});
