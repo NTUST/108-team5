@@ -1,4 +1,4 @@
-{% extends 'QA/layout.html' %}
+{% extends 'main/layout.html' %}
 {% block content %}
 
 <div class="col-md-9" id="div1">
@@ -6,6 +6,7 @@
         <div style="position: relative;display: inline-block;">BACK</div>
     </button>
     <div class="card" style="margin-top: 10px; padding: 10px">
+        <h6>{{data.postedUser}}</h6>
         <h2>{{data.title}}</h2>
         <div>{{ data.body|safe }}</div>
         <hr>
