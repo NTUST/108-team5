@@ -7,9 +7,19 @@
     </button>
     <div class="card" style="margin-top: 10px; padding: 10px">
         <h2>{{data.title}}</h2>
-            <div>{{ data.body|safe }}</div>
+        <div>{{ data.body|safe }}</div>
         <hr>
+
         <h3>Answer</h3>
+
+        <textarea class="comment-content open" name="comment_content" id="comment_content" placeholder="Answer something?"></textarea>
+        <div style="margin-left: auto;">
+            <button class="btn btn-primary create-post style-jvp6q3ta" type="button" style="position: relative;width:100px;" onclick="location.href='/QA/'">
+                <div style="position: relative;display: inline-block;">Send</div>
+            </button>
+        </div>
+
+
         {% for data in anss%}   
             <div class="card-body">
                 <div class="list">
