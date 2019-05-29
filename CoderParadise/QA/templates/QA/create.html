@@ -1,4 +1,4 @@
-{% extends 'QA/layout.html' %}
+{% extends 'main/layout.html' %}
 {% block content %}
     <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 
@@ -8,7 +8,7 @@
         <input class="col-md-12" type="text" name="title_textbox" id="title_textbox" placeholder="Title">
         <br>
         <br>
-        <div name="editor1"></div>
+        <textarea name="editor1"></textarea>
         <script>
             CKEDITOR.replace( 'editor1' , {uiColor: '#0000000f'});
         </script>

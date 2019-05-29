@@ -11,37 +11,45 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container-fluid" style="height:auto	;">
-		<div class="row" style="height: auto;">
-			<div class="col-md-12" style="height: auto;">
-				<div class="row" style="height: auto;">
-					<div class="col-md-6" style="top: 40px;left: 270px;height: auto;">
-						<div style="height: auto;">
-							<h1 style="font-size:66px;color: lightblue"><a href="" style="text-decoration:none;"><b>碼農天堂</b></a></h1>
-						</div>
-					</div>
-					<div class="col-md-6" style="top: 55px;height: auto;">
-						<ul class="nav">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row" style="background: white;" >
+				<div class="col-md-8" id="div1">
+					<h1 style="font-size: 66px;color: blue;margin-top: 1%">
+						<a href="index.html" style="text-decoration:none;1"><b>碼農天堂</b></a></h1>
+					</h1>
+				</div>
+				<div class="col-md-4">
+					<ul class="nav" id="div2">
 							<li class="nav-item">
-								<a class="nav-link active" href="../../index&member/src/index.html" style="position: relative;display: block;left: 120px;">首頁</a>
+								<a class="nav-link active" href="../../index&member/src/index.html">首頁</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="../../forum/src/forum_index.html" style="position: relative;display: block;left: 120px;">討論區</a>
+								<a class="nav-link" href="../../forum/src/forum_index.html">討論區</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="" style="position: relative;display: block;left: 120px;">問答區</a>
+								<a class="nav-link " href="">問答區</a>
 							</li>
-							<li class="nav-item dropdown ml-md-auto">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://example.com" id="navbarDropdownMenuLink" style="position: relative;display: block;left: -310px">會員</a>
-								<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" style="left: -391.6px;right: 310px;height: auto;">
-									<!--此為未登入前-->
-									<a class="dropdown-item" href="#">登入</a>
-									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">註冊</a> <!--登入後-->
-									 <!--<a class="dropdown-item" href="#">個人小屋</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#">註冊</a>-->
+
+							 <!-- {% if(is_login())  %} -->
+							<li class="nav-item">
+								<a class="nav-link d-none" href="../../index&member/src/個人小屋-關於我.html">個人小屋</a>
+							</li>
+
+							 <!-- else  -->
+							<li class="nav-item dropdown ml-mda-uto">
+							 	<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">會員</a>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+								 <a class="dropdown-item" href="../../index&member/src/註冊.html">註冊</a> <a class="dropdown-item" href="../../index&member/src/登入介面.html">登入</a>
 								</div>
 							</li>
-						</ul><!--<a href="url">7527</a> <a href="url">27272</a> <a href="url">2752752</a> <a href="url">7275275</a>-->
+							<!--  endif  -->
+					</ul>
+					<br>
+				</div>
+			</div>
+			<!--<a href="url">7527</a> <a href="url">27272</a> <a href="url">2752752</a> <a href="url">7275275</a>-->
 						<!--<ul id="List">
                         <ol>
                             <li>
@@ -58,8 +66,6 @@
                             </li>
                         </ul>
                     </nav>-->
-					</div>
-				</div>
 				<div class="row" style="position: relative; top: 58px">
 					<div class="col-md-7" style="left: 275px">
 						<!--以下的DIV是可以切換問答類別,當使用者按下某個類別後須顯示該類別的所有文章-->
