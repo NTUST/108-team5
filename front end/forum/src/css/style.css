@@ -45,6 +45,9 @@
 	text-align: center;
   }
 }
-div.style-jvqa3opr{
-	height: auto;
+.create-post{
+  border-radius: 0px
+}
+.create-post-svg{
+  fill: white
 }

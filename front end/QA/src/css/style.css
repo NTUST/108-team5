@@ -37,3 +37,11 @@
 .create-post-svg{
   fill: white
 }
+#List li{
+  display:inline;
+  top: 25px;
+  margin-right:25px;
+}
+.board>.row>div:hover .link-board{
+  display: inline-block !important;
+}
