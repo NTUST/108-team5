@@ -24,6 +24,15 @@
 	font-size: 12px;
 }
 
+
+.create-post{
+  border-radius: 0px
+}
+.create-post-svg{
+  fill: white
+}
+
+
 #div1{
 	/*top: 40px
   left: 270px*/
@@ -65,3 +74,4 @@
 }
 .comp-jvqa3otnsvg svg{
 	fill: #e84a43;
+}
