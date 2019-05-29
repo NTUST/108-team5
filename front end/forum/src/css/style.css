@@ -24,6 +24,15 @@
 	font-size: 12px;
 }
 
+
+.create-post{
+  border-radius: 0px
+}
+.create-post-svg{
+  fill: white
+}
+
+
 #div1{
 	/*top: 40px
   left: 270px*/
@@ -44,10 +53,4 @@
   #div3{
 	text-align: center;
   }
-}
-.create-post{
-  border-radius: 0px
-}
-.create-post-svg{
-  fill: white
 }

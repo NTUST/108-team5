@@ -1,22 +1,33 @@
 #div1{
-	/*top: 40px
-  left: 270px*/
-  left:15%;
+  /*首頁標題區的排版*/
+  left:12%;
 }
 #div2{
- /* top: 55px;*/
+  /*首頁標題區的排版*/
 	margin-top: 30px;
 }
+#div4{
+  /*個人小屋標題區的排版*/
+  margin-top: 30px;
+}
+
 @media screen and (max-width:800px) {
   #div1 {
-  	left: 18%;
+    /*首頁標題區的排版*/
+  	left: 19%;
   }
   #div2{
+    /*首頁標題區的排版*/
 	margin-left:16%;
 
   }
   #div3{
+    /*首頁新聞區文字的排版*/
 	text-align: center;
+  }
+  #div4{
+ /*個人小屋標題區的排版*/
+  margin-left: 11%;
   }
 }
 
@@ -44,7 +55,7 @@ header {
 nav {
   float: left;
   width: 30%;
- height: 600px;   /* only for demonstration, should be removed */
+ height: 600px;    only for demonstration, should be removed 
   background: white;
   padding: 20px;
 }
@@ -117,7 +128,5 @@ footer {
   position: relative;
   top: 120px;
 }
-
-
 
 

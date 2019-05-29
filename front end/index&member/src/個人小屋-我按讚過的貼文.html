@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div class="row" style="background: white;" >
-				<div class="col-md-7" id="div1">
+				<div class="col-md-7" id="div1" >
 					<h1 style="font-size: 66px;color: blue;margin-top: 1%">
 								<a href="index.html" style="text-decoration:none;1"><b>碼農天堂</b></a></h1>
 					</h1>
@@ -20,7 +20,7 @@
 				<div class="col-md-5" >
 					<ul class="nav" id="div4">
 							<li class="nav-item">
-								<a class="nav-link active" href="index.html">首頁</a>
+								<a class="nav-link active" href="#">首頁</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#">討論區</a>
@@ -29,7 +29,7 @@
 								<a class="nav-link " href="#">問答區</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link " href="個人小屋-關於我.html">個人小屋</a>
+								<a class="nav-link " href="#">個人小屋</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link " href="#">登出</a>
@@ -55,7 +55,7 @@
 		      <li><a href="個人小屋-我按讚過的貼文.html">我按讚的貼文</a></li>
 		      <li><a href="個人小屋-正在追蹤.html">正在追蹤</a></li>
 		      <li><a href="個人小屋-粉絲.html">粉絲</a></li>
-		      <!-- {% if(是自己的個人小屋())  %}-->
+		       <!-- {% if(是自己的個人小屋())  %}-->
 		      <a href="編輯個人資料.html" class="btn btn-info" role="button">編輯個人檔案</a>
 		      <!-- else -->
 		      <a href="#" class="btn btn-info" role="button">追蹤+</a>
@@ -64,30 +64,20 @@
 		  </nav>
 		  
 		  <article>
-		  	<!--可依粉絲人數調整方框-->
-		  	<li style="border: 3px solid;padding: 25px;display: inline-block;margin-top: 10px;border-radius: 30px;border-color:blue;width: 23%;height: auto;">
+		  	<!--顯示出使用者撰寫過的文章的超連結，板塊可以自己加-->
+		  	<li style="border: 3px solid;padding: 25px;display: inline-flex;margin-top: 10px;border-radius: 30px;border-color:blue;">
 		  		<span>
-		  			<img src="下載.jpg" style="width: 30%;height: auto;">	Name
+		  			<a href="#">****(曾經按讚的文章標題)</a>	
 		  		</span>
 		  	</li>
-		  	<li style="border: 3px solid;padding: 25px;display: inline-block;margin-top: 10px;border-radius: 30px;border-color:blue;width: 23%;height: auto;">
-		  		<span >
-		  			<img src="下載.jpg" style="width: 30%;height: auto;"> 	Name
+		  	<li style="border: 3px solid;padding: 25px;display: inline-block;margin-top: 10px;border-radius: 30px;border-color:blue;">
+		  		<span>
+		  			<a href="#">****(曾經按讚的文章標題)</a>	
 		  		</span>
 		  	</li>
-		  	<li style="border: 3px solid;padding: 25px;display: inline-block;margin-top: 10px;border-radius: 30px;border-color:blue;width: 23%;height: auto;">
+		  	<li style="border: 3px solid;padding: 25px;display: inline-block;margin-top: 10px;border-radius: 30px;border-color:blue;">
 		  		<span>
-		  			<img src="下載.jpg" style="width: 30%;height: auto;">	Name
-		  		</span>
-		  	</li>
-		  	<li style="border: 3px solid;padding: 25px;display: inline-block;margin-top: 10px;border-radius: 30px;border-color:blue;width: 23%;height: auto;">
-		  		<span>
-		  			<img src="下載.jpg" style="width: 30%;height: auto;">	Name
-		  		</span>
-		  	</li>
-		  	<li style="border: 3px solid;padding: 25px;display: inline-block;margin-top: 10px;border-radius: 30px;border-color:blue;width: 23%;height: auto;">
-		  		<span>
-		  			<img src="下載.jpg" style="width: 30%;height: auto;">	Name
+		  			<a href="#">****(曾經按讚的文章標題)</a>	
 		  		</span>
 		  	</li>
 		  </article>
