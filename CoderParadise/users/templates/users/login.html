@@ -1,0 +1,71 @@
+{% extends "main/layout.html" %}
+
+{% block content %}
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="login-title text-center" style="background:blue;width: 400px;height: 50px;position:relative;top: 30px;left: 480px;">
+        <h1 style="color: white;position:relative;top: 8px;">
+            <small>碼農天堂登入</small>
+        </h1>
+    </div>
+    <br>
+
+    <div class="login-content " style="width: 400px;height: auto;position: relative;top: 30px;left: 480px;">
+        <div class="form">
+            <form id="modifyPassword" class="form-horizontal" action="" method="post">							
+                <!-- 用户名输入 -->
+                <div class="form-group">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span></span><i class="fas fa-user"></i></span> 
+                            <input type="text" id="id_username" name="username" class="form-control" placeholder="請輸入您的帳號">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- 密码输入 -->
+                <div class="form-group">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="input-group">
+                            <span class="input-group-addon"><span></span><i class="fas fa-lock"></i></span> 
+                                <input type="password" id="id_password" name="password" class="form-control" placeholder="請輸入您的密碼">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group form-actions">
+                    {% if form.errors %}
+                        <p>Your username and password didn't match. Please try again.</p>
+                    {% endif %}
+                    
+                    {% if next %}
+                        {% if user.is_authenticated %}
+                            <p>你的密碼或帳號錯誤，請重新確認再輸入！</p>
+                        {% else %}
+                            <p>Please login to see this page.</p>
+                        {% endif %}
+                    {% endif %}
+
+
+                    <div class="col-xs-12">
+                        <div style="text-align: right;">
+                            <a href="註冊.html">還沒註冊?</a>
+                            <a href="{% url 'password_reset' %}">忘記密碼?</a>
+                        </div>
+                        <input type="submit" class="btn btn-sm btn-success" style="font-size: 25px" value="登入" />
+                        <input type="hidden" name="next" value="{{ next }}" />
+
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+
+</form>
+{% endblock %}
