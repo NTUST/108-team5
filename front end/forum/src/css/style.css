@@ -45,3 +45,9 @@
 	text-align: center;
   }
 }
+.create-post{
+  border-radius: 0px
+}
+.create-post-svg{
+  fill: white
+}
