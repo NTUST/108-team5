@@ -14,7 +14,6 @@
     <script src="{% static "js/jquery.min.js" %}"></script> 
 	<script src="{% static "js/bootstrap.min.js" %}"></script> 
 	<script src="{% static "js/scripts.js" %}"></script>
-
         
 
 </head>
@@ -39,19 +38,26 @@
                         </li>
 
                             <!-- login  %} -->
-                        <li class="nav-item">
-                            <a class="nav-link d-none" href="../../index&member/src/個人小屋-關於我.html">個人小屋</a>
-                        </li>
+                        {% if request.user.is_authenticated %}
 
+                            <li class="nav-item dropdown ml-mda-uto">
+                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">{{request.user.username}}</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="nav-link" href="">個人小屋</a>
+                                    <a class="nav-link " href="/logout">登出</a>
+                                </div>
+                            </li>
                             <!-- else  -->
-                        <li class="nav-item dropdown ml-mda-uto">
-                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">會員</a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/register/">註冊</a> 
-                                <a class="dropdown-item" href="../../index&member/src/登入介面.html">登入</a>
-                            </div>
-                        </li>
+                        {% else %}
+                            <li class="nav-item dropdown ml-mda-uto">
+                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">會員</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="/register/">註冊</a> 
+                                    <a class="dropdown-item" href="/login/">登入</a>
+                                </div>
+                            </li>
                         <!--  endif  -->
+                        {% endif %}
                     </ul>
                 <br>
             </div>
