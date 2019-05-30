@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,22 @@
     <script src="{% static "js/jquery.min.js" %}"></script> 
 	<script src="{% static "js/bootstrap.min.js" %}"></script> 
 	<script src="{% static "js/scripts.js" %}"></script>
-        
+    
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+    
+    <script src="{% static 'prism/prism_patched.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'prism/prism.css' %}">
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
 
 </head>
+
 <body>
     <div class="col-md-12">
         <div class="row" style="background: white;" >

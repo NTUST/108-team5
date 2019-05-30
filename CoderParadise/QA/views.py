@@ -1,8 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from django.contrib import messages
+from . import forms
+from django.contrib.auth.models import User
 
 # Create your views here.
 from .models import Question, QuestionType, Answer
-
 def index(request):
     datasAll = Question.objects.all()
     datasCPP = Question.objects.filter(questionType__name='C++')
@@ -30,5 +33,30 @@ def detail(request, id):
     return render(request, 'QA/detail.html', context)
 
 def create(request):
-    return render(request, 'QA/create.html')
+    if request.user.is_authenticated:
+        username = request.user.username
+        if request.method == 'POST':
+            form = forms.QuestionCreateForm(request.POST)
+            if form.is_valid():
+                title = form.cleaned_data.get('title')
+                body = form.cleaned_data.get('body')
+                questionTypeID = form.cleaned_data.get('questionType')
+                questionType = QuestionType.objects.get(id=int(questionTypeID))
+                postedUser = User.objects.get(username=username)
+                
+                question = Question.objects.create(
+                    title=title,
+                    body=body,
+                    questionType=questionType,
+                    postedUser=postedUser
+                )
+                Question.save(question)
+                messages.success(request, f'您以創建問題成功!')
+                return redirect('/QA/')
+        else:
+            form = forms.QuestionCreateForm()
+        return render(request, 'QA/create.html', {'form':form})
+    else:
+        messages.info(request, f'請您登入後再新增問題！')
+        return redirect('/QA/')
 

@@ -1,20 +1,24 @@
 {% extends 'main/layout.html' %}
 {% block content %}
-    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
-
-
-    <div class="col-md-9" id="div1">
-    
-        <input class="col-md-12" type="text" name="title_textbox" id="title_textbox" placeholder="Title">
+<form method="post" class="col-md-9" id="div1">
+    {% load widget_tweaks %}
+    {% csrf_token %}  
+    <div >
         <br>
+        <h4>標題</h4>
+        {% render_field form.title class="form-control"  placeholder=form.title.name %}
         <br>
-        <textarea name="editor1"></textarea>
+        <h4>內容</h4>
+        {{form.body}}
         <script>
-            CKEDITOR.replace( 'editor1' , {uiColor: '#0000000f'});
+            $(".django-ckeditor-widget").removeAttr('style');
         </script>
-        <button class="btn btn-primary create-post style-jvp6q3ta" type="button" style="position: relative;"  onclick="location.href='/QA/'">
-            <div style="position: relative;display: inline-block;">SAVE</div>
-        </button>
+        <br>
+        <h4>選擇語言</h4>
+        {% render_field form.questionType class="browser-default custom-select" %}
+        <br>
+        <br>
+        <input type="submit" class="btn btn-primary create-post style-jvp6q3ta" style="font-size: 25px" value="儲存" />
     <div>
-
+</form>
 {% endblock content %}
