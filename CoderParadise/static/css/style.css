@@ -1,22 +1,32 @@
 #div1{
-	/*top: 40px
-  left: 270px*/
-  left:15%;
+	/*首頁標題區的排版*/
+  left:12%;
 }
 #div2{
- /* top: 55px;*/
+ /*首頁標題區的排版*/
 	margin-top: 30px;
+}
+#div4{
+  /*個人小屋標題區的排版*/
+  margin-top: 30px;
 }
 @media screen and (max-width:800px) {
   #div1 {
-  	left: 18%;
+     /*首頁標題區的排版*/
+  	left: 19%;
   }
   #div2{
+     /*首頁標題區的排版*/
 	margin-left:16%;
 
   }
   #div3{
+    /*首頁新聞區文字的排版*/
 	text-align: center;
+  }
+  #div4{
+ /*個人小屋標題區的排版*/
+  margin-left: 11%;
   }
 }
 .style-jvp6q3ta{
@@ -50,5 +60,95 @@
 
 body{
   font-family: Helvetica, Arial,LiHei Pro,黑體-繁,微軟正黑體, sans-serif!important;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Style the header */
+header {
+  background-color: lightblue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white; 
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 500px; 
+  background: white;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: white;
+  height: auto; /*only for demonstration, should be removed */
+}
+
+
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the footer */
+footer {
+  background-color:lightblue;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+#posting{
+  display: table;
+  padding:10px;
+  width: 49.9%;
+  height: 49.9%;
+  background: lightblue;
+  color:white; 
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.button {
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+ -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button1:hover {
+  background-color: lightblue;
+  color: white;
+}
+#relative{
+  position: relative;
+  top: 120px;
 }
 

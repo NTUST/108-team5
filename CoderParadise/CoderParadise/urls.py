@@ -24,4 +24,5 @@ urlpatterns = [
     path(r'register/', user_views.register, name='register'),
     path(r'logout/', user_views.logout_request, name='logout'),
     path(r'login/', user_views.login_request, name='login'),
+    path(r'users/', include("users.urls")),
 ]

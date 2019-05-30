@@ -46,3 +46,12 @@ def login_request(request):
 
     form = AuthenticationForm()
     return render(request = request, template_name = "users/login.html", context={"form":form})
+
+def profile(request, username):
+    user = User.objects.get(username=username)
+    userProfile = UserProfile.objects.get(user=user)
+    context={
+        'userprofile':userProfile
+    }
+
+    return render(request, 'users/profile.html', context)
