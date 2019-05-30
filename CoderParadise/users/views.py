@@ -14,7 +14,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             user = User.objects.get(username=username)
-            userProfile = UserProfile.objects.create(user=user)
+            userProfile = UserProfile.objects.create(user=user, avatar='avatar/defualt.png')
             UserProfile.save(userProfile)
             messages.success(request, f'{username} 創建帳號成功!')
             return redirect('/QA/')
@@ -55,3 +55,11 @@ def profile(request, username):
     }
 
     return render(request, 'users/profile.html', context)
+
+def editProfile(request, username):
+    user = User.objects.get(username=username)
+    userProfile = UserProfile.objects.get(user=user)
+    context={
+        'userprofile':userProfile
+    }
+    return render(request, 'users/editprofile.html', context)

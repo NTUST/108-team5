@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +104,36 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CKEDITOR_CONFIGS = {
+    # django-ckeditor預設使用default配置
+    'default': {
+        'width':'auto',
+        'height':'250px',
+        # tab鍵轉換空格數
+        'tabSpaces': 4,
+        # 工具欄風格
+        'toolbar': 'Custom',
+        # 工具欄按鈕
+        'toolbar_Custom': [
+            # 表情 程式碼塊
+            ['Smiley', 'CodeSnippet'], 
+            # 字型風格
+            ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
+            # 字型顏色
+            ['TextColor', 'BGColor'],
+            # 連結
+            ['Link', 'Unlink'],
+            # 列表
+            ['NumberedList', 'BulletedList'],
+            # 最大化
+            ['Maximize'],
+            ['Image', 'Link', 'Unlink'],
+        ],
+        # 加入程式碼塊外掛
+        'extraPlugins': ','.join(['codesnippet','uploadimage','widget','lineutils',]),
+    }
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -129,3 +160,6 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+CKEDITOR_UPLOAD_PATH = 'upload/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
