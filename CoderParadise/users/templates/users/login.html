@@ -3,8 +3,8 @@
 {% block content %}
 <form method="POST">
     {% csrf_token %}  
-    <div class="login-title text-center" style="background:DodgerBlue;width: 400px;height: 50px;position:relative;top: 30px;left: 480px;">
-        <h1 style="color: white;position:relative;top: 8px;">
+    <div class="login-title text-center" style="background:DodgerBlue;width: 400px;height: 50px;position:relative;margin-top: 5%;left:115% ;">
+        <h1 style="color: white;position:relative;top: 8px;text-align: center;">
             <small>碼農天堂登入</small>
         </h1>
     </div>
@@ -12,7 +12,7 @@
     {% if error_message %}
         <p class="bg-danger p-d ml-b">{{ error_message }}</p>
     {% endif %}
-    <div class="login-content " style="width: 400px;height: auto;position: relative;top: 50px;left: 480px;">
+    <div class="login-content " style="width: 400px;height: auto;position: relative;left: 115%;">
         <div class="form">
             <form id="modifyPassword" class="form-horizontal" action="" method="post">							
                 <!-- 用户名输入 -->
