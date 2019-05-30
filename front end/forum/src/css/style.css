@@ -54,3 +54,24 @@
 	text-align: center;
   }
 }
+.create-post{
+  border-radius: 0px
+}
+.create-post-svg{
+  fill: white
+}
+.title-Input{
+	background: transparent;
+	border: 0;
+	outline: 0;
+	font-size: 30px
+}
+.title-content{
+	background: transparent;
+	border: 0;
+	outline: 0;
+	font-size: 18px
+}
+.comp-jvqa3otnsvg svg{
+	fill: #e84a43;
+}
