@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import UserRegisterForm
 from django.contrib.auth import login, logout, authenticate
+from .models import UserProfile
 
 # Create your views here.
 def register(request):
@@ -10,7 +12,10 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            username = request.POST.get('username')
+            username = form.cleaned_data.get('username')
+            user = User.objects.get(username=username)
+            userProfile = UserProfile.objects.create(user=user)
+            UserProfile.save(userProfile)
             messages.success(request, f'{username} 創建帳號成功!')
             return redirect('/QA/')
     else:
