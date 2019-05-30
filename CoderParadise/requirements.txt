@@ -1,0 +1,5 @@
+Django==2.2.1
+django-ckeditor==5.7.1
+django-js-asset==1.2.2
+django-widget-tweaks==1.4.3
+Pillow==6.0.0
