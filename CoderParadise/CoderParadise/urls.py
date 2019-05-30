@@ -28,7 +28,7 @@ urlpatterns = [
     path(r'logout/', user_views.logout_request, name='logout'),
     path(r'login/', user_views.login_request, name='login'),
     path(r'users/', include("users.urls")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+]
 if settings.DEBUG:
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

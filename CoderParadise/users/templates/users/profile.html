@@ -17,8 +17,10 @@
         <!-- <li><a href="個人小屋-我按讚過的貼文.html">我按讚的貼文</a></li> -->
         <!-- <li><a href="個人小屋-正在追蹤.html">正在追蹤</a></li> -->
         <!-- <li><a href="個人小屋-粉絲.html">粉絲</a></li> -->
+        {% if request.user.is_authenticated and request.user.username == userprofile.user.username %}
+            <a href="/users/editprofile/{{ userprofile.user.username }}" class="btn btn-info" role="button">編輯個人檔案</a>
+        {% endif %}
         
-        <a href="/users/editprofile/{{ userprofile.user.username }}" class="btn btn-info" role="button">編輯個人檔案</a>
     </nav>
     
     <article>

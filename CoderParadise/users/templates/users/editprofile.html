@@ -1,53 +1,54 @@
 {% extends "main/layout.html" %}
 {% block content %}
-<div class="col-md-9" id="div1">
-    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
-
+<form method="post" enctype="multipart/form-data" class="col-md-9" id="div1">
+    {% load widget_tweaks %}
+    {% csrf_token %}  
     <header>
-      <h2><b>修改</b></h2>
+        <h2><b>修改</b></h2>
     </header>
     <br>
-    <section>
-            <form action="form_action.asp" method="get" style="height: auto; margin-right:auto; margin-left:auto; ">
-                username: <br>
-                <input type="text" name="username" value="{{ userprofile.user.username }}"/><br>
-                about me<br>
-                <textarea name="editor1">{{ userprofile.aboutme }}</textarea>
-                <script>
-                    CKEDITOR.replace( 'editor1' , {uiColor: '#0000000f'});
-                </script>
-            </form>
-            <br>
-            <form action="/somewhere/to/upload" enctype="multipart/form-data" style="width:20%;height: auto; margin-right:auto; margin-left:auto; ">
-                   <div>
-                       <img id="preview_progressbarTW_img" src="" style="width: 100%;height: auto;" />
-                   </div>
-                   請選擇想要的頭像
-                   <br>
-                   <input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png" value="{{ userprofile.avatar.url }}"/ >
-                   
-            </form>
-            
-            <a href="個人小屋-關於我.html" ><button class="button button1">儲存</button></a>
-            <!--按儲存之後個人小屋的部分都要可以SHOW出剛更改完的資料-->
-            <script>
-                function readURL(input){
-                     if(input.files && input.files[0]){
-                        var imageTagID = input.getAttribute("targetID");
-                        var reader = new FileReader();
-                        reader.onload = function (e) {
-                            var img = document.getElementById(imageTagID);
-                            img.setAttribute("src", e.target.result)
-                        }
-                        reader.readAsDataURL(input.files[0]);
-                    }
-                }
-            </script>
-    </section>
+    {{ form.non_field_errors }}
 
-    <footer>
+    {% for hidden_field in form.hidden_fields %}
+        {{ hidden_field.errors }}
+        {{ hidden_field }}
+    {% endfor %}
 
-    </footer>
-</div>
+    <tr>
+        <h2>Email</h2>
+        <td>
+            {{ form.email.errors }}
+                {% render_field form.email class="form-control" %}
+            {{ form.email.help_text }}
+        </td>
+        <br>
+    </tr>
+
+    <tr>
+        <h2>大頭貼</h2>
+        <td>
+            {{ form.avatar.errors }}
+                {% render_field form.avatar class="form-control" %}
+            {{ form.avatar.help_text }}
+        </td>
+        <br>
+    </tr>
+
+    <tr>
+        <h2>關於我</h2>
+        <td>
+            {{ form.aboutme.errors }}
+                {% render_field form.aboutme class="form-control" %}
+            {{ form.aboutme.help_text }}
+        </td>
+        <br>
+    </tr>
+    <script>
+        $(".django-ckeditor-widget").removeAttr('style');
+    </script>
+    <br>
+    <input type="submit" class="btn btn-primary create-post style-jvp6q3ta" style="font-size: 25px" value="儲存" />
+</form>
+
 
 {% endblock %}

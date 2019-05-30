@@ -4,6 +4,12 @@
     {% load widget_tweaks %}
     {% csrf_token %}  
     <div >
+        {{ form.non_field_errors }}
+
+        {% for hidden_field in form.hidden_fields %}
+            {{ hidden_field.errors }}
+            {{ hidden_field }}
+        {% endfor %}
         <br>
         <h4>標題</h4>
         {% render_field form.title class="form-control"  placeholder=form.title.name %}

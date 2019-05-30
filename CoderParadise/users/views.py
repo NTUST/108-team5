@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserProfileEditForm
 from django.contrib.auth import login, logout, authenticate
 from .models import UserProfile
 
@@ -56,10 +56,28 @@ def profile(request, username):
 
     return render(request, 'users/profile.html', context)
 
-def editProfile(request, username):
-    user = User.objects.get(username=username)
-    userProfile = UserProfile.objects.get(user=user)
-    context={
-        'userprofile':userProfile
-    }
-    return render(request, 'users/editprofile.html', context)
+def editProfile(request):
+    if request.user.is_authenticated:
+        user = request.user
+        userProfile = UserProfile.objects.get(user=user)
+        if request.method == 'POST':
+            form = UserProfileEditForm(request.POST)
+            if form.is_valid():
+                email = form.cleaned_data.get('email')
+                # avatar = form.cleaned_data.get('avatar')
+                avatar = request.FILES.get('avatar')
+                aboutme = form.cleaned_data.get('aboutme')
+
+                user.email = email
+                userProfile.avatar = avatar
+                userProfile.aboutme = aboutme
+                user.save()
+                userProfile.save()
+                messages.success(request, '修改資料成功!')
+
+                return redirect('/users/profile/' + user.username)
+        else:
+            form = UserProfileEditForm({'email':user.email, 'avatar':userProfile.avatar, 'aboutme':userProfile.aboutme})
+            return render(request, 'users/editprofile.html', {'form':form})
+    else:
+        return redirect('/')

@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.media',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -154,8 +155,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MIDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "mideafiles")
-MEDIA_URL = '/media/'
+MEDIA_URL = '/avatar/'
+
+MIDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "avatar")
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
