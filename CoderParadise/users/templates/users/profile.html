@@ -18,11 +18,11 @@
         <!-- <li><a href="個人小屋-正在追蹤.html">正在追蹤</a></li> -->
         <!-- <li><a href="個人小屋-粉絲.html">粉絲</a></li> -->
         
-        <a href="編輯個人資料.html" class="btn btn-info" role="button">編輯個人檔案</a>
+        <a href="/users/editprofile/{{ userprofile.user.username }}" class="btn btn-info" role="button">編輯個人檔案</a>
     </nav>
     
     <article>
-        <h3>目前沒放東西，之後需要後端放入關於我</h3>
+        <h3>{{ userprofile.aboutme|safe }}</h3>
     </article>
     </section>
 </div>

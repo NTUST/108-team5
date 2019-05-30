@@ -1,0 +1,53 @@
+{% extends "main/layout.html" %}
+{% block content %}
+<div class="col-md-9" id="div1">
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+
+    <header>
+      <h2><b>修改</b></h2>
+    </header>
+    <br>
+    <section>
+            <form action="form_action.asp" method="get" style="height: auto; margin-right:auto; margin-left:auto; ">
+                username: <br>
+                <input type="text" name="username" value="{{ userprofile.user.username }}"/><br>
+                about me<br>
+                <textarea name="editor1">{{ userprofile.aboutme }}</textarea>
+                <script>
+                    CKEDITOR.replace( 'editor1' , {uiColor: '#0000000f'});
+                </script>
+            </form>
+            <br>
+            <form action="/somewhere/to/upload" enctype="multipart/form-data" style="width:20%;height: auto; margin-right:auto; margin-left:auto; ">
+                   <div>
+                       <img id="preview_progressbarTW_img" src="" style="width: 100%;height: auto;" />
+                   </div>
+                   請選擇想要的頭像
+                   <br>
+                   <input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png" value="{{ userprofile.avatar.url }}"/ >
+                   
+            </form>
+            
+            <a href="個人小屋-關於我.html" ><button class="button button1">儲存</button></a>
+            <!--按儲存之後個人小屋的部分都要可以SHOW出剛更改完的資料-->
+            <script>
+                function readURL(input){
+                     if(input.files && input.files[0]){
+                        var imageTagID = input.getAttribute("targetID");
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            var img = document.getElementById(imageTagID);
+                            img.setAttribute("src", e.target.result)
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+            </script>
+    </section>
+
+    <footer>
+
+    </footer>
+</div>
+
+{% endblock %}

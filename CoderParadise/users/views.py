@@ -55,3 +55,11 @@ def profile(request, username):
     }
 
     return render(request, 'users/profile.html', context)
+
+def editProfile(request, username):
+    user = User.objects.get(username=username)
+    userProfile = UserProfile.objects.get(user=user)
+    context={
+        'userprofile':userProfile
+    }
+    return render(request, 'users/editprofile.html', context)
