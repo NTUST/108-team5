@@ -64,12 +64,14 @@ def editProfile(request):
             form = UserProfileEditForm(request.POST)
             if form.is_valid():
                 email = form.cleaned_data.get('email')
-                # avatar = form.cleaned_data.get('avatar')
+                
                 avatar = request.FILES.get('avatar')
+
                 aboutme = form.cleaned_data.get('aboutme')
 
                 user.email = email
-                userProfile.avatar = avatar
+                if avatar != None:
+                    userProfile.avatar = avatar
                 userProfile.aboutme = aboutme
                 user.save()
                 userProfile.save()
