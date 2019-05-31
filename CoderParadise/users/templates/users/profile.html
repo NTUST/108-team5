@@ -2,28 +2,31 @@
 
 {% block content %}
 
-<div style="margin-left:12%;margin-right:12%;">
+<div class="col-md-9" id="div1">
     <header>
-      <h2><b>個人小屋</b></h2>
+        <h2><b>個人小屋</b></h2>
     </header>
-
+  
     <section>
-      <nav>
+    <nav>
         <ul>
-          <img src="#" alt="大頭照">
-          <h3>{{ userprofile.user.username }}</h3><br>
-          <li><a href="個人小屋-關於我.html">關於我</a></li>
-          <li><a href="個人小屋-我的貼文.html">我的貼文</a></li>
-          <li><a href="個人小屋-我留言過的貼文.html">我留言過的貼文</a></li>
-          <li><a href="個人小屋-我按讚過的貼文.html">我按讚的貼文</a></li>
-          <li><a href="個人小屋-正在追蹤.html">正在追蹤</a></li>
-          <li><a href="個人小屋-粉絲.html">粉絲</a></li>
-          
-          <a href="編輯個人資料.html" class="btn btn-info" role="button">編輯個人檔案</a>
-      </nav>
-      
-      <article>
-        <h3>目前沒放東西，之後需要後端放入關於我</h3>
-      </article>
+        <img src="{{ userprofile.avatar.url }}" style="width: 200px; height:auto" alt="大頭照">
+        <h3>{{ userprofile.user.username }}</h3><br>
+        <li><a href="個人小屋-我的貼文.html">我的貼文</a></li>
+        <!-- <li><a href="個人小屋-我留言過的貼文.html">我留言過的貼文</a></li> -->
+        <!-- <li><a href="個人小屋-我按讚過的貼文.html">我按讚的貼文</a></li> -->
+        <!-- <li><a href="個人小屋-正在追蹤.html">正在追蹤</a></li> -->
+        <!-- <li><a href="個人小屋-粉絲.html">粉絲</a></li> -->
+        {% if request.user.is_authenticated and request.user.username == userprofile.user.username %}
+            <a href="/users/editprofile/{{ userprofile.user.username }}" class="btn btn-info" role="button">編輯個人檔案</a>
+        {% endif %}
+        
+    </nav>
+    
+    <article>
+        <h3>{{ userprofile.aboutme|safe }}</h3>
+    </article>
     </section>
+</div>
+
 {% endblock content %}

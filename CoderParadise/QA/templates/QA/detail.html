@@ -6,7 +6,7 @@
         <div style="position: relative;display: inline-block;">BACK</div>
     </button>
     <div class="card" style="margin-top: 10px; padding: 10px">
-        <h6>{{data.postedUser}}</h6>
+        <h6><a href="/users/profile/{{data.postedUser.username}}">{{data.postedUser}}</a></h6>
         <h2>{{data.title}}</h2>
         <div>{{ data.body|safe }}</div>
         <hr>
@@ -36,7 +36,6 @@
             </div>
         {% endfor %}
     </div>
-
 </div>
 
 {% endblock content %}

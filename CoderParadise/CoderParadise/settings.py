@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,7 @@ ROOT_URLCONF = 'CoderParadise.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'],
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -64,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.media',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -102,6 +105,36 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CKEDITOR_CONFIGS = {
+    # django-ckeditor預設使用default配置
+    'default': {
+        'width':'auto',
+        'height':'250px',
+        # tab鍵轉換空格數
+        'tabSpaces': 4,
+        # 工具欄風格
+        'toolbar': 'Custom',
+        # 工具欄按鈕
+        'toolbar_Custom': [
+            # 表情 程式碼塊
+            ['Smiley', 'CodeSnippet'], 
+            # 字型風格
+            ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
+            # 字型顏色
+            ['TextColor', 'BGColor'],
+            # 連結
+            ['Link', 'Unlink'],
+            # 列表
+            ['NumberedList', 'BulletedList'],
+            # 最大化
+            ['Maximize'],
+            ['Image', 'Link', 'Unlink'],
+        ],
+        # 加入程式碼塊外掛
+        'extraPlugins': ','.join(['codesnippet','uploadimage','widget','lineutils',]),
+    }
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -122,6 +155,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/avatar/'
+
+MIDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "avatar")
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+CKEDITOR_UPLOAD_PATH = 'upload/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'

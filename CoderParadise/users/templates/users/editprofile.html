@@ -1,0 +1,54 @@
+{% extends "main/layout.html" %}
+{% block content %}
+<form method="post" enctype="multipart/form-data" class="col-md-9" id="div1">
+    {% load widget_tweaks %}
+    {% csrf_token %}  
+    <header>
+        <h2><b>修改</b></h2>
+    </header>
+    <br>
+    {{ form.non_field_errors }}
+
+    {% for hidden_field in form.hidden_fields %}
+        {{ hidden_field.errors }}
+        {{ hidden_field }}
+    {% endfor %}
+
+    <tr>
+        <h2>Email</h2>
+        <td>
+            {{ form.email.errors }}
+                {% render_field form.email class="form-control" %}
+            {{ form.email.help_text }}
+        </td>
+        <br>
+    </tr>
+
+    <tr>
+        <h2>大頭貼</h2>
+        <td>
+            {{ form.avatar.errors }}
+                {% render_field form.avatar class="form-control" %}
+            {{ form.avatar.help_text }}
+        </td>
+        <br>
+    </tr>
+
+    <tr>
+        <h2>關於我</h2>
+        <td>
+            {{ form.aboutme.errors }}
+                {% render_field form.aboutme class="form-control" %}
+            {{ form.aboutme.help_text }}
+        </td>
+        <br>
+    </tr>
+    <script>
+        $(".django-ckeditor-widget").removeAttr('style');
+    </script>
+    <br>
+    <input type="submit" class="btn btn-primary create-post style-jvp6q3ta" style="font-size: 25px" value="儲存" />
+</form>
+
+
+{% endblock %}
