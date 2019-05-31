@@ -75,3 +75,39 @@
 .comp-jvqa3otnsvg svg{
 	fill: #e84a43;
 }
+
+/* tooltip settings start 
+.tip1 span{
+  position: relative;
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    &amp;:before, &amp;:after {
+      opacity: 1;
+    }
+  }
+  &::before {
+    content: attr(data-tooltip);
+    background: #d9444a;
+    color: #fff;
+    padding: .8em 1em;
+    position: absolute;
+    left: 100%;
+    top: -90%;
+    margin-left: 14px;
+    white-space: pre;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #d9444a transparent transparent;
+  }
+  &::before, &::after {
+    opacity: 0;
+    @include transition(opacity .3s ease-out);
+  }
+}*/
