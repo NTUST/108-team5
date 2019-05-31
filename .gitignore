@@ -86,7 +86,7 @@ __pycache__/
 local_settings.py
 
 .env
-db.sqlite3
+
 
 CoderParadise/avatar
 CoderParadise/.vscode
