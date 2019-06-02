@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'users',
     'ckeditor',
+    'ckeditor_uploader',
     'QA',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -116,20 +117,20 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'Custom',
         # 工具欄按鈕
         'toolbar_Custom': [
-            # 表情 程式碼塊
-            ['Smiley', 'CodeSnippet'], 
-            # 字型風格
-            ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
-            # 字型顏色
-            ['TextColor', 'BGColor'],
-            # 連結
-            ['Link', 'Unlink'],
-            # 列表
-            ['NumberedList', 'BulletedList'],
-            # 最大化
-            ['Maximize'],
-            ['Image', 'Link', 'Unlink'],
-        ],
+            ['div','Source','-','Save','NewPage','Preview','-','Templates'],
+            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'],
+            ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+            ['Form','Checkbox','Radio','TextField','Textarea','Select','Button', 'ImageButton','HiddenField'],
+            ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+            ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+            ['Link','Unlink','Anchor'],
+            ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],
+            ['Styles','Format','Font','FontSize'],
+            ['TextColor','BGColor'],
+            ['Maximize','ShowBlocks','-','About', 'pbckcode'],
+            ['CodeSnippet']
+            ],
         # 加入程式碼塊外掛
         'extraPlugins': ','.join(['codesnippet','uploadimage','widget','lineutils',]),
     }
@@ -165,3 +166,4 @@ STATICFILES_DIRS = (
 
 CKEDITOR_UPLOAD_PATH = 'upload/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_ALLOW_NONIMAGE_FILES = False

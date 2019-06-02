@@ -1,6 +1,8 @@
 from django import forms
 
 from ckeditor.fields import RichTextFormField
+from ckeditor_uploader.fields import RichTextUploadingFormField
+
 from .models import Question, QuestionType
 from django.forms import widgets
 
