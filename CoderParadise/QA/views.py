@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib import messages
 from . import forms
 from django.contrib.auth.models import User
+from django.db.models import Q
 
 # Create your views here.
 from .models import Question, QuestionType, Answer
@@ -12,6 +13,14 @@ def index(request):
     datasJava = Question.objects.filter(questionType__name='Java')
     datasPython = Question.objects.filter(questionType__name='Python')
     datasOther = Question.objects.filter(questionType__name='Other')
+
+    query = request.GET.get('srch-term')
+    if query:
+        datasAll = Question.objects.filter(title__contains=query)
+        datasCPP = Question.objects.filter(questionType__name='C++').filter(title__contains=query)
+        datasJava = Question.objects.filter(questionType__name='Java').filter(title__contains=query)
+        datasPython = Question.objects.filter(questionType__name='Python').filter(title__contains=query)
+        datasOther = Question.objects.filter(questionType__name='Other').filter(title__contains=query)
     context = {
         'title': 'QA',
         'datasAll': datasAll,
