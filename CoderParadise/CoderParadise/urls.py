@@ -22,6 +22,7 @@ from users import views as user_views
 from django.conf import settings
 
 urlpatterns = [
+    path(r'', include("home.urls")),
     path(r'admin/', admin.site.urls),
     path(r'QA/', include("QA.urls")),
     path(r'register/', user_views.register, name='register'),

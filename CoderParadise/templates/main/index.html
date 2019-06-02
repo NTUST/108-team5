@@ -1,0 +1,69 @@
+
+{% extends "main/layout.html" %}
+
+{% block content %}
+{% load static %}
+<div class="col-md-9" id="div1" class="container-fluid" style="background: lightblue;">
+    <div>
+        <img src="{% static "img/程式設計三大聖經.png" %}" alt="程式設計三大聖經 from 查士朝" style="width: 80%;margin-left: 10%;">
+    </div>
+    <div class="row" style="margin-left:9%;margin-right:9%;margin-top: 5%;">
+        <!--要從資料庫傳新聞進來-->
+        <div class="col-md-6" >
+            <div class="row" >
+                <div class="col-md-6">
+                    <img src="{% static "img/未來AI先修班.jpg" %}" style="width: 100%;height: auto;display:block; margin:auto;vertical-align: middle;">
+                </div>
+                <div class="col-md-6" id="div3">
+                    <a href="https://news.microsoft.com/zh-tw/ai-1-15/" alt="微軟未來AI人先修班」1月15日隆重登場"><b style="color: blue">微軟未來AI人先修班」1月15日隆重登場</b></a><br>
+                    熱血推動台灣程式教育，結合台灣AI人才培育政策  目標培育500名學生成為人才種子
+                </div>
+            </div>
+        </div>
+        <!--要從資料庫傳新聞進來-->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static "img/區塊鏈.jpg" %}" style="width: 100%;height: auto;display:block; margin:auto;vertical-align: middle;">
+                </div>
+                <div class="col-md-6" id="div3">
+                    <a href="https://www.ithome.com.tw/news/130344" alt="臺灣保險區塊鏈平臺測試環境啟用"><b style="color: blue">臺灣保險區塊鏈平臺測試環境啟用</b></a><br>
+                    同時採用了2套主流區塊鏈技術，包括Hyperledger超級帳本和以太坊（Ethereum）。
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row" style="margin-left:9%;margin-right:9%;margin-top: 3%;">
+        <!--要從資料庫傳新聞進來-->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static "img/stream.png" %}" style="width: 100%;height: auto;display:block; margin:auto;vertical-align: middle;">
+                </div>
+                <div class="col-md-6" id="div3">
+                    <a href="https://dotblogs.com.tw/eyeshuang/2019/04/17/111751" alt="[Java] Stream管線操作觀念探討"><b style="color: blue">[Java] Stream管線操作觀念探討</b></a><br>
+                    Stream就如同一個迭代器(Iterator)，單向不可往復，數據只能探取一次，探取一次後便用盡了。
+                </div>
+            </div>
+        </div>
+        <!--要從資料庫傳新聞進來-->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static "img/臉書.jpg" %}" style="width: 100%;height: auto;display:block; margin:auto;vertical-align: middle;">
+                </div>
+                <div class="col-md-6" id="div3">
+                    <a href="https://www.ithome.com.tw/news/130430" alt="臉書打造包容性AI，拿掉影像辨識的有色眼鏡"><b style="color: blue">臉書打造包容性AI，拿掉影像辨識的有色眼鏡</b></a><br>
+                    一位來自奈及利亞的臉書AR/R技術業務主管，在發現自己會被智慧視訊裝置的智慧相機忽略後，開始了他的包容性人工智慧研究
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+{% endblock content %}
