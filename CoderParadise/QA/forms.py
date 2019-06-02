@@ -10,3 +10,6 @@ class QuestionCreateForm(forms.Form):
     title = forms.CharField(help_text='Title')
     body = RichTextFormField()
     questionType = forms.ChoiceField(choices=[(choice.pk, choice.name) for choice in QuestionType.objects.all()])
+
+class AnswerForm(forms.Form):
+    body = forms.CharField()

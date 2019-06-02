@@ -22,10 +22,41 @@ def index(request):
     }
     return render(request, 'QA/index.html', context)
 
+def findMyOA(request, username):
+    user = User.objects.get(username=username)
+    datasAll = Question.objects.filter(postedUser=user)
+    datasCPP = Question.objects.filter(questionType__name='C++', postedUser=user)
+    datasJava = Question.objects.filter(questionType__name='Java', postedUser=user)
+    datasPython = Question.objects.filter(questionType__name='Python', postedUser=user)
+    datasOther = Question.objects.filter(questionType__name='Other', postedUser=user)
+    context = {
+        'title': 'QA',
+        'datasAll': datasAll,
+        'datasCPP': datasCPP,
+        'datasJava': datasJava,
+        'datasPython': datasPython,
+        'datasOther': datasOther
+    }
+    return render(request, 'QA/index.html', context)
+
 def detail(request, id):
     data = Question.objects.get(id=id)
+    if request.user.is_authenticated:
+        user = request.user
+        if request.method == 'POST':
+            form = forms.AnswerForm(request.POST)
+            if form.is_valid():
+                body = form.cleaned_data.get('body')
+                ans = Answer( body=body, abouQuestion=data, postedUser=user)
+                ans.save()
+                return redirect(f'/QA/detail/{id}')
+        else:
+            form = forms.AnswerForm()
+    else:
+        form = forms.AnswerForm()
     anss = Answer.objects.filter(abouQuestion__id=id)
     context = {
+        'form': form,
         'title': 'QA',
         'data': data,
         'anss': anss,

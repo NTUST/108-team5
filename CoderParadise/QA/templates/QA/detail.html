@@ -12,13 +12,18 @@
         <hr>
 
         <h3>回答</h3>
-
-        <textarea class="comment-content open" name="comment_content" id="comment_content" placeholder="你要回答些什麼嗎?"></textarea>
-        <div style="margin-left: auto;">
-            <button class="btn btn-primary create-post style-jvp6q3ta" type="button" style="position: relative;width:100px;" onclick="location.href='/QA/'">
-                <div style="position: relative;display: inline-block;">送出</div>
-            </button>
-        </div>
+        <form method="post">
+            {% load widget_tweaks %}
+            {% csrf_token %}
+            
+            {% render_field form.body class="form-control" %}
+            <div style="margin-left: auto;">
+                <button class="btn btn-primary create-post style-jvp6q3ta" type="submit" style="position: relative;width:100px;" onclick="location.href='/QA/'">
+                    <div style="position: relative;display: inline-block;">送出</div>
+                </button>
+            </div>
+        </form> 
+        
 
 
         {% for data in anss%}   
@@ -26,7 +31,7 @@
                 <div class="list">
                     <p class="card-text">
                         <div class="">
-                            <a href="">{{data.postedUser}}</a>
+                            <a href="/users/profile/{{data.postedUser.username}}">{{data.postedUser}}</a>
                         </div>
                         <div>
                             <a><span style="white-space: pre-line">{{data.body}}</span></a>
