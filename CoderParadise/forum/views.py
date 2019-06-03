@@ -20,7 +20,7 @@ def forum(request, id):
     return render(request, 'forum/forum.html', context)
 
 def detail(request, id):
-    post = Post.objects.filter(id=id)
+    post = Post.objects.get(id=id)
     thumb = Thumb.objects.filter(post=post)
     thumbCount = Thumb.objects.count()
     comment = Comment.objects.filter(post=post)
