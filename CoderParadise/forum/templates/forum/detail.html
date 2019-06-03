@@ -5,7 +5,6 @@
 {% csrf_token %}
 
 
-<body class="col-md-9" id="div1">
     		<style>
 			.forum-title{
 				font-size: 40px;
@@ -79,8 +78,11 @@
 			})
 		</script>
 
-		<h1 class="forum-title">顯示討論區標題</h1>
-			<div style="background-color: lightblue;">
+			<div class="row w-100 justify-content-center">
+				<h1 class="forum-title">顯示討論區標題</h1>
+			</div>
+		
+			<div class="col-md-12" style="background-color: lightblue;">
 				<div class="row justify-content-center">
 					<div class="col-md-8" style="padding: 0; text-align: right; margin: 20px 0;">
 						<button class="btn btn-primary" type="button">撰寫文章</button>
@@ -153,7 +155,6 @@
 	
 				</div>
 		<div>
-</body>
 
 
 
