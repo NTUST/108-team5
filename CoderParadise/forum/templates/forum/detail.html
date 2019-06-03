@@ -3,9 +3,7 @@
 
 {% load widget_tweaks %}
 {% csrf_token %}
-
-
-    		<style>
+    	<style>
 			.forum-title{
 				font-size: 40px;
 				font-weight: bold;
@@ -92,7 +90,7 @@
 		</script>
 
 			<div class="row w-100 justify-content-center">
-				<h1 class="forum-title">顯示討論區標題</h1>
+				<h1 class="forum-title">{{post.forum.title}}區</h1>
 			</div>
 		
 			<div class="col-md-12 justify-content-center" style="background-color: lightblue;">
@@ -103,28 +101,25 @@
 				</div>
 				<div class="post-row row justify-content-center">
 					<div class="forum-post col-md-8">
-						<p class="forum-post-title">標題</p>
+						<p class="forum-post-title">{{post.title}}</p>
 						<p class="forum-post-body">
-							文章的內文，文章的內文，文章的內文，文章的內文，<br>
-							文章的內文，文章的內文，文章的內文<br>	
-							文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，<br>	
-							文章的內文，文章的內文，文章的內文，文章的內文。
+							{{post.body|safe}}
 						</p>
 						<div class="forum-post-info">
 							<div>
 								<div class="post-info">
 									<span>張貼於</span>
-									<span class="post-time">2019-06-03 22:28</span><br>
-									<img src="avater.jpg" alt="頭像" width="30" height="30">
-									<span class="post-user">Username</span>
+									<span class="post-time">{{post.postTime}}</span><br>
+									<img src="{{post.postUser.userprofile.avatar.url}}" alt="頭像" width="30" height="30">
+									<span class="post-user">{{post.postUser.username}}</span>
 								</div>
 							</div>
 							<div class="post-info-2">
 								<p class="info-thumb">
 									<img src="thumb.png" alt="" width="30" height="30">
 								</p>
-								<span class="info-thumbcount"><span>2</span>個人按讚</span>
-								<span class="info-comment"><span>5</span>則留言</span>
+								<span class="info-thumbcount"><span>{{thumbCount}}</span>個人按讚</span>
+								<span class="info-comment"><span>{{comments.count}}</span>則留言</span>
 							</div>
 						</div>
 
@@ -140,29 +135,27 @@
 					留言區
 				</div>
 
-				{% comment %} <!-- {% for data in comments %} --> {% endcomment %}
-				<div class="forum-comment row justify-content-center">
-					<div class="forum-post col-md-8">
-						<p class="forum-post-body">
-							文章的內文，文章的內文，文章的內文，文章的內文，<br>
-							文章的內文，文章的內文，文章的內文<br>	
-							文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，<br>	
-							文章的內文，文章的內文，文章的內文，文章的內文。
-						</p>
-						<div class="forum-post-info">
-							<div>
-								<div class="post-info">
-									<span>留言於</span>
-									<span class="post-time">2019-06-03 22:30</span><br>
-									<img src="avater.jpg" alt="頭像" width="30" height="30">
-									<span class="post-user">Username</span>
+				{% for comment in comments %}
+					<div class="forum-comment row justify-content-center">
+						<div class="forum-post col-md-8">
+							<p class="forum-post-body">
+								{{comment.body}}
+							</p>
+							<div class="forum-post-info">
+								<div>
+									<div class="post-info">
+										<span>留言於</span>
+										<span class="post-time">{{comment.commentTime}}</span><br>
+										<img src="{{comment.postUser.userprofile.avatar.url}}" alt="頭像" width="30" height="30">
+										<span class="post-user">{{comment.postUser}}</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<!-- 發文者可以刪除(看你要不要做) -->
-						<div class="forum-post-action forum-comment-action">
-							<a href="#">刪除</a>
+							<!-- 發文者可以刪除(看你要不要做) -->
+							<div class="forum-post-action forum-comment-action">
+								<a href="#">刪除</a>
+							</div>
 						</div>
 					</div>
 	

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Forum, Post, Comment, Thumb
+from users.models import UserProfile
 from . import forms
 
 # Create your views here.
@@ -40,10 +41,13 @@ def detail(request, id):
 
     context = {
         'post': post,
-        'thumb':thumb,
         'thumbCount':thumbCount,
-        'comment':comment,
+        'comments':comment,
         'commentForm':form
     }
 
     return render(request, 'forum/detail.html', context)
+
+
+def create(request):
+    return render(request, 'forum/create.html')
