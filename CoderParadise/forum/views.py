@@ -3,6 +3,8 @@ from .models import Forum, Post, Comment, Thumb
 from users.models import UserProfile
 from . import forms
 
+
+
 # Create your views here.
 def index(request):
     return render(request, 'forum/index.html')
@@ -51,7 +53,14 @@ def update(request, id):
     if request.method == 'POST':
         form = forms.UpdateForm(request.POST)
         if form.is_valid():
-            
+            idd = form.cleaned_data.get('forum')
+            forum = Forum.objects.get(pk=idd)
+            post.forum = forum
+            post.title = form.cleaned_data.get('title')
+            post.body = form.cleaned_data.get('body')
+            post.postUser=user
+
+            post.save()
             return redirect(f'/forum/detail/{id}')
     else:
         form = forms.UpdateForm({'forum':post.forum, 'title':post.title, 'body':post.body})
@@ -66,15 +75,21 @@ def update(request, id):
 def create(request):
     if request.user.is_authenticated:
         user = request.user
-        post = Post.objects.get(id=id)
         if request.method == 'POST':
             form = forms.UpdateForm(request.POST)
             if form.is_valid():
-                return redirect(f'/forum/detail/{id}')
+                idd = form.cleaned_data.get('forum')
+                forum = Forum.objects.get(pk=idd)
+                title = form.cleaned_data.get('title')
+                body = form.cleaned_data.get('body')
+                postUser=user
+                post = Post(forum=forum, title=title, body=body, postUser=postUser)
+                post.save()
+                return redirect(f'/forum/forum/{idd}')
         else:
             form = forms.UpdateForm()
 
     context = {
         'form': form
     }
-    return render(request, 'forum/update.html')
+    return render(request, 'forum/update.html', context)

@@ -166,7 +166,8 @@
 			{% endfor %}
 			<div class="forum-comment-insert row justify-content-center" style="padding: 0;">
 				<div class="forum-comment-div col-md-8" style="padding: 0;">
-					<form method="post" action=".">
+					<form action="" method="POST">
+						{% load widget_tweaks %}
 						{% csrf_token %}
 						{% comment %} <textarea name="comment" style="width: 100%; height: 100%;"></textarea> {% endcomment %}
 						{% render_field commentForm.commentBody class="form-control"%}
