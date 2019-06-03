@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 {% csrf_token %}
 
-<body>
+<body class="col-md-9" id="div1">
     <style>
         .forum-title{
             font-size: 40px;
@@ -74,12 +74,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="forum-post col-md-8">
-                    <p class="forum-post-title">標題</p>
+                    <p class="forum-post-title">{{post.title}}</p>
                     <p class="forum-post-body">
-                        文章的內文，文章的內文，文章的內文，文章的內文，<br>
-                        文章的內文，文章的內文，文章的內文<br>	
-                        文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，<br>	
-                        文章的內文，文章的內文，文章的內文，文章的內文。
+                        {{post.body|safe}}
                     </p>
                     <div class="forum-post-info">
                         <div>
