@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'forum',
     'users',
     'ckeditor',
     'ckeditor_uploader',
