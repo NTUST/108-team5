@@ -8,14 +8,11 @@ def index(request):
     return render(request, 'forum/index.html')
 
 def forum(request, id):
-    forumType = Forum.objects.get(id=id)
+    forumType = Forum.objects.get(pk=id)
     post = Post.objects.filter(forum=forumType)
-    thumb = Thumb.objects.filter(post=post)
-    thumbCount = thumb.objects.count()
 
     context = {
-        'post': post,
-        'thumbCount':thumbCount
+        'post': post
     }
 
     return render(request, 'forum/forum.html', context)
@@ -54,6 +51,7 @@ def update(request, id):
     if request.method == 'POST':
         form = forms.UpdateForm(request.POST)
         if form.is_valid():
+            
             return redirect(f'/forum/detail/{id}')
     else:
         form = forms.UpdateForm({'forum':post.forum, 'title':post.title, 'body':post.body})
@@ -66,4 +64,17 @@ def update(request, id):
 
 
 def create(request):
-    return render(request, 'forum/create.html')
+    if request.user.is_authenticated:
+        user = request.user
+        post = Post.objects.get(id=id)
+        if request.method == 'POST':
+            form = forms.UpdateForm(request.POST)
+            if form.is_valid():
+                return redirect(f'/forum/detail/{id}')
+        else:
+            form = forms.UpdateForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'forum/update.html')
