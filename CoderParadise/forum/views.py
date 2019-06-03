@@ -48,6 +48,22 @@ def detail(request, id):
 
     return render(request, 'forum/detail.html', context)
 
+def update(request, id):
+    user = request.user
+    post = Post.objects.get(id=id)
+    if request.method == 'POST':
+        form = forms.UpdateForm(request.POST)
+        if form.is_valid():
+            return redirect(f'/forum/detail/{id}')
+    else:
+        form = forms.UpdateForm({'forum':post.forum, 'title':post.title, 'body':post.body})
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'forum/update.html', context)
+
 
 def create(request):
     return render(request, 'forum/create.html')
