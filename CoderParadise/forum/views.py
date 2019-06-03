@@ -47,3 +47,7 @@ def detail(request, id):
     }
 
     return render(request, 'forum/detail.html', context)
+
+
+def create(request):
+    return render(request, 'forum/create.html')
