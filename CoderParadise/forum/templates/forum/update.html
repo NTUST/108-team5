@@ -1,0 +1,107 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+
+{% load widget_tweaks %}
+{% csrf_token %}
+    	<style>
+			.forum-title{
+				font-size: 40px;
+				font-weight: bold;
+				text-align: center;
+				margin: 30px;
+			}
+			.forum-post{
+				background-color: #fff;
+				border: .5px #00f solid;
+				padding: 20px;
+				font-size: 14px;
+			}
+			.forum-post-title{
+				font-size: 1.5em;
+				font-weight: bold;
+				padding: 10px 0;
+				border-bottom: 1px #ddd solid;
+			}
+			.forum-post-info{
+				margin-top: 30px;
+			}
+			.post-info{
+				font-size: .8em;
+				background-color: #ffe8ab;
+				display: inline-block;
+				padding: 10px;
+			}
+			.post-time{
+				font-weight: bold;
+			}
+			.post-info-2{
+				color: #51b2b8;
+				margin-top: 20px;
+			}
+			.post-info-2>span{
+				padding-right: 20px;
+			}
+			.info-thumb{
+				display: inline-block;
+				margin-right: 50px;
+				cursor: pointer;
+				transition: transform .2s linear;
+			}
+			.info-thumb:hover{
+				transform: scale(1.2);
+			}
+			.forum-post-action{
+				position: absolute;
+				right: 20px;
+				top: 20px;
+			}
+			.post-row{
+				margin-bottom: 50px;
+			}
+			.comment-line{
+				color: #fff;
+				opacity: .8;
+				font-size: 24px;
+				border-bottom: 1px #ddd solid;
+				margin-bottom: 30px;
+			}
+			.forum-post-action.forum-comment-action{
+				top: auto;
+				bottom: 20px;
+			}
+		</style>
+		<script>
+			$(document).on('click', '.info-thumb', function(){
+				$(this).css({'transform': 'scale(1.2) rotate(360deg)'})
+			})
+		</script>
+	
+		<div class="col-md-12 justify-content-center" style="background-color: lightblue;">
+			<div class="row justify-content-center">
+			{% if request.user.is_authenticated and request.user.username == post.postUser.username %}
+				<div class="col-md-8" style="padding: 0; text-align: right; margin: 20px 0;">
+					<button class="btn btn-primary" type="button">撰寫文章</button>
+				</div>
+			{% endif %}
+
+			</div>
+			<div class="post-row row justify-content-center">
+				<div class="forum-post col-md-8">
+                <form method="post">
+
+                    {% render_field form.forum class=""%}
+                    <br>
+                    <br>
+                    {% render_field form.title class="" placeholder="標題" %}
+                	{% comment %} <p class="forum-post-title">{{post.title}}</p> {% endcomment %}
+					<p class="forum-post-body">
+                        {% render_field form.body %}
+						{% comment %} {{post.body|safe}} {% endcomment %}
+					</p>
+
+                </form> 
+	
+				</div>
+			</div>
+	<div>
+{% endblock content %}
