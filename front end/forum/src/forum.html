@@ -64,6 +64,20 @@
 				right: 20px;
 				top: 20px;
 			}
+			.post-row{
+				margin-bottom: 50px;
+			}
+			.comment-line{
+				color: #fff;
+				opacity: .8;
+				font-size: 24px;
+				border-bottom: 1px #ddd solid;
+				margin-bottom: 30px;
+			}
+			.forum-post-action.forum-comment-action{
+				top: auto;
+				bottom: 20px;
+			}
 		</style>
 		<script>
 			$(document).on('click', '.info-thumb', function(){
@@ -79,7 +93,7 @@
 						<button class="btn btn-primary" type="button">撰寫文章</button>
 					</div>
 				</div>
-				<div class="row justify-content-center">
+				<div class="post-row row justify-content-center">
 					<div class="forum-post col-md-8">
 						<p class="forum-post-title">標題</p>
 						<p class="forum-post-body">
@@ -108,6 +122,38 @@
 
 						<!-- 發文者可以刪除(看你要不要做) -->
 						<div class="forum-post-action">
+							<a href="#">刪除</a>
+						</div>
+					</div>
+	
+				</div>
+
+				<div class="comment-line row justify-content-center">
+					留言區
+				</div>
+
+				<!-- {% for data in comments %} -->
+				<div class="forum-comment row justify-content-center">
+					<div class="forum-post col-md-8">
+						<p class="forum-post-body">
+							文章的內文，文章的內文，文章的內文，文章的內文，<br>
+							文章的內文，文章的內文，文章的內文<br>	
+							文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，<br>	
+							文章的內文，文章的內文，文章的內文，文章的內文。
+						</p>
+						<div class="forum-post-info">
+							<div>
+								<div class="post-info">
+									<span>留言於</span>
+									<span class="post-time">2019-06-03 22:30</span><br>
+									<img src="avater.jpg" alt="頭像" width="30" height="30">
+									<span class="post-user">Username</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 發文者可以刪除(看你要不要做) -->
+						<div class="forum-post-action forum-comment-action">
 							<a href="#">刪除</a>
 						</div>
 					</div>
