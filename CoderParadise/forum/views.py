@@ -30,7 +30,7 @@ def detail(request, id):
         if request.method == 'POST':
             form = forms.CommentForm(request.POST)
             if form.is_valid():
-                body = form.cleaned_data.get('body')
+                body = form.cleaned_data.get('commentBody')
                 comment = Comment(post=post, body=body, postUser=user)
                 comment.save()
                 return redirect(f'/forum/detail/{id}')
