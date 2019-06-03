@@ -71,6 +71,19 @@
 				top: auto;
 				bottom: 20px;
 			}
+			.forum-comment{
+				margin-bottom: 30px;
+			}
+			.forum-comment-div{
+				padding: 0;
+				background: none;
+				border: 0;
+				outline: 0;
+			}
+			.forum-comment-div textarea{
+				border: .5px #00f solid;
+				box-shadow: 2px 0 5px 0 #bb68ff;
+			}
 		</style>
 		<script>
 			$(document).on('click', '.info-thumb', function(){
@@ -154,6 +167,21 @@
 					</div>
 	
 				</div>
+
+		
+				<div class="forum-comment-insert row justify-content-center" style="padding: 0;">
+					<div class="forum-comment-div col-md-8" style="padding: 0;">
+						<form action="#" method="post">
+							<textarea name="comment" style="width: 100%; height: 100%;"></textarea>
+							<div style="text-align: right;">
+								<button class="btn btn-primary" type="button">發布留言</button>
+							</div>
+						</form>
+						
+					</div>
+				</div>
+
+
 		<div>
 
 
