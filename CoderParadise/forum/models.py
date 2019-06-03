@@ -22,16 +22,17 @@ class Post(models.Model):
         return self.title
 
 class Thumb(models.Model):
-    post = models.ForeignKey(User,on_delete=models.CASCADE)
-    thumb = models.ForeignKey(Post,on_delete=models.CASCADE)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
+    thumbUser = models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
         return self.post.title
 
 class Comment(models.Model):
-    post = models.ForeignKey(User,on_delete=models.CASCADE)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
     body = models.TextField()
-    CommentTime = models.DateTimeField(default = datetime.now)
+    commentTime = models.DateTimeField(default = datetime.now)
+    postUser = models.ForeignKey(User,on_delete=models.CASCADE)
     
     def __str__(self):
         return self.post.title

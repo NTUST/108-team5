@@ -1,0 +1,9 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+
+<form method="post">
+    {% load widget_tweaks %}
+    {% csrf_token %}
+</form> 
+
+{% endblock content %}
