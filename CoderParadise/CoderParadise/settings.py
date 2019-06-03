@@ -129,10 +129,11 @@ CKEDITOR_CONFIGS = {
             ['Styles','Format','Font','FontSize'],
             ['TextColor','BGColor'],
             ['Maximize','ShowBlocks','-','About', 'pbckcode'],
-            ['CodeSnippet']
+            ['CodeSnippet'],
+            ['Youtube']
             ],
         # 加入程式碼塊外掛
-        'extraPlugins': ','.join(['codesnippet','uploadimage','widget','lineutils',]),
+        'extraPlugins': ','.join(['codesnippet','uploadimage','widget','lineutils']),
     }
 }
 
@@ -155,6 +156,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'
 
 MEDIA_URL = '/avatar/'
 

@@ -14,7 +14,11 @@ class UserRegisterForm(UserCreationForm):
 
 class UserProfileEditForm(forms.ModelForm):
     avatar = forms.ImageField(required=False)
-    aboutme = RichTextFormField(required=False)
+    aboutme = RichTextFormField(required=False, external_plugin_resources=[(
+                                          'youtube',
+                                          '/static/base/vendor/ckeditor_plugins/youtube/youtube/',
+                                          'plugin.js',
+                                          )])
     class Meta:
         model = User
         fields = ['email']
