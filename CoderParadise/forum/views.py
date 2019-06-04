@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Forum, Post, Comment, Thumb
 from users.models import UserProfile
+from django.contrib.auth.models import User
 from . import forms
 
 
@@ -27,6 +28,31 @@ def index(request):
         'postsJava':postsJava,
         'postsPython':postsPython,
         'postsOther':postsOther
+    }
+    return render(request, 'forum/index.html', context)
+
+def findMyForum(request, username):
+    user = User.objects.get(username=username)
+    datasAll = Post.objects.filter(postUser=user)
+    datasCPP = Post.objects.filter(forum__title='C++', postUser=user)
+    datasJava = Post.objects.filter(forum__title='Java', postUser=user)
+    datasPython = Post.objects.filter(forum__title='Python', postUser=user)
+    datasOther = Post.objects.filter(forum__title='Other', postUser=user)
+
+    query = request.GET.get('srch-term')
+    if query:
+        datasAll = Post.objects.filter(title__contains=query).filter(postUser=user)
+        datasCPP = Post.objects.filter(forum__title='C++').filter(title__contains=query).filter(postUser=user)
+        datasJava = Post.objects.filter(forum__title='Java').filter(title__contains=query).filter(postUser=user)
+        datasPython = Post.objects.filter(forum__title='Python').filter(title__contains=query).filter(postUser=user)
+        datasOther = Post.objects.filter(forum__title='Other').filter(title__contains=query).filter(postUser=user)
+
+    context = {
+        'posts': datasAll,
+        'postsCPP': datasCPP,
+        'postsJava': datasJava,
+        'postsPython': datasPython,
+        'postsOther': datasOther
     }
     return render(request, 'forum/index.html', context)
 

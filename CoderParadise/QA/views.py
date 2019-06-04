@@ -41,11 +41,11 @@ def findMyOA(request, username):
 
     query = request.GET.get('srch-term')
     if query:
-        datasAll = Question.objects.filter(title__contains=query)
-        datasCPP = Question.objects.filter(questionType__name='C++').filter(title__contains=query)
-        datasJava = Question.objects.filter(questionType__name='Java').filter(title__contains=query)
-        datasPython = Question.objects.filter(questionType__name='Python').filter(title__contains=query)
-        datasOther = Question.objects.filter(questionType__name='Other').filter(title__contains=query)
+        datasAll = Question.objects.filter(title__contains=query).filter(postedUser=user)
+        datasCPP = Question.objects.filter(questionType__name='C++').filter(title__contains=query).filter(postedUser=user)
+        datasJava = Question.objects.filter(questionType__name='Java').filter(title__contains=query).filter(postedUser=user)
+        datasPython = Question.objects.filter(questionType__name='Python').filter(title__contains=query).filter(postedUser=user)
+        datasOther = Question.objects.filter(questionType__name='Other').filter(title__contains=query).filter(postedUser=user)
 
     context = {
         'title': 'QA',

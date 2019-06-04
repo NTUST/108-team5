@@ -17,7 +17,7 @@ def register(request):
             userProfile = UserProfile.objects.create(user=user, avatar='avatar/defualt.png')
             UserProfile.save(userProfile)
             messages.success(request, f'{username} 創建帳號成功!')
-            return redirect('/QA/')
+            return redirect('/')
     else:
         form = UserRegisterForm()
         
@@ -26,7 +26,7 @@ def register(request):
 def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
-    return redirect('/QA/')
+    return redirect('/')
 
 def login_request(request):
     if request.method == 'POST':
@@ -38,7 +38,7 @@ def login_request(request):
             if user is not None:
                 login(request, user)
                 messages.info(request, f"{username} 你已經成功登入了~")
-                return redirect('/QA/')
+                return redirect('/')
             else:
                 messages.info(request, "密碼或帳號錯誤!!")
         else:
