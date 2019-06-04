@@ -82,10 +82,13 @@
 				border: .5px #00f solid;
 				box-shadow: 2px 0 5px 0 #bb68ff;
 			}
+			.info-thumb.pushed{
+				filter: blur(3px);
+			}
 		</style>
 		<script>
 			$(document).on('click', '.info-thumb', function(){
-				$(this).css({'transform': 'scale(1.2) rotate(360deg)'})
+				$(this).css({'transform': 'scale(1.2) rotate(360deg)'}).addClass('pushed');
 			})
 		</script>
 
@@ -120,7 +123,8 @@
 							{% if request.user.is_authenticated%}
 								<p class="info-thumb">
 									{% load static %}
-									<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30">
+									{% if user_already_thumb %}
+									<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = '/forum/thumb/{{post.id}}'">
 								</p>
 							{% endif %}
 							<span class="info-thumbcount"><span>{{thumb.count}}</span>個人按讚</span>
@@ -130,7 +134,7 @@
 
 					<!-- 發文者可以刪除(看你要不要做) -->
 					<div class="forum-post-action">
-						<a href="#">刪除</a>
+						<a href="/forum/delete/{{post.id}}">刪除</a>
 					</div>
 				</div>
 
