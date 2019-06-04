@@ -7,11 +7,31 @@ from . import forms
 
 # Create your views here.
 def index(request):
-    return render(request, 'forum/index.html')
+    posts = Post.objects.all()
+    postsCPP = Post.objects.filter(forum__title='C++')
+    postsJava = Post.objects.filter(forum__title='Java')
+    postsPython = Post.objects.filter(forum__title='Python')
+    postsOther = Post.objects.filter(forum__title='Other')
 
-def forum(request, id):
-    forumType = Forum.objects.get(pk=id)
-    post = Post.objects.filter(forum=forumType)
+    query = request.GET.get('srch-term')
+    if query:
+        posts = Post.objects.filter(title__contains=query)
+        postsCPP = Post.objects.filter(forum__title='C++').filter(title__contains=query)
+        postsJava = Post.objects.filter(forum__title='Java').filter(title__contains=query)
+        postsPython = Post.objects.filter(forum__title='Python').filter(title__contains=query)
+        postsOther = Post.objects.filter(forum__title='Other').filter(title__contains=query)
+
+    context = {
+        'posts': posts,
+        'postsCpp':postsCPP,
+        'postsJava':postsJava,
+        'postsPython':postsPython,
+        'postsOther':postsOther
+    }
+    return render(request, 'forum/index.html', context)
+
+def forum(request):
+    post = Post.objects
 
     context = {
         'post': post
@@ -22,7 +42,6 @@ def forum(request, id):
 def detail(request, id):
     post = Post.objects.get(id=id)
     thumb = Thumb.objects.filter(post=post)
-    thumbCount = Thumb.objects.count()
     comment = Comment.objects.filter(post=post)
     if request.user.is_authenticated:
         user = request.user
@@ -40,7 +59,7 @@ def detail(request, id):
 
     context = {
         'post': post,
-        'thumbCount':thumbCount,
+        'thumb':thumb,
         'comments':comment,
         'commentForm':form
     }
@@ -85,7 +104,7 @@ def create(request):
                 postUser=user
                 post = Post(forum=forum, title=title, body=body, postUser=postUser)
                 post.save()
-                return redirect(f'/forum/forum/{idd}')
+                return redirect(f'/forum/')
         else:
             form = forms.UpdateForm()
 
