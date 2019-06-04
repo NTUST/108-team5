@@ -89,10 +89,12 @@
 				<div class="forum-post col-md-8">
                 <form method="post">
 					{% csrf_token %}
-                    {% render_field form.forum class=""%}
+					<div class="col-xs-3">
+                    	{% render_field form.forum class="form-control"%}
+                    </div>
                     <br>
                     <br>
-                    {% render_field form.title class="" placeholder="標題" %}
+                    {% render_field form.title class="form-control" placeholder="標題" %}
 					<p class="forum-post-body">
                         {% render_field form.body %}
 					</p>

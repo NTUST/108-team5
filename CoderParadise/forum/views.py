@@ -4,6 +4,7 @@ from users.models import UserProfile
 from django.contrib.auth.models import User
 from . import forms
 from django.contrib import messages
+from django.http import HttpResponse
 
 
 
@@ -71,15 +72,17 @@ def detail(request, id):
     post = Post.objects.get(id=id)
     thumb = Thumb.objects.filter(post=post)
     comment = Comment.objects.filter(post=post)
+    userThumb = None
     if request.user.is_authenticated:
         user = request.user
+        userThumb = Thumb.objects.filter(post=post).filter(thumbUser=user)
         if request.method == 'POST':
             form = forms.CommentForm(request.POST)
             if form.is_valid():
                 body = form.cleaned_data.get('commentBody')
                 comment = Comment(post=post, body=body, postUser=user)
                 comment.save()
-                return redirect(f'/forum/detail/{id}')
+                return redirect(f'/forum/detail/{id}#footer')
         else:
             form = forms.CommentForm()
     else:    
@@ -89,7 +92,8 @@ def detail(request, id):
         'post': post,
         'thumb':thumb,
         'comments':comment,
-        'commentForm':form
+        'commentForm':form,
+        'userThumb':userThumb
     }
 
     return render(request, 'forum/detail.html', context)
@@ -144,3 +148,20 @@ def create(request):
         messages.info(request, f'請您登入後再新增問題！')
         return redirect(f'/forum/')
 
+def thumb(request, id):
+    user = request.user
+    post = Post.objects.get(id=id)
+    t = Thumb.objects.filter(post=post).filter(thumbUser=user)
+    if(t.count() == 0):
+        thumb = Thumb(post=post, thumbUser=user)
+        thumb.save()
+        return HttpResponse(1) #按讚
+    else:
+        thumb = Thumb.objects.get(post=post, thumbUser=user)
+        thumb.delete()
+        return HttpResponse(0) #收回讚
+
+def delete(request, id):
+    post = Post.objects.get(id=id)
+    post.delete()
+    return redirect(f'/forum/')

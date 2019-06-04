@@ -13,7 +13,7 @@
 			.forum-post{
 				background-color: #fff;
 				border: .5px #00f solid;
-				padding: 20px;
+				padding: 14px;
 				font-size: 14px;
 			}
 			.forum-post-title{
@@ -38,18 +38,23 @@
 				color: #51b2b8;
 				margin-top: 20px;
 			}
-			.post-info-2>span{
-				padding-right: 20px;
+			.post-info-2>*{
+				vertical-align: middle;
 			}
 			.info-thumb{
 				display: inline-block;
-				margin-right: 50px;
+				margin-right: 10px;
 				cursor: pointer;
 				transition: transform .2s linear;
+				filter: grayscale(.8);
+				width: 50px;
+				height: 50px;
+				user-select: none;
 			}
-			.info-thumb:hover{
-				transform: scale(1.2);
+			.info-thumb.pushed{
+				filter: grayscale(0);
 			}
+
 			.forum-post-action{
 				position: absolute;
 				right: 20px;
@@ -82,10 +87,45 @@
 				border: .5px #00f solid;
 				box-shadow: 2px 0 5px 0 #bb68ff;
 			}
+			.info-thumbcount{
+				display: inline-block;
+				margin-right: 20px;
+			}
+			.info-comment{
+				display: inline-block;
+			}
 		</style>
 		<script>
 			$(document).on('click', '.info-thumb', function(){
-				$(this).css({'transform': 'scale(1.2) rotate(360deg)'})
+				var rot = Number($(this).data('rot')) + 360;
+				var t = this;
+
+				$(this).data('rot', rot).css({'transform': 'rotate('+ rot +'deg)'}).addClass('pushed');
+
+				$.ajax({
+					url: location.origin + '/forum/thumb/' + $(t).data('postid'),
+					type: 'get',
+					success: function(re){
+						if (re == '1')
+						{
+							$('.info-thumbcount>span').text(Number($('.info-thumbcount>span').text()) + 1);
+							$(t).addClass('pushed');
+							$(t).find('img').css({
+								width: 50,
+								height: 50
+							});
+						}
+						else
+						{
+							$('.info-thumbcount>span').text(Number($('.info-thumbcount>span').text()) - 1);
+							$(t).removeClass('pushed');
+							$(t).find('img').css({
+								width: 40,
+								height: 40
+							});
+						}
+					}
+				});
 			})
 		</script>
 
@@ -117,21 +157,29 @@
 							</div>
 						</div>
 						<div class="post-info-2">
-							{% if request.user.is_authenticated%}
-								<p class="info-thumb">
-									{% load static %}
-									<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30">
-								</p>
+							{% if request.user.is_authenticated %}
+								{% load static %}
+								{% if userThumb.count == 0 %}
+									<p class="info-thumb" data-postid="{{post.id}}" data-rot="0">
+										<img src="{% static "img/thumb.png" %}" alt="" width="40" height="40">
+									</p>
+								{% else %}
+									<p class="info-thumb pushed" data-postid="{{post.id}}" data-rot="0">
+										<img src="{% static "img/thumb.png" %}" alt="" width="50" height="50">
+									</p>
+								{% endif %}
 							{% endif %}
-							<span class="info-thumbcount"><span>{{thumb.count}}</span>個人按讚</span>
-							<span class="info-comment"><span>{{comments.count}}</span>則留言</span>
+							<p class="info-thumbcount"><span>{{thumb.count}}</span>個人按讚</p>
+							<p class="info-comment"><span>{{comments.count}}</span>則留言</p>
 						</div>
 					</div>
 
 					<!-- 發文者可以刪除(看你要不要做) -->
-					<div class="forum-post-action">
-						<a href="#">刪除</a>
-					</div>
+					{% if request.user.is_authenticated and request.user.username == post.postUser.username %}
+						<div class="forum-post-action">
+							<a href="/forum/delete/{{post.id}}">刪除</a>
+						</div> 
+					{% endif %}
 				</div>
 
 			</div>
@@ -145,8 +193,8 @@
 					<form action="" method="POST">
 						{% load widget_tweaks %}
 						{% csrf_token %}
-						{% comment %} <textarea name="comment" style="width: 100%; height: 100%;"></textarea> {% endcomment %}
-						{% render_field commentForm.commentBody placeholder="留點東西吧" class="form-control"%}
+						
+						{% render_field commentForm.commentBody placeholder="留點東西吧" class="form-control" %}
 				
 						<div style="text-align: right;">
 							<input type="submit" class="btn btn-primary" value="發布留言" style="cursor: pointer;"/>
@@ -174,9 +222,11 @@
 					</div>
 
 					<!-- 發文者可以刪除(看你要不要做) -->
+					<!--
 					<div class="forum-post-action forum-comment-action">
 						<a href="#">刪除</a>
 					</div>
+					-->
 				</div>
 			</div>
 		
