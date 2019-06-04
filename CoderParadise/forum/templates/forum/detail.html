@@ -50,6 +50,10 @@
 			.info-thumb:hover{
 				transform: scale(1.2);
 			}
+			.info-thumb.pushed{
+				filter: grayscale(1) blur(1px);
+			}
+
 			.forum-post-action{
 				position: absolute;
 				right: 20px;
@@ -82,13 +86,30 @@
 				border: .5px #00f solid;
 				box-shadow: 2px 0 5px 0 #bb68ff;
 			}
-			.info-thumb.pushed{
-				filter: blur(3px);
-			}
 		</style>
 		<script>
 			$(document).on('click', '.info-thumb', function(){
-				$(this).css({'transform': 'scale(1.2) rotate(360deg)'}).addClass('pushed');
+				var rot = Number($(this).data('rot')) + 360;
+				var t = this;
+
+				$(this).data('rot', rot).css({'transform': 'scale(1.2) rotate('+ rot +'deg)'}).addClass('pushed');
+
+				$.ajax({
+					url: location.origin + '/forum/thumb/' + $(t).data('postid'),
+					type: 'get',
+					success: function(re){
+						if (re == '0')
+						{
+							$('.info-thumbcount>span').text(Number($('.info-thumbcount>span').text()) + 1);
+							$(t).addClass('pushed');
+						}
+						else
+						{
+							$('.info-thumbcount>span').text(Number($('.info-thumbcount>span').text()) - 1);
+							$(t).removeClass('pushed');
+						}
+					}
+				});
 			})
 		</script>
 
@@ -123,14 +144,12 @@
 							{% if request.user.is_authenticated %}
 								{% load static %}
 								{% if userThumb.count == 0 %}
-									<p class="info-thumb">
-											<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = location.origin + '/forum/thumb/{{post.id}}/'">
-									</p>
+									<p class="info-thumb" data-postid="{{post.id}}" data-rot="0">
 								{% else %}
-									<p class="info-thumb pushed">
-											<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = location.origin + '/forum/thumb/{{post.id}}/'">
-									</p>
+									<p class="info-thumb pushed" data-postid="{{post.id}}" data-rot="0">
 								{% endif %}
+										<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30">
+									</p>
 							{% endif %}
 							<span class="info-thumbcount"><span>{{thumb.count}}</span>個人按讚</span>
 							<span class="info-comment"><span>{{comments.count}}</span>則留言</span>

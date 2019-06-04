@@ -4,6 +4,7 @@ from users.models import UserProfile
 from django.contrib.auth.models import User
 from . import forms
 from django.contrib import messages
+from django.http import HttpResponse
 
 
 
@@ -154,7 +155,8 @@ def thumb(request, id):
     if(t.count() == 0):
         thumb = Thumb(post=post, thumbUser=user)
         thumb.save()
+        return HttpResponse(1) #按讚
     else:
         thumb = Thumb.objects.get(post=post, thumbUser=user)
         thumb.delete()
-    return redirect(f'/forum/detail/{id}')
+        return HttpResponse(0) #收回讚
