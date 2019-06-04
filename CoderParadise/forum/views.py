@@ -150,6 +150,11 @@ def create(request):
 def thumb(request, id):
     user = request.user
     post = Post.objects.get(id=id)
-    thumb = Thumb(post=post, thumbUser=user)
-    thumb.save()
+    t = Thumb.objects.filter(post=post).filter(thumbUser=user)
+    if(t.count() == 0):
+        thumb = Thumb(post=post, thumbUser=user)
+        thumb.save()
+    else:
+        thumb = Thumb.objects.get(post=post, thumbUser=user)
+        thumb.delete()
     return redirect(f'/forum/detail/{id}')
