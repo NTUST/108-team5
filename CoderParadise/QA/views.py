@@ -67,7 +67,7 @@ def detail(request, id):
                 body = form.cleaned_data.get('body')
                 ans = Answer( body=body, abouQuestion=data, postedUser=user)
                 ans.save()
-                return redirect(f'/QA/detail/{id}')
+                return redirect(f'/QA/detail/{id}#footer')
         else:
             form = forms.AnswerForm()
     else:
