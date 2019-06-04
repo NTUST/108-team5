@@ -121,12 +121,16 @@
 						</div>
 						<div class="post-info-2">
 							{% if request.user.is_authenticated %}
-								<p class="info-thumb">
-									{% load static %}
-									{% if userThumb.count == 0 %}
-										<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = '/forum/thumb/{{post.id}}/'">
-									{% endif %}
-								</p>
+								{% load static %}
+								{% if userThumb.count == 0 %}
+									<p class="info-thumb">
+											<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = location.origin + '/forum/thumb/{{post.id}}/'">
+									</p>
+								{% else %}
+									<p class="info-thumb pushed">
+											<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = location.origin + '/forum/thumb/{{post.id}}/'">
+									</p>
+								{% endif %}
 							{% endif %}
 							<span class="info-thumbcount"><span>{{thumb.count}}</span>個人按讚</span>
 							<span class="info-comment"><span>{{comments.count}}</span>則留言</span>
