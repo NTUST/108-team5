@@ -24,7 +24,7 @@ class Post(models.Model):
 
 class Thumb(models.Model):
     post = models.ForeignKey(Post,on_delete=models.CASCADE)
-    thumbUserProfile = models.ForeignKey(UserProfile,on_delete=models.CASCADE, default=None, blank=True)
+    thumbUser = models.ForeignKey(User,on_delete=models.CASCADE, default=None, blank=True)
 
     def __str__(self):
         return self.post.title

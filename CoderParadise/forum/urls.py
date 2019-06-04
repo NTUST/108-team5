@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^detail/(?P<id>\d+)/$', views.detail, name='detail'),
     url(r'^create/', views.create, name='create'),
     url(r'^update/(?P<id>\d+)/$', views.update, name='update'),
+        url(r'^thumb/(?P<id>\d+)/$', views.thumb, name='thumb'),
 ]

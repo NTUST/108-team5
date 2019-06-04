@@ -71,8 +71,10 @@ def detail(request, id):
     post = Post.objects.get(id=id)
     thumb = Thumb.objects.filter(post=post)
     comment = Comment.objects.filter(post=post)
+    userThumb = None
     if request.user.is_authenticated:
         user = request.user
+        userThumb = Thumb.objects.filter(post=post).filter(thumbUser=user)
         if request.method == 'POST':
             form = forms.CommentForm(request.POST)
             if form.is_valid():
@@ -89,7 +91,8 @@ def detail(request, id):
         'post': post,
         'thumb':thumb,
         'comments':comment,
-        'commentForm':form
+        'commentForm':form,
+        'userThumb':userThumb
     }
 
     return render(request, 'forum/detail.html', context)
@@ -144,3 +147,9 @@ def create(request):
         messages.info(request, f'請您登入後再新增問題！')
         return redirect(f'/forum/')
 
+def thumb(request, id):
+    user = request.user
+    post = Post.objects.get(id=id)
+    thumb = Thumb(post=post, thumbUser=user)
+    thumb.save()
+    return redirect(f'/forum/detail/{{id}}')
