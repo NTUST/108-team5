@@ -151,3 +151,16 @@ footer {
   position: relative;
   top: 120px;
 }
+
+.footer{
+  width: 100%;
+  background-color: #0275d8;
+  margin-top: 100px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.index-content{
+  padding: 30px;
+}

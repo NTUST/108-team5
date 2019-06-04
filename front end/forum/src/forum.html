@@ -9,515 +9,154 @@
 	<meta content="LayoutIt!" name="author">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row" style="height: 300px;">
-		<div class="col-md-12" style="height: auto;	">
-			<div class="row" style="background: white;" >
-				<div class="col-md-8" id="div1">
-					<h1 style="font-size: 66px;color: blue;margin-top: 1%">
-								<a href="index.html" style="text-decoration:none;1"><b>碼農天堂</b></a></h1>
-					</h1>
-				</div>
-				<div class="col-md-4">
-					<ul class="nav" id="div2">
-							<li class="nav-item">
-								<a class="nav-link active" href="../../index&member/src/index.html">首頁</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="">討論區</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link " href="../../QA/src/QA.html">問答區</a>
-							</li>
-
-							 <!-- {% if(is_login())  %} -->
-							<li class="nav-item">
-								<a class="nav-link d-none" href="../../index&member/src/個人小屋-關於我.html">個人小屋</a>
-							</li>
-
-							 <!-- else  -->
-							<li class="nav-item dropdown ml-mda-uto">
-							 	<a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">會員</a>
-								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-								 <a class="dropdown-item" href="../../index&member/src/註冊.html">註冊</a> <a class="dropdown-item" href="../../index&member/src/登入介面.html">登入</a>
-								</div>
-							</li>
-							<!--  endif  -->
-					</ul>
-					<br>
-				</div>
-			</div>
-						<div class="row" style="position: relative; background-color: lightblue;top: 0%;">
-							
-							<div class="col-md-5" style="">
-								<span style="position: relative;display: inline-block;margin-right: 10px;left: 280px;top: 10px"><a href="./forum_index.html" style="text-decoration: none;">討論區</a></span>
-								<span class="_1ears" style="position: relative;display: inline-block;margin-right: 10px;left: 280px;top: 10px"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" class="breadcrumbs-icon-fill" style="fill-rule: evenodd;"><path d="M785.783,854.5l-4.552,4.3a0.771,0.771,0,0,1-1.048,0,0.672,0.672,0,0,1,0-.99L784.21,854l-4.027-3.8a0.672,0.672,0,0,1,0-.99,0.773,0.773,0,0,1,1.048,0l4.552,4.3A0.674,0.674,0,0,1,785.783,854.5Z" transform="translate(-780 -849.031)"></path></svg></span>
-								<span style="position: relative;display: inline-block;left: 280px;top: 10px">討論區名稱</span>
-							</div>
-							<div class="col-md-2" style="text-align: right;">
-								<span style="position: relative;top: 10px; border-bottom: #04f 1px solid;">
-									<input type="text" class="search-input" placeholder="在此輸入搜尋內容">
-											<svg class="qqNm_ desktop-header-search-icon-fill button-hover-fill style-jvp6q3ta" data-hook="search-icon" height="16" style="fill-rule:evenodd" viewBox="0 0 15 16" width="15" xmlns="http://www.w3.org/2000/svg" onclick="">
-												<path d="M878.766,254.573l-3.7-3.96a6.555,6.555,0,0,0,1.471-4.153,6.274,6.274,0,1,0-6.27,6.46,6.074,6.074,0,0,0,3.592-1.169l3.725,3.99a0.8,0.8,0,0,0,1.156.024A0.862,0.862,0,0,0,878.766,254.573Zm-8.5-12.888a4.777,4.777,0,1,1-4.636,4.775A4.712,4.712,0,0,1,870.27,241.685Z" transform="translate(-864 -240)"></path>
-											</svg>
-								</span>
-									
-							</div>
-							<div class="col-md-1" style="text-align: right;">
-								<span class="_385Jf" style="position: relative;display: block;top: 10px"><svg class="breadcrumbs-icon-fill members-icon-button button-hover-fill style-jvp6q3ta" height="19px" version="1.1" viewbox="0 0 19 19" width="19px" xmlns="http://www.w3.org/2000/svg" onclick="">
-								<path d="M11,15 L11,16 C11,16.5522847 10.5522847,17 10,17 L2,17 C1.44771525,17 1,16.5522847 1,16 L1,13 C1,11.3431458 2.34314575,10 4,10 L8,10 C8.05673321,10 8.11309861,10.0015748 8.16905486,10.0046831 C8.57956608,8.8370451 9.69203186,8 11,8 L15,8 C16.6568542,8 18,9.34314575 18,11 L18,14 C18,14.5522847 17.5522847,15 17,15 L11,15 Z M11,14 L17,14 L17,11 C17,9.8954305 16.1045695,9 15,9 L11,9 C10.1683695,9 9.45529124,9.50758246 9.15366611,10.2298465 C10.2378934,10.6819075 11,11.751954 11,13 L11,14 Z M13,7 C11.3431458,7 10,5.65685425 10,4 C10,2.34314575 11.3431458,1 13,1 C14.6568542,1 16,2.34314575 16,4 C16,5.65685425 14.6568542,7 13,7 Z M13,6 C14.1045695,6 15,5.1045695 15,4 C15,2.8954305 14.1045695,2 13,2 C11.8954305,2 11,2.8954305 11,4 C11,5.1045695 11.8954305,6 13,6 Z M4,11 C2.8954305,11 2,11.8954305 2,13 L2,16 L10,16 L10,13 C10,11.8954305 9.1045695,11 8,11 L4,11 Z M6,9 C4.34314575,9 3,7.65685425 3,6 C3,4.34314575 4.34314575,3 6,3 C7.65685425,3 9,4.34314575 9,6 C9,7.65685425 7.65685425,9 6,9 Z M6,8 C7.1045695,8 8,7.1045695 8,6 C8,4.8954305 7.1045695,4 6,4 C4.8954305,4 4,4.8954305 4,6 C4,7.1045695 4.8954305,8 6,8 Z" id="Members"></path></svg><span class="_1vKJV"></span></span>
-							</div>
-							<div class="col-md-4" style="">
-								<button class="btn btn-primary" style="width:130px;position: relative;left: 50px" type="button">登入/註冊</button>
-							</div>
-							
-
-							<!--登入後換成以下區塊
-							<div class="col-md-5" style="">
-								<span style="position: relative;left: 280px;top: 5px">討論區</span>
-							</div>
-							<div class="col-md-2" style="text-align: right;left: 155px">
-								<span style="position: relative;top: 5px; border-bottom: #04f 1px solid;">
-									<input type="text" class="search-input" placeholder="在此輸入搜尋內容">
-										<svg class="qqNm_ desktop-header-search-icon-fill button-hover-fill" data-hook="search-icon" height="16" style="fill-rule:evenodd" viewbox="0 0 15 16" width="15" xmlns="http://www.w3.org/2000/svg">
-											<path d="M878.766,254.573l-3.7-3.96a6.555,6.555,0,0,0,1.471-4.153,6.274,6.274,0,1,0-6.27,6.46,6.074,6.074,0,0,0,3.592-1.169l3.725,3.99a0.8,0.8,0,0,0,1.156.024A0.862,0.862,0,0,0,878.766,254.573Zm-8.5-12.888a4.777,4.777,0,1,1-4.636,4.775A4.712,4.712,0,0,1,870.27,241.685Z" transform="translate(-864 -240)"></path>
-										</svg>
-								</span>
-									
-							</div>
-							<div class="col-md-1" style="text-align: right;left: 80px">
-								<div class="lHtWm breadcrumbs-icon-fill button-hover-fill" data-hook="categories-manager-button" style="position: relative;top: 5px"><svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" class="_2fd67"><path d="M16.9553,8.6584 C17.0183,9.2294 17.0143,9.8044 16.9463,10.3744 C16.9203,10.5934 16.7283,10.7544 16.5073,10.7414 L16.4133,10.7414 C15.7273,10.7394 15.1103,11.1604 14.8623,11.8014 C14.6153,12.4414 14.7893,13.1684 15.2993,13.6274 C15.4633,13.7754 15.4833,14.0254 15.3443,14.1974 C14.9873,14.6424 14.5803,15.0444 14.1313,15.3954 C13.9603,15.5274 13.7163,15.5074 13.5693,15.3494 C13.0903,14.8494 12.3603,14.6834 11.7123,14.9264 C11.0713,15.1934 10.6623,15.8304 10.6873,16.5254 C10.6953,16.7444 10.5313,16.9324 10.3123,16.9544 C10.0393,16.9844 9.7643,17.0004 9.4893,17.0004 C9.2003,16.9994 8.9123,16.9834 8.6253,16.9504 C8.4063,16.9244 8.2443,16.7324 8.2573,16.5114 C8.2973,15.8094 7.8913,15.1584 7.2433,14.8854 C6.5933,14.6344 5.8553,14.8004 5.3743,15.3054 C5.2263,15.4694 4.9763,15.4894 4.8043,15.3514 C4.3643,14.9974 3.9663,14.5944 3.6173,14.1504 C3.4843,13.9794 3.5043,13.7354 3.6633,13.5884 C4.1763,13.1184 4.3433,12.3794 4.0823,11.7344 C3.8303,11.1054 3.2173,10.6964 2.5393,10.7034 C2.3103,10.7094 2.1073,10.5564 2.0483,10.3354 C1.9843,9.7684 1.9843,9.1964 2.0483,8.6294 C2.0693,8.4104 2.2613,8.2474 2.4813,8.2624 C3.1803,8.2844 3.8233,7.8844 4.1133,7.2484 C4.3853,6.5984 4.2173,5.8474 3.6943,5.3744 C3.5303,5.2264 3.5103,4.9764 3.6493,4.8054 C4.0063,4.3604 4.4133,3.9574 4.8623,3.6054 C5.0333,3.4744 5.2773,3.4944 5.4243,3.6534 C5.9033,4.1524 6.6333,4.3184 7.2813,4.0764 C7.9253,3.8104 8.3363,3.1724 8.3113,2.4764 C8.3043,2.2574 8.4683,2.0704 8.6863,2.0474 C9.2473,1.9844 9.8133,1.9844 10.3733,2.0474 C10.5933,2.0724 10.7543,2.2654 10.7423,2.4864 C10.7013,3.1874 11.1073,3.8384 11.7543,4.1124 C12.4063,4.3654 13.1463,4.1994 13.6283,3.6924 C13.7763,3.5294 14.0263,3.5094 14.1983,3.6474 C14.6383,4.0004 15.0373,4.4024 15.3863,4.8464 C15.5203,5.0174 15.5003,5.2614 15.3403,5.4084 C14.8313,5.8704 14.6613,6.5994 14.9123,7.2404 C15.1643,7.8804 15.7863,8.2984 16.4733,8.2894 C16.7003,8.2854 16.9003,8.4384 16.9553,8.6584 Z M15.9933,9.7754 C16.0013,9.6004 16.0023,9.4254 15.9963,9.2514 C15.0913,9.0954 14.3273,8.4844 13.9823,7.6064 C13.6513,6.7654 13.7813,5.8154 14.2883,5.0964 C14.1753,4.9724 14.0563,4.8534 13.9343,4.7404 C13.4803,5.0544 12.9353,5.2294 12.3773,5.2294 C12.0393,5.2294 11.7083,5.1674 11.3653,5.0334 C10.5113,4.6724 9.9183,3.8964 9.7733,3.0044 C9.6923,3.0024 9.6113,3.0004 9.5303,3.0004 C9.4433,3.0004 9.3573,3.0024 9.2693,3.0054 C9.1093,3.8864 8.5053,4.6524 7.6313,5.0124 C7.3243,5.1284 7.0023,5.1854 6.6743,5.1854 C6.1193,5.1854 5.5763,5.0134 5.1183,4.6974 C4.9903,4.8144 4.8663,4.9364 4.7473,5.0634 C5.2723,5.8024 5.3923,6.7804 5.0233,7.6644 C4.6523,8.4754 3.9103,9.0474 3.0063,9.2134 C2.9983,9.3884 2.9983,9.5644 3.0053,9.7404 C3.9023,9.8924 4.6633,10.4954 5.0093,11.3594 C5.3513,12.2074 5.2273,13.1694 4.7143,13.8984 C4.8273,14.0224 4.9453,14.1424 5.0683,14.2574 C5.5213,13.9434 6.0663,13.7694 6.6243,13.7694 C6.9593,13.7694 7.2883,13.8314 7.6323,13.9624 C8.4873,14.3244 9.0813,15.1004 9.2253,15.9954 C9.3133,15.9984 9.4013,16.0004 9.4893,16.0004 C9.5693,16.0004 9.6483,15.9984 9.7283,15.9954 C9.8893,15.1174 10.4903,14.3514 11.3613,13.9904 C11.6693,13.8754 11.9923,13.8164 12.3203,13.8164 C12.8753,13.8164 13.4183,13.9884 13.8753,14.3044 C14.0043,14.1874 14.1273,14.0654 14.2463,13.9384 C13.7383,13.2224 13.6063,12.2784 13.9303,11.4394 C14.2783,10.5424 15.0593,9.9214 15.9933,9.7754 Z M9.5,12 C8.11928813,12 7,10.8807119 7,9.5 C7,8.11928813 8.11928813,7 9.5,7 C10.8807119,7 12,8.11928813 12,9.5 C12,10.8807119 10.8807119,12 9.5,12 Z M9.5,11 C10.3284271,11 11,10.3284271 11,9.5 C11,8.67157288 10.3284271,8 9.5,8 C8.67157288,8 8,8.67157288 8,9.5 C8,10.3284271 8.67157288,11 9.5,11 Z"></path></svg></div>
-							</div>
-							<div class="col-md-1" style=" text-align: right;">
-								<span class="_385Jf" style="position: relative;display: block;top: 5px"><svg class="breadcrumbs-icon-fill members-icon-button button-hover-fill" height="19px" version="1.1" viewbox="0 0 19 19" width="19px" xmlns="http://www.w3.org/2000/svg">
-								<path d="M11,15 L11,16 C11,16.5522847 10.5522847,17 10,17 L2,17 C1.44771525,17 1,16.5522847 1,16 L1,13 C1,11.3431458 2.34314575,10 4,10 L8,10 C8.05673321,10 8.11309861,10.0015748 8.16905486,10.0046831 C8.57956608,8.8370451 9.69203186,8 11,8 L15,8 C16.6568542,8 18,9.34314575 18,11 L18,14 C18,14.5522847 17.5522847,15 17,15 L11,15 Z M11,14 L17,14 L17,11 C17,9.8954305 16.1045695,9 15,9 L11,9 C10.1683695,9 9.45529124,9.50758246 9.15366611,10.2298465 C10.2378934,10.6819075 11,11.751954 11,13 L11,14 Z M13,7 C11.3431458,7 10,5.65685425 10,4 C10,2.34314575 11.3431458,1 13,1 C14.6568542,1 16,2.34314575 16,4 C16,5.65685425 14.6568542,7 13,7 Z M13,6 C14.1045695,6 15,5.1045695 15,4 C15,2.8954305 14.1045695,2 13,2 C11.8954305,2 11,2.8954305 11,4 C11,5.1045695 11.8954305,6 13,6 Z M4,11 C2.8954305,11 2,11.8954305 2,13 L2,16 L10,16 L10,13 C10,11.8954305 9.1045695,11 8,11 L4,11 Z M6,9 C4.34314575,9 3,7.65685425 3,6 C3,4.34314575 4.34314575,3 6,3 C7.65685425,3 9,4.34314575 9,6 C9,7.65685425 7.65685425,9 6,9 Z M6,8 C7.1045695,8 8,7.1045695 8,6 C8,4.8954305 7.1045695,4 6,4 C4.8954305,4 4,4.8954305 4,6 C4,7.1045695 4.8954305,8 6,8 Z" id="Members"></path></svg><span class="_1vKJV"></span></span>
-							</div>
-							<div class="col-md-1" style="">
-								<a class="_30xR4 notification-button _1TGG_" aria-label="通知" data-hook="notification-button" currentuser="[object Object]" href="https://jklzv6668895.wixsite.com/nickchen-t/members/notifications" target="_top" style="position: relative;top: 5px"><span class="_385Jf"><svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" class="breadcrumbs-icon-fill button-hover-fill"><path d="M7.05000906,15 L5.1,15 C4.49248678,15 4,14.5522847 4,14 L4,8 C4,5.69998834 5.70827798,3.76269459 8.03431738,3.17949743 C8.18111314,2.50506611 8.78157432,2 9.5,2 C10.2184257,2 10.8188869,2.50506611 10.9656826,3.17949743 C13.291722,3.76269459 15,5.69998834 15,8 L15,14 C15,14.5522847 14.5075132,15 13.9,15 L11.9499909,15 C11.7183558,16.1411202 10.709479,17 9.5,17 C8.29052104,17 7.28164422,16.1411202 7.05000906,15 Z M10.9146471,15 L8.08535285,15 C8.29127106,15.5825962 8.84689059,16 9.5,16 C10.1531094,16 10.7087289,15.5825962 10.9146471,15 Z M9.5,4 C7.01471863,4 5,5.78979527 5,7.99761963 L5,14 L14,14 L14,7.99761963 C14,5.78979527 11.9852814,4 9.5,4 Z"></path></svg><span class="_1vKJV"></span></span></a>
-							</div>
-							<div class="col-md-2" style="left: -80px">
-								<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" width="30px" height="30px">
-							</div>
-							-->
-						</div>
-				<h1 style="text-align:center;position: relative;display: block;top: 20%">顯示討論區標題</h1>
-			</div>
-		</div>
-		<div class="row" style="height: 1500px;position: relative;top: 30%;">
-			<div class="col-md-12" style="top: 0%;background-color: lightblue">
-				<div class="row">
-					<div class="col-md-7" style="top: 35px;left: 115px;text-align: right;">
-						<h6>排序方式:</h6>
-					</div>
-					<div class="col-md-2" style="top: 25px;left: 80px">
-						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://example.com" id="navbarDropdownMenuLink">最近活動</a>
-						<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu dropdown-menu-right" style="max-width: 160px;left: -18%">
-							<a class="dropdown-item" href="#">最近活動</a> <a class="dropdown-item" href="#">最新</a> <a class="dropdown-item" href="#">最多留言</a> <a class="dropdown-item" href="#">最多觀看次數</a> <a class="dropdown-item" href="#">最多讚數</a>
-						</div>
-					</div>
-					<div class="col-md-3" style="top: 25px;left: -40px">
-						<!--點擊這個按鈕後進入用戶新增文章的網頁-->
-						<a href="./create-article.html"><button class="btn btn-primary" type="button">撰寫文章</button></a>
+		<style>
+			.forum-title{
+				font-size: 40px;
+				font-weight: bold;
+				text-align: center;
+				margin: 30px;
+			}
+			.forum-post{
+				background-color: #fff;
+				border: .5px #00f solid;
+				padding: 20px;
+				font-size: 14px;
+			}
+			.forum-post-title{
+				font-size: 1.5em;
+				font-weight: bold;
+				padding: 10px 0;
+				border-bottom: 1px #ddd solid;
+			}
+			.forum-post-info{
+				margin-top: 30px;
+			}
+			.post-info{
+				font-size: .8em;
+				background-color: #ffe8ab;
+				display: inline-block;
+				padding: 10px;
+			}
+			.post-time{
+				font-weight: bold;
+			}
+			.post-info-2{
+				color: #51b2b8;
+				margin-top: 20px;
+			}
+			.post-info-2>span{
+				padding-right: 20px;
+			}
+			.info-thumb{
+				display: inline-block;
+				margin-right: 50px;
+				cursor: pointer;
+				transition: transform .2s linear;
+			}
+			.info-thumb:hover{
+				transform: scale(1.2);
+			}
+			.forum-post-action{
+				position: absolute;
+				right: 20px;
+				top: 20px;
+			}
+			.post-row{
+				margin-bottom: 50px;
+			}
+			.comment-line{
+				color: #fff;
+				opacity: .8;
+				font-size: 24px;
+				border-bottom: 1px #ddd solid;
+				margin-bottom: 30px;
+			}
+			.forum-post-action.forum-comment-action{
+				top: auto;
+				bottom: 20px;
+			}
+		</style>
+		<script>
+			$(document).on('click', '.info-thumb', function(){
+				$(this).css({'transform': 'scale(1.2) rotate(360deg)'})
+			})
+		</script>
+		<h1 class="forum-title">顯示討論區標題</h1>
+			<div style="background-color: lightblue;">
+				<div class="row justify-content-center">
+					<div class="col-md-8" style="padding: 0; text-align: right; margin: 20px 0;">
+						<button class="btn btn-primary" type="button">撰寫文章</button>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-12" style="text-align: center;top: 5px;">
-						<!--以下的div為討論區內用戶發的文章區塊,如果用戶新增了某篇討論區內的貼文,那就要在此討論區列出來。顯示內文的部分最多列出該文章的三行字,超過用...表示。點擊後進入此文章的完整內容與互動區,一頁最多列8個(或是要其他的數列也可)-->
-						<div class="" id="comp-jvob29h5"  style="border: 1px solid blue;margin-left: -469.5px;left: 50%; width: 939px; position: absolute; top: 39px; height: 272px;background-color: white">
-
-							<div class="style-jvp6q3tabg" id="comp-jvob29h5bg"></div>
-							<div class="style-jvp6q3tainlineContent" id="comp-jvob29h5inlineContent">
-								<div class="ImageButton_1 style-jvp6q3ta" data-state="supports_opacity transition_none" id="comp-jvob29iq" style="left: 26px; width: 26px; position: absolute; top: 24px; height: 26px;" onclick="location.href='#'">
-									<a class="ImageButton_1link" id="comp-jvob29iqlink" style="width: 26px; height: 26px;" title="">
-									<div class="ImageButton_1_correct-positioning">
-										<div class="ImageButton_1defaultImage" data-has-bg-scroll-effect="" data-style="" id="comp-jvob29iqdefaultImage" style="position: relative; width: 26px; height: 26px;"><img alt="" data-type="image" id="comp-jvob29iqdefaultImageimage" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_26,h_26,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 26px; height: 26px; object-fit: contain;"></div>
-									</div>
-									<div class="ImageButton_1_correct-positioning">
-										<div class="ImageButton_1hoverImage" data-has-bg-scroll-effect="" data-style="" id="comp-jvob29iqhoverImage" style="position: relative; width: 26px; height: 26px;"><img alt="" data-type="image" id="comp-jvob29iqhoverImageimage" itemprop="image" src="https://static.wixstatic.com/media/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.png/v1/fill/w_26,h_26,al_c,q_90/035244_ddf2a7558b514f8e9d42ea99a5835359~mv2.webp" style="width: 26px; height: 26px; object-fit: contain;"></div>
-									</div>
-									<div class="ImageButton_1_correct-positioning">
-										<div class="ImageButton_1activeImage" data-has-bg-scroll-effect="" data-style="" id="comp-jvob29iqactiveImage" style="position: relative; width: 26px; height: 26px;"><img alt="" data-type="image" id="comp-jvob29iqactiveImageimage" itemprop="image" src="https://static.wixstatic.com/media/035244_3511e868a21748338c395d7843494e00~mv2.png/v1/fill/w_26,h_26,al_c,q_90/035244_3511e868a21748338c395d7843494e00~mv2.webp" style="width: 26px; height: 26px; object-fit: contain;"></div>
-									</div></a>
+				<div class="post-row row justify-content-center">
+					<div class="forum-post col-md-8">
+						<p class="forum-post-title">標題</p>
+						<p class="forum-post-body">
+							文章的內文，文章的內文，文章的內文，文章的內文，<br>
+							文章的內文，文章的內文，文章的內文<br>	
+							文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，<br>	
+							文章的內文，文章的內文，文章的內文，文章的內文。
+						</p>
+						<div class="forum-post-info">
+							<div>
+								<div class="post-info">
+									<span>張貼於</span>
+									<span class="post-time">2019-06-03 22:28</span><br>
+									<img src="avater.jpg" alt="頭像" width="30" height="30">
+									<span class="post-user">Username</span>
 								</div>
-								<style data-styleid="ImageButton_1" type="text/css">
-								.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
-								.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
-								.ImageButton_1defaultImage {position:absolute;opacity:1;}
-								.ImageButton_1hoverImage {position:absolute;opacity:0;}
-								.ImageButton_1activeImage {position:absolute;opacity:0;}
-								.ImageButton_1_correct-positioning {position:absolute;}
-								.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
-								.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
-								.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
-								.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
-								.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
-								.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
-								.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
-								.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
-								.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
-								.ImageButton_1defaultImage {overflow:hidden;}
-								.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
-								.ImageButton_1hoverImage {overflow:hidden;}
-								.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
-								.ImageButton_1activeImage {overflow:hidden;}
-								.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}
-								</style>
-								<div class="txtNew" data-packed="false" id="comp-jvob29jd" style="left: 66px; width: 52px; position: absolute; pointer-events: none; top: 24px;">
-									<h1 class="font_0" style="font-size:11px;"><span class="style-jvp6q3ta" style="font-size:11px;" onclick="location.href='#'">用戶名稱</span></h1>
-									<div class="measurer" style="position: absolute"></div>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div class="txtNew" data-packed="false" id="comp-jvob29jx" style="left: 66px; width: 59px; position: absolute; pointer-events: none; top: 40px;">
-									<h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;">用戶階級</span></h1>
-									<div class="measurer" style="position: absolute"></div>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div class="txtNew" data-packed="false" id="comp-jvob29kd" style="left: 125px; width: auto; position: absolute; pointer-events: none; top: 41px;">
-									<h1 class="font_0" style="font-size:11px;"><span style="font-size:11px;"><span>&#8203;發文日期</span></span></h1>
-									<div class="measurer" style="position: absolute"></div>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div>
-									<a class="ImageButton_1link nav-link" data-toggle="dropdown" id="navbarDropdownMenuLink" style="left: 896px; width: 26px; position: absolute; top: 24px; height: 26px;" title="">
-										<svg class="style-jvp6q3ta" xmlns="http://www.w3.org/2000/svg" width="19" viewBox="0 0 19 19" role="img" class="blog-post-homepage-description-fill blog-hover-container-element-fill"><path d="M2.44398805,5.99973295 C1.62345525,5.9690612 0.980075653,5.28418875 1.00047182,4.46312144 C1.02086799,3.64205413 1.69745853,2.98998831 2.51850166,3.0001164 C3.33954478,3.01024449 3.99985313,3.67880182 4,4.50012255 C3.98424812,5.34399206 3.28763905,6.0153508 2.44398805,5.99973295 L2.44398805,5.99973295 Z M2.44398805,10.9997329 C1.62345525,10.9690612 0.980075653,10.2841888 1.00047182,9.46312144 C1.02086799,8.64205413 1.69745853,7.98998831 2.51850166,8.0001164 C3.33954478,8.01024449 3.99985313,8.67880182 4,9.50012255 C3.98424812,10.3439921 3.28763905,11.0153508 2.44398805,10.9997329 L2.44398805,10.9997329 Z M2.44398805,15.9997329 C1.62345525,15.9690612 0.980075653,15.2841888 1.00047182,14.4631214 C1.02086799,13.6420541 1.69745853,12.9899883 2.51850166,13.0001164 C3.33954478,13.0102445 3.99985313,13.6788018 4,14.5001225 C3.98424812,15.3439921 3.28763905,16.0153508 2.44398805,15.9997329 L2.44398805,15.9997329 Z"></path></svg>
-									</a>
-									<!-- "登入前"按下按鈕則顯示下面的區塊 -->
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="position: absolute; top: 50px; right: 1%">
-							 			<!-- 尚未追蹤此貼文顯示追蹤貼文 -->
-							 			<a class="dropdown-item" href="#">追蹤貼文</a>
-							 			<!-- 追蹤此貼文後顯示取消追蹤貼文
-							 			<a class="dropdown-item" href="#">取消追蹤貼文</a> -->
-							 		</div>									
-
-							 		<!-- "登入後"and"如果是自己發的貼文or是管理員"則按下按紐則顯示以下區塊-->
-									<!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="position: absolute; top: 50px; right: 1%">
-							 			尚未追蹤此貼文顯示追蹤貼文
-							 			<a class="dropdown-item" href="#">追蹤貼文</a>
-							 			追蹤此貼文後顯示取消追蹤貼文
-							 			<a class="dropdown-item" href="#">取消追蹤貼文</a>
-
-										<a class="dropdown-item" href="#">編輯貼文</a>
-										<a class="dropdown-item" href="#">置頂貼文</a>
-										關閉留言功能前顯示關閉留言功能
-										<a class="dropdown-item" href="#">關閉留言功能</a>
-										關閉留言功能後顯示開啟留言功能
-										<a class="dropdown-item" href="#">開啟留言功能</a>
-
-										<a class="dropdown-item" href="#">移動到其它類別</a>
-										<a class="dropdown-item" href="#">刪除貼文</a>
-							 		</div> -->
-
-							 		<!-- "登入後"and"如果是別人發的貼文"則按下按紐則顯示以下區塊-->
-									<!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink" style="position: absolute; top: 50px; right: 1%">
-							 			尚未追蹤此貼文顯示追蹤貼文
-							 			<a class="dropdown-item" href="#">追蹤貼文</a>
-							 			追蹤此貼文後顯示取消追蹤貼文
-							 			<a class="dropdown-item" href="#">取消追蹤貼文</a>
-										<a class="dropdown-item" href="#">置頂貼文</a>
-							 		</div> -->
-								</div>
-								<style data-styleid="ImageButton_1" type="text/css">
-								.ImageButton_1link {position:relative;display:block;z-index:0;overflow:visible;-ms-touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
-								.ImageButton_1link:after {content:"";position:absolute;z-index:5;width:100%;height:100%;display:block;}
-								.ImageButton_1defaultImage {position:absolute;opacity:1;}
-								.ImageButton_1hoverImage {position:absolute;opacity:0;}
-								.ImageButton_1activeImage {position:absolute;opacity:0;}
-								.ImageButton_1_correct-positioning {position:absolute;}
-								.ImageButton_1[data-state~="hovered"] .ImageButton_1defaultImage {opacity:0;}
-								.ImageButton_1[data-state~="hovered"] .ImageButton_1hoverImage {opacity:1;}
-								.ImageButton_1[data-state~="hovered"] .ImageButton_1activeImage {opacity:0;}
-								.ImageButton_1[data-state~="pressed"] .ImageButton_1defaultImage {opacity:0;}
-								.ImageButton_1[data-state~="pressed"] .ImageButton_1hoverImage {opacity:0;}
-								.ImageButton_1[data-state~="pressed"] .ImageButton_1activeImage {opacity:1;}
-								.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1defaultImage {z-index:1;transition:opacity 0.1s ease 0s;}
-								.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_adh"] .ImageButton_1hoverImage {z-index:3;transition:opacity 0.5s ease 0s;}
-								.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_ahd"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dah"] .ImageButton_1hoverImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_dha"] .ImageButton_1activeImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_had"] .ImageButton_1defaultImage,.ImageButton_1[data-state~="transition_fade"][data-state~="prepare_hda"] .ImageButton_1activeImage {z-index:2;transition:opacity 0.5s ease 0s;}
-								.ImageButton_1defaultImage {overflow:hidden;}
-								.ImageButton_1defaultImageimage {position:static;box-shadow:#000 0 0 0;}
-								.ImageButton_1hoverImage {overflow:hidden;}
-								.ImageButton_1hoverImageimage {position:static;box-shadow:#000 0 0 0;}
-								.ImageButton_1activeImage {overflow:hidden;}
-								.ImageButton_1activeImageimage {position:static;box-shadow:#000 0 0 0;}
-								</style>
-								<div class="txtNew" data-packed="false" id="comp-jvob29lt" style="left: 26px; width: 896px; position: absolute; pointer-events: none; top: 80px;">
-									<h1 class="font_0" style="font-size:20px;"><span class="style-jvp6q3ta" style="font-size:20px;" onclick="location.href='./article.html'">標題</span></h1>
-									<div class="measurer" style="position: absolute"></div>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div class="txtNew" data-min-height="64" data-packed="false" id="comp-jvob29ma" style="left: 21px; width: 896px; position: absolute; min-height: 64px; pointer-events: none; top: 129px;">
-									<p class="font_7" style="font-size:15px;"><span class="style-jvp6q3ta" style="font-size:15px;" onclick="location.href='./article.html'">我是個段落。按一下這裡來新增您的文字和進行編輯。這很簡單。</span></p>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div class="txtNew" data-packed="false" id="comp-jvob29ms" style="left: 17px; width: 66px; position: absolute; pointer-events: none; top: 238px;">
-									<h1 class="font_0 style-jvp6q3ta" style="font-size:12px;"><span style="font-size:12px;" onclick="location.href='./article.html'">x 個留言</span></h1>
-									<div class="measurer" style="position: absolute"></div>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div class="txtNew" data-packed="false" id="comp-jvob29nb" style="left: 86px; width: 59px; position: absolute; pointer-events: none; top: 238px;">
-									<h1 class="font_0" style="font-size:12px;"><span style="font-size:12px;">x 個查看</span></h1>
-									<div class="measurer" style="position: absolute"></div>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div class="txtNew" data-packed="false" id="comp-jvob29nu" style="right: 4%; width: auto; position: absolute; pointer-events: none; top: 240px;">
-									<h1 class="font_0" style="font-size:14px;"><span style="font-size:14px;">顯示此文章讚數(需與對應的article文章讚數一致)</span></h1>
-									<div class="measurer" style="position: absolute"></div>
-								</div>
-								<style data-styleid="txtNew" type="text/css">
-								.txtNew {word-wrap:break-word;text-align:start;}
-								.txtNew_override-left * {text-align:left !important;}
-								.txtNew_override-right * {text-align:right !important;}
-								.txtNew_override-center * {text-align:center !important;}
-								.txtNew_override-justify * {text-align:justify !important;}
-								.txtNew > * {pointer-events:auto;}
-								.txtNew li {font-style:inherit;font-weight:inherit;line-height:inherit;letter-spacing:normal;}
-								.txtNew ol,.txtNew ul {padding-left:1.3em;padding-right:0;margin-left:0.5em;margin-right:0;line-height:normal;letter-spacing:normal;}
-								.txtNew ul {list-style-type:disc;}
-								.txtNew ol {list-style-type:decimal;}
-								.txtNew ul ul,.txtNew ol ul {list-style-type:circle;}
-								.txtNew ul ul ul,.txtNew ol ul ul {list-style-type:square;}
-								.txtNew ul ol ul,.txtNew ol ol ul {list-style-type:square;}
-								.txtNew ul[dir="rtl"],.txtNew ol[dir="rtl"] {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew ul[dir="rtl"] ul,.txtNew ul[dir="rtl"] ol,.txtNew ol[dir="rtl"] ul,.txtNew ol[dir="rtl"] ol {padding-left:0;padding-right:1.3em;margin-left:0;margin-right:0.5em;}
-								.txtNew p {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h1 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h2 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h3 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h4 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h5 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew h6 {margin:0;line-height:normal;letter-spacing:normal;}
-								.txtNew a {color:inherit;}
-								</style>
-								<div class="style-jvob29op" data-display-mode="stretch" data-preserve-viewbox="ignore" data-svg-id="0345921c668b47ed87c489509b3c146e.svg" data-svg-type="color" data-viewbox="0 0 200 200" id="comp-jvob29og" style="left: 902px; width: 19px; position: absolute; top: 236px; height: 19px;">
-									<div class="style-jvob29oplink" id="comp-jvob29oglink">
-										<div class="style-jvob29op_comp-jvob29og style-jvob29op_non-scaling-stroke style-jvob29opsvg" id="comp-jvob29ogsvg" style="opacity: 1;">
-											<!-- 以下的div用來顯示對此篇留言按讚與否,如果會員未登入就按下可能要提醒他登入(或是要讓訪客按讚也行) -->
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 475.099 475.099" style="enable-background:new 0 0 475.099 475.099;" xml:space="preserve"><g><g>
-												<path d="M442.829,265.532c9.328-14.089,13.986-29.598,13.986-46.538c0-19.607-7.225-36.637-21.687-51.117   c-14.469-14.465-31.601-21.696-51.394-21.696h-50.251c9.134-18.842,13.709-37.117,13.709-54.816c0-22.271-3.34-39.971-9.996-53.105   c-6.663-13.138-16.372-22.795-29.126-28.984C295.313,3.09,280.947,0,264.959,0c-9.712,0-18.274,3.521-25.697,10.566   c-8.183,7.993-14.084,18.274-17.699,30.837c-3.617,12.559-6.521,24.6-8.708,36.116c-2.187,11.515-5.569,19.652-10.135,24.41   c-9.329,10.088-19.511,22.273-30.551,36.547c-19.224,24.932-32.264,39.685-39.113,44.255H54.828   c-10.088,0-18.702,3.574-25.84,10.706c-7.135,7.139-10.705,15.752-10.705,25.841v182.723c0,10.089,3.566,18.699,10.705,25.838   c7.142,7.139,15.752,10.711,25.84,10.711h82.221c4.188,0,17.319,3.806,39.399,11.42c23.413,8.186,44.017,14.418,61.812,18.702   c17.797,4.284,35.832,6.427,54.106,6.427h26.545h10.284c26.836,0,48.438-7.666,64.809-22.99   c16.365-15.324,24.458-36.213,24.27-62.67c11.42-14.657,17.129-31.597,17.129-50.819c0-4.185-0.281-8.277-0.855-12.278   c7.23-12.748,10.854-26.453,10.854-41.11C445.399,278.379,444.544,271.809,442.829,265.532z M85.949,396.58   c-3.616,3.614-7.898,5.428-12.847,5.428c-4.95,0-9.233-1.813-12.85-5.428c-3.615-3.613-5.424-7.897-5.424-12.85   c0-4.948,1.805-9.229,5.424-12.847c3.621-3.617,7.9-5.425,12.85-5.425c4.949,0,9.231,1.808,12.847,5.425   c3.617,3.617,5.426,7.898,5.426,12.847C91.375,388.683,89.566,392.967,85.949,396.58z M414.145,242.419   c-4.093,8.754-9.186,13.227-15.276,13.415c2.854,3.237,5.235,7.762,7.139,13.562c1.902,5.807,2.847,11.087,2.847,15.848   c0,13.127-5.037,24.455-15.126,33.969c3.43,6.088,5.141,12.658,5.141,19.697c0,7.043-1.663,14.038-4.996,20.984   c-3.327,6.94-7.851,11.938-13.559,14.982c0.951,5.709,1.423,11.04,1.423,15.988c0,31.785-18.274,47.678-54.823,47.678h-34.536   c-24.94,0-57.483-6.943-97.648-20.841c-0.953-0.38-3.709-1.383-8.28-2.998s-7.948-2.806-10.138-3.565   c-2.19-0.767-5.518-1.861-9.994-3.285c-4.475-1.431-8.087-2.479-10.849-3.142c-2.758-0.664-5.901-1.283-9.419-1.855   c-3.52-0.571-6.519-0.855-8.993-0.855h-9.136V219.285h9.136c3.045,0,6.423-0.859,10.135-2.568c3.711-1.714,7.52-4.283,11.421-7.71   c3.903-3.427,7.564-6.805,10.992-10.138c3.427-3.33,7.233-7.517,11.422-12.559c4.187-5.046,7.47-9.089,9.851-12.135   c2.378-3.045,5.375-6.949,8.992-11.707c3.615-4.757,5.806-7.613,6.567-8.566c10.467-12.941,17.795-21.601,21.982-25.981   c7.804-8.182,13.466-18.603,16.987-31.261c3.525-12.66,6.427-24.604,8.703-35.832c2.282-11.229,5.903-19.321,10.858-24.27   c18.268,0,30.453,4.471,36.542,13.418c6.088,8.945,9.134,22.746,9.134,41.399c0,11.229-4.572,26.503-13.71,45.821   c-9.134,19.32-13.698,34.5-13.698,45.539h100.495c9.527,0,17.993,3.662,25.413,10.994c7.426,7.327,11.143,15.843,11.143,25.553   C420.284,225.943,418.237,233.653,414.145,242.419z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#4854C7"/>
-											</g></g> </svg>
-											<!-- 會員按下上方svg後則圖片換成這個svg,再按一次則恢復成上方的svg-->
-											<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 456.814 456.814" style="enable-background:new 0 0 456.814 456.814;" xml:space="preserve" class=""><g><g>
-	<g>
-		<path d="M441.11,252.677c10.468-11.99,15.704-26.169,15.704-42.54c0-14.846-5.432-27.692-16.259-38.547    c-10.849-10.854-23.695-16.278-38.541-16.278h-79.082c0.76-2.664,1.522-4.948,2.282-6.851c0.753-1.903,1.811-3.999,3.138-6.283    c1.328-2.285,2.283-3.999,2.852-5.139c3.425-6.468,6.047-11.801,7.857-15.985c1.807-4.192,3.606-9.9,5.42-17.133    c1.811-7.229,2.711-14.465,2.711-21.698c0-4.566-0.055-8.281-0.145-11.134c-0.089-2.855-0.574-7.139-1.423-12.85    c-0.862-5.708-2.006-10.467-3.43-14.272c-1.43-3.806-3.716-8.092-6.851-12.847c-3.142-4.764-6.947-8.613-11.424-11.565    c-4.476-2.95-10.184-5.424-17.131-7.421c-6.954-1.999-14.801-2.998-23.562-2.998c-4.948,0-9.227,1.809-12.847,5.426    c-3.806,3.806-7.047,8.564-9.709,14.272c-2.666,5.711-4.523,10.66-5.571,14.849c-1.047,4.187-2.238,9.994-3.565,17.415    c-1.719,7.998-2.998,13.752-3.86,17.273c-0.855,3.521-2.525,8.136-4.997,13.845c-2.477,5.713-5.424,10.278-8.851,13.706    c-6.28,6.28-15.891,17.701-28.837,34.259c-9.329,12.18-18.94,23.695-28.837,34.545c-9.899,10.852-17.131,16.466-21.698,16.847    c-4.755,0.38-8.848,2.331-12.275,5.854c-3.427,3.521-5.14,7.662-5.14,12.419v183.01c0,4.949,1.807,9.182,5.424,12.703    c3.615,3.525,7.898,5.38,12.847,5.571c6.661,0.191,21.698,4.374,45.111,12.566c14.654,4.941,26.12,8.706,34.4,11.272    c8.278,2.566,19.849,5.328,34.684,8.282c14.849,2.949,28.551,4.428,41.11,4.428h4.855h21.7h10.276    c25.321-0.38,44.061-7.806,56.247-22.268c11.036-13.135,15.697-30.361,13.99-51.679c7.422-7.042,12.565-15.984,15.416-26.836    c3.231-11.604,3.231-22.74,0-33.397c8.754-11.611,12.847-24.649,12.272-39.115C445.395,268.286,443.971,261.055,441.11,252.677z" data-original="#000000" class="active-path" data-old_color="##4854C" fill="#4854C7"/>
-		<path d="M100.5,191.864H18.276c-4.952,0-9.235,1.809-12.851,5.426C1.809,200.905,0,205.188,0,210.137v182.732    c0,4.942,1.809,9.227,5.426,12.847c3.619,3.611,7.902,5.421,12.851,5.421H100.5c4.948,0,9.229-1.81,12.847-5.421    c3.616-3.62,5.424-7.904,5.424-12.847V210.137c0-4.949-1.809-9.231-5.424-12.847C109.73,193.672,105.449,191.864,100.5,191.864z     M67.665,369.308c-3.616,3.521-7.898,5.281-12.847,5.281c-5.14,0-9.471-1.76-12.99-5.281c-3.521-3.521-5.281-7.85-5.281-12.99    c0-4.948,1.759-9.232,5.281-12.847c3.52-3.617,7.85-5.428,12.99-5.428c4.949,0,9.231,1.811,12.847,5.428    c3.617,3.614,5.426,7.898,5.426,12.847C73.091,361.458,71.286,365.786,67.665,369.308z" data-original="#000000" class="active-path" data-old_color="##4854C" fill="#4854C7"/>
-	</g>
-</g></g> </svg> -->
-										</div>
-									</div>
-								</div>
-								<style data-styleid="style-jvob29op" type="text/css">
-								.style-jvob29op {-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
-								.style-jvob29oplink,.style-jvob29opsvg {position:absolute;top:0;right:0;bottom:0;left:0;}
-								.style-jvob29op svg {position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:auto;}
-								.style-jvob29op_non-scaling-stroke * {vector-effect:non-scaling-stroke;}
-								</style>
+							</div>
+							<div class="post-info-2">
+								<p class="info-thumb">
+									<img src="thumb.png" alt="" width="30" height="30">
+								</p>
+								<span class="info-thumbcount"><span>2</span>個人按讚</span>
+								<span class="info-comment"><span>5</span>則留言</span>
 							</div>
 						</div>
-					</div> ''
-				</div>
-				<div class="row" style="position: absolute;left: 50%;margin-left: -171.64px;bottom: 10px">
-					<div class="col-md-12" style="text-align: center;">
-						<!--頁碼數需由文章數做決定，一頁大概可以有８個文章(或是要其他數目也可)。然後看頁碼數要不要最多顯示現在頁數往後的４頁(或是其他數目也可)，像是總共有１０頁，目前在第２頁，那就顯示２、３、４、５、６-->
-						<nav>
-							<ul class="pagination">
-								<li class="page-item">
-									<a class="page-link" href="#">第一頁</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">前一頁</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">1</a>
-								</li>
-								
-								<li class="page-item">
-									<a class="page-link" href="#">下一頁</a>
-								</li>
-								<li class="page-item">
-									<a class="page-link" href="#">最後一頁</a>
-								</li>
-							</ul>
-						</nav>
+
+						<!-- 發文者可以刪除(看你要不要做) -->
+						<div class="forum-post-action">
+							<a href="#">刪除</a>
+						</div>
 					</div>
+	
 				</div>
-			</div>
-		</div>
-	</div>
-	<script src="js/jquery.min.js">
-	</script> 
-	<script src="js/bootstrap.min.js">
-	</script> 
-	<script src="js/scripts.js">
-	</script>
+
+				<div class="comment-line row justify-content-center">
+					留言區
+				</div>
+
+				<!-- {% for data in comments %} -->
+				<div class="forum-comment row justify-content-center">
+					<div class="forum-post col-md-8">
+						<p class="forum-post-body">
+							文章的內文，文章的內文，文章的內文，文章的內文，<br>
+							文章的內文，文章的內文，文章的內文<br>	
+							文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，文章的內文，<br>	
+							文章的內文，文章的內文，文章的內文，文章的內文。
+						</p>
+						<div class="forum-post-info">
+							<div>
+								<div class="post-info">
+									<span>留言於</span>
+									<span class="post-time">2019-06-03 22:30</span><br>
+									<img src="avater.jpg" alt="頭像" width="30" height="30">
+									<span class="post-user">Username</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 發文者可以刪除(看你要不要做) -->
+						<div class="forum-post-action forum-comment-action">
+							<a href="#">刪除</a>
+						</div>
+					</div>
+	
+				</div>
+		<div>
 </body>
 </html>
