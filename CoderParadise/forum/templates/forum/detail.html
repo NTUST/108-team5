@@ -93,7 +93,7 @@
 			<h1 class="forum-title">{{post.forum.title}}區</h1>
 		</div>
 	
-		<div class="col-md-12 justify-content-center" style="background-color: lightblue;">
+		<div class="col-md-12 justify-content-center" style="background-color: lightblue; padding-top: 40px;">
 			<div class="row justify-content-center">
 				{% if request.user.is_authenticated and request.user.username == post.postUser.username %}
 					<div class="col-md-8" style="padding: 0; text-align: right; margin: 20px 0;">
@@ -149,7 +149,7 @@
 						{% render_field commentForm.commentBody placeholder="留點東西吧" class="form-control"%}
 				
 						<div style="text-align: right;">
-							<input type="submit" class="btn btn-primary" value="發布留言"/>
+							<input type="submit" class="btn btn-primary" value="發布留言" style="cursor: pointer;"/>
 						</div>
 					</form>
 					
@@ -157,28 +157,29 @@
 			</div>
 			<br>
 			{% for comment in comments %}
-				<div class="forum-comment row justify-content-center">
-					<div class="forum-post col-md-8">
-						<p class="forum-post-body">
-							{{comment.body}}
-						</p>
-						<div class="forum-post-info">
-							<div>
-								<div class="post-info">
-									<span>留言於</span>
-									<span class="post-time">{{comment.commentTime}}</span><br>
-									<img src="{{comment.postUser.userprofile.avatar.url}}" alt="頭像" width="30" height="30">
-									<span class="post-user">{{comment.postUser}}</span>
-								</div>
+			<div class="forum-comment row justify-content-center">
+				<div class="forum-post col-md-8">
+					<p class="forum-post-body">
+						{{comment.body}}
+					</p>
+					<div class="forum-post-info">
+						<div>
+							<div class="post-info">
+								<span>留言於</span>
+								<span class="post-time">{{comment.commentTime}}</span><br>
+								<img src="{{comment.postUser.userprofile.avatar.url}}" alt="頭像" width="30" height="30">
+								<span class="post-user">{{comment.postUser}}</span>
 							</div>
 						</div>
+					</div>
 
-						<!-- 發文者可以刪除(看你要不要做) -->
-						<div class="forum-post-action forum-comment-action">
-							<a href="#">刪除</a>
-						</div>
+					<!-- 發文者可以刪除(看你要不要做) -->
+					<div class="forum-post-action forum-comment-action">
+						<a href="#">刪除</a>
 					</div>
 				</div>
-			{% endfor %}
-
+			</div>
+		
+	{% endfor %}
+</div>
 {% endblock content %}
