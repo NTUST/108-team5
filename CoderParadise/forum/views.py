@@ -152,4 +152,4 @@ def thumb(request, id):
     post = Post.objects.get(id=id)
     thumb = Thumb(post=post, thumbUser=user)
     thumb.save()
-    return redirect(f'/forum/detail/{{id}}')
+    return redirect(f'/forum/detail/{id}')
