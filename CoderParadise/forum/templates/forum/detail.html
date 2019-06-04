@@ -123,8 +123,8 @@
 							{% if request.user.is_authenticated %}
 								<p class="info-thumb">
 									{% load static %}
-									{% if user_already_thumb %}
-										<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = '/forum/thumb/{{post.id}}'">
+									{% if userThumb.count == 0 %}
+										<img src="{% static "img/thumb.png" %}" alt="" width="30" height="30" onclick="location.href = '/forum/thumb/{{post.id}}/'">
 									{% endif %}
 								</p>
 							{% endif %}
