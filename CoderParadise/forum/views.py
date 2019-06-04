@@ -3,6 +3,8 @@ from .models import Forum, Post, Comment, Thumb
 from users.models import UserProfile
 from django.contrib.auth.models import User
 from . import forms
+from django.contrib import messages
+
 
 
 
@@ -133,8 +135,12 @@ def create(request):
                 return redirect(f'/forum/')
         else:
             form = forms.UpdateForm()
+        
+        context = {
+            'form': form
+        }
+        return render(request, 'forum/update.html', context)
+    else:
+        messages.info(request, f'請您登入後再新增問題！')
+        return redirect(f'/forum/')
 
-    context = {
-        'form': form
-    }
-    return render(request, 'forum/update.html', context)
