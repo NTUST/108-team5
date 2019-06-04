@@ -160,3 +160,8 @@ def thumb(request, id):
         thumb = Thumb.objects.get(post=post, thumbUser=user)
         thumb.delete()
         return HttpResponse(0) #收回讚
+
+def delete(request, id):
+    post = Post.objects.get(id=id)
+    post.delete()
+    return redirect(f'/forum/')

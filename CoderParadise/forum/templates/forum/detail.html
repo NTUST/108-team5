@@ -175,11 +175,11 @@
 					</div>
 
 					<!-- 發文者可以刪除(看你要不要做) -->
-					<!--
-					<div class="forum-post-action">
-						<a href="/forum/delete/{{post.id}}">刪除</a>
-					</div> 
-					-->
+					{% if request.user.is_authenticated and request.user.username == post.postUser.username %}
+						<div class="forum-post-action">
+							<a href="/forum/delete/{{post.id}}">刪除</a>
+						</div> 
+					{% endif %}
 				</div>
 
 			</div>
