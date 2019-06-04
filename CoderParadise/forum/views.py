@@ -3,13 +3,35 @@ from .models import Forum, Post, Comment, Thumb
 from users.models import UserProfile
 from . import forms
 
+
+
 # Create your views here.
 def index(request):
-    return render(request, 'forum/index.html')
+    posts = Post.objects.all()
+    postsCPP = Post.objects.filter(forum__title='C++')
+    postsJava = Post.objects.filter(forum__title='Java')
+    postsPython = Post.objects.filter(forum__title='Python')
+    postsOther = Post.objects.filter(forum__title='Other')
 
-def forum(request, id):
-    forumType = Forum.objects.get(pk=id)
-    post = Post.objects.filter(forum=forumType)
+    query = request.GET.get('srch-term')
+    if query:
+        posts = Post.objects.filter(title__contains=query)
+        postsCPP = Post.objects.filter(forum__title='C++').filter(title__contains=query)
+        postsJava = Post.objects.filter(forum__title='Java').filter(title__contains=query)
+        postsPython = Post.objects.filter(forum__title='Python').filter(title__contains=query)
+        postsOther = Post.objects.filter(forum__title='Other').filter(title__contains=query)
+
+    context = {
+        'posts': posts,
+        'postsCpp':postsCPP,
+        'postsJava':postsJava,
+        'postsPython':postsPython,
+        'postsOther':postsOther
+    }
+    return render(request, 'forum/index.html', context)
+
+def forum(request):
+    post = Post.objects
 
     context = {
         'post': post
@@ -20,7 +42,6 @@ def forum(request, id):
 def detail(request, id):
     post = Post.objects.get(id=id)
     thumb = Thumb.objects.filter(post=post)
-    thumbCount = Thumb.objects.count()
     comment = Comment.objects.filter(post=post)
     if request.user.is_authenticated:
         user = request.user
@@ -38,7 +59,7 @@ def detail(request, id):
 
     context = {
         'post': post,
-        'thumbCount':thumbCount,
+        'thumb':thumb,
         'comments':comment,
         'commentForm':form
     }
@@ -51,7 +72,14 @@ def update(request, id):
     if request.method == 'POST':
         form = forms.UpdateForm(request.POST)
         if form.is_valid():
-            
+            idd = form.cleaned_data.get('forum')
+            forum = Forum.objects.get(pk=idd)
+            post.forum = forum
+            post.title = form.cleaned_data.get('title')
+            post.body = form.cleaned_data.get('body')
+            post.postUser=user
+
+            post.save()
             return redirect(f'/forum/detail/{id}')
     else:
         form = forms.UpdateForm({'forum':post.forum, 'title':post.title, 'body':post.body})
@@ -66,15 +94,21 @@ def update(request, id):
 def create(request):
     if request.user.is_authenticated:
         user = request.user
-        post = Post.objects.get(id=id)
         if request.method == 'POST':
             form = forms.UpdateForm(request.POST)
             if form.is_valid():
-                return redirect(f'/forum/detail/{id}')
+                idd = form.cleaned_data.get('forum')
+                forum = Forum.objects.get(pk=idd)
+                title = form.cleaned_data.get('title')
+                body = form.cleaned_data.get('body')
+                postUser=user
+                post = Post(forum=forum, title=title, body=body, postUser=postUser)
+                post.save()
+                return redirect(f'/forum/')
         else:
             form = forms.UpdateForm()
 
     context = {
         'form': form
     }
-    return render(request, 'forum/update.html')
+    return render(request, 'forum/update.html', context)
